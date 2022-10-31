@@ -4,6 +4,7 @@ public enum StructureType
     Path,
     Fence,
     Lamp,
-    Stable,
+    CowStable,
+    SheepStable,
     Brainberry
 }

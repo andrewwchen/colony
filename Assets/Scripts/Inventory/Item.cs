@@ -1,23 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Item : MonoBehaviour
+[CreateAssetMenu(fileName = "Item", menuName = "ScriptableObjects/Item")]
+public class Item : ScriptableObject
 {
+    // type of the item
     public ItemType type;
-    public int count;
-    public bool isPlaceable;
-    public bool isSeed;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // name of the item
+    public string displayName;
+    // description for the item
+    public string description;
+    // thumbnail image for the item
+    public Texture2D thumbnail;
+    // the way this item is used
+    public ItemUseType useType;
+    // the associated plant or structure that can be placed depending on this item's useType
+    public Structure placeable;
 }

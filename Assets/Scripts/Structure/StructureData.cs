@@ -5,11 +5,14 @@
 public class StructureData
 {
     // the direction the structure is facing
-    public StructureDirection direction = StructureDirection.North;
+    public StructureDirection direction;
     // the type of the structure
-    public StructureType type = StructureType.None;
+    public StructureType type;
+    // the row of the tile under the structure's bottom left corner 
     public int row;
+    // the column of the tile under the structure's bottom left corner 
     public int col;
+    // the animals living in this stable
     public AnimalData[] animals;
 
     public StructureData(StructureDirection direction, StructureType type, int row, int col)

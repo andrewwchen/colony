@@ -7,24 +7,25 @@ public class AnimalData
     // the type of the animal
     public AnimalType type;
 
-    // the type of the animal
-    public AnimalType type;
+    // the name of the animal
+    public string displayName;
+
     // number of days the animal has gone unfed
     public int daysUnfed;
 
-    public StructureData(StructureDirection direction, StructureType type, int row, int col)
+    public AnimalData(AnimalType type, string displayName, int daysUnfed)
     {
         this.type = type;
-        this.direction = direction;
-        this.row = row;
-        this.col = col;
+        this.displayName = displayName;
+        this.daysUnfed = daysUnfed;
     }
 
     public override string ToString()
     {
-        string s = @"direction={0}
-type={1}";
+        string s = @"type={0}
+displayName={1}
+daysUnfed={2}";
 
-        return string.Format(s, direction, type);
+        return string.Format(s, type, displayName, daysUnfed);
     }
 }

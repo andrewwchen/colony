@@ -1,9 +1,10 @@
 public enum ItemType
 {
-    BrainberrySeed,
     Brainberry,
-    Path,
+    BrainberrySeed,
+    CowStable,
     Fence,
     Lamp,
-    Stable
+    Path,
+    SheepStable,
 }
