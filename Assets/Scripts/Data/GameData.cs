@@ -1,0 +1,24 @@
+using UnityEngine;
+
+/// <summary>
+/// class which holds save game data
+/// </summary>
+[System.Serializable]
+public class GameData
+{
+    // amount of money the player has
+    public int money = 0;
+    // the current day number the player is on (first day is day 1)
+    public int day = 1;
+    // array of rows and tiles and what structures are placed on them
+    [SerializeField] private StructureData[][] structures;
+
+    public override string ToString()
+    {
+        string s = @"money={0}
+day={1}
+structures=[{2}]";
+
+        return string.Format(s, money, day, structures);
+    }
+}
