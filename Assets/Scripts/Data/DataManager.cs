@@ -35,6 +35,15 @@ public class DataManager : MonoBehaviour
         Debug.Log(string.Format("game data path:\n{0}", path));
     }
 
+    public void EndDay(int currentDay, int money, ItemData[] inventory, StructureData[] structures)
+    {
+        gameData.day = currentDay + 1;
+        gameData.money = money;
+        gameData.inventory = inventory;
+        gameData.structures = structures;
+    }
+
+
     // Save data to a JSON file as filename.json. Will overwrite an existing file
     public void Save()
     {
@@ -50,5 +59,4 @@ public class DataManager : MonoBehaviour
         if (File.Exists(path))
             gameData = JsonUtility.FromJson<GameData>(File.ReadAllText(path));
     }
-
 }

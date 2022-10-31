@@ -10,15 +10,18 @@ public class GameData
     public int money = 0;
     // the current day number the player is on (first day is day 1)
     public int day = 1;
-    // array of rows and tiles and what structures are placed on them
-    [SerializeField] private StructureData[][] structures;
+    // array of tiles and what structures are placed on them
+    [SerializeField] public StructureData[] structures;
+    // array of items held in inventory and their amounts
+    [SerializeField] public ItemData[] inventory;
 
     public override string ToString()
     {
         string s = @"money={0}
 day={1}
-structures=[{2}]";
+structures=[{2}]
+inventory=[{3}]";
 
-        return string.Format(s, money, day, structures);
+        return string.Format(s, money, day, structures, string.Join<StructureData>(',', structures), string.Join<ItemData>(',', inventory));
     }
 }
