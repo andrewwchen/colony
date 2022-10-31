@@ -6,6 +6,9 @@ public class Item : MonoBehaviour
 {
     public ItemType type;
     public int count;
+    public bool isPlaceable;
+    public bool isSeed;
+
     // Start is called before the first frame update
     void Start()
     {

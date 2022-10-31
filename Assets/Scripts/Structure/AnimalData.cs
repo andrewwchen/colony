@@ -1,16 +1,16 @@
 /// <summary>
-/// class which holds save game data about a particular structure in the scene
+/// class which holds save game data about a particular animal in a structure in the scene
 /// </summary>
 [System.Serializable]
-public class StructureData
+public class AnimalData
 {
-    // the direction the structure is facing
-    public StructureDirection direction = StructureDirection.North;
-    // the type of the structure
-    public StructureType type = StructureType.None;
-    public int row;
-    public int col;
-    public AnimalData[] animals;
+    // the type of the animal
+    public AnimalType type;
+
+    // the type of the animal
+    public AnimalType type;
+    // number of days the animal has gone unfed
+    public int daysUnfed;
 
     public StructureData(StructureDirection direction, StructureType type, int row, int col)
     {
