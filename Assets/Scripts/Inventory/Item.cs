@@ -11,6 +11,12 @@ public class Item : ScriptableObject
     public string description;
     // thumbnail image for the item
     public Texture2D thumbnail;
+    // whether this item can be bought in the shop
+    public bool buyable;
+    // the buy price of the item
+    public int buyPrice;
+    // the sell price of the item
+    public int sellPrice;
     // the way this item is used
     public ItemUseType useType;
     // the associated plant or structure that can be placed depending on this item's useType

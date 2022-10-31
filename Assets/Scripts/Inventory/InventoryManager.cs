@@ -8,9 +8,9 @@ public class InventoryManager : MonoBehaviour
     // list of all items available in the game
     public Item[] items;
     // maps item types to items
-    [HideInInspector] public Dictionary<ItemType, Item> typeToItem;
+    private Dictionary<ItemType, Item> typeToItem;
     // maps items to item types
-    [HideInInspector] public Dictionary<Item, ItemType> itemToType;
+    private Dictionary<Item, ItemType> itemToType;
     // maps items to the amount of that item a player has
     [HideInInspector] public Dictionary<Item, int> inventory;
 
@@ -36,6 +36,7 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
+    // converts inventory into a serializable format for data saving
     public ItemData[] Serialize()
     {
         ItemData[] itemData = new ItemData[inventory.Count];
