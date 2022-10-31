@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eecb8f6d2b00c014c886e6e794832f15, type: 3}
   m_Name: Path
   m_EditorClassIdentifier: 
-  type: 0
+  type: 5
   displayName: Walkable Path
   description: A short walkway segment to place around your farm.
   thumbnail: {fileID: 0}
