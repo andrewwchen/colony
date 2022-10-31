@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eecb8f6d2b00c014c886e6e794832f15, type: 3}
   m_Name: SheepStable
   m_EditorClassIdentifier: 
-  displayName: Space Cow Stable
-  description: 'A stable for sheltering Space Cows to place around your farm. '
+  type: 0
+  displayName: Space Sheep Stable
+  description: 'A stable for sheltering Space Sheep to place around your farm. '
   thumbnail: {fileID: 0}
+  buyable: 1
+  buyPrice: 500
+  sellPrice: 250
   useType: 1
   placeable: {fileID: 0}

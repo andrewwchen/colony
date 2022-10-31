@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eecb8f6d2b00c014c886e6e794832f15, type: 3}
   m_Name: BrainberrySeed
   m_EditorClassIdentifier: 
+  type: 0
   displayName: Brainberry Seed Packet
   description: A small seed packet. If planted and watered for several days, these
     seeds will grow into a brainberry plant.
   thumbnail: {fileID: 0}
+  buyable: 1
+  buyPrice: 10
+  sellPrice: 5
   useType: 2
   placeable: {fileID: 0}
