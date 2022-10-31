@@ -6,7 +6,7 @@ using System.IO;
 /// </summary>
 public class DataManager : MonoBehaviour
 {
-    //singleton instance
+    // singleton instance
     public static DataManager Instance;
     // name of json file to load and save data from and to
     private string filename = "game_data";

@@ -5,6 +5,8 @@ using System.Linq;
 
 public class InventoryManager : MonoBehaviour
 {
+    // singleton instance
+    public static InventoryManager Instance;
     // list of all items available in the game
     public Item[] items;
     // maps item types to items
@@ -14,8 +16,18 @@ public class InventoryManager : MonoBehaviour
     // maps items to the amount of that item a player has
     [HideInInspector] public Dictionary<Item, int> inventory;
 
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+    }
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         // initializing dictionaries based on default values
         for (int i = 0; i < items.Length; i++)
