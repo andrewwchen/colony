@@ -6,5 +6,8 @@ public enum StructureType
     Lamp,
     CowStable,
     SheepStable,
-    Brainberry
+    BrainberryNew,
+    BrainberryHalf,
+    BrainberryRipe,
+    BrainberryWilted,
 }

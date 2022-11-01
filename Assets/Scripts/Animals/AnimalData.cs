@@ -20,6 +20,13 @@ public class AnimalData
         this.daysUnfed = daysUnfed;
     }
 
+    public AnimalData(AnimalInstance ai)
+    {
+        type = ai.config.type;
+        displayName = ai.displayName;
+        daysUnfed = ai.daysUnfed;
+    }
+
     public override string ToString()
     {
         string s = @"type={0}

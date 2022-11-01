@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25ca50aef15040a4da4a444a7c47cff3, type: 3}
+  m_Name: CowStable
+  m_EditorClassIdentifier: 
+  type: 4
+  prefab: {fileID: 0}
+  cols: 6
+  rows: 3
+  isStable: 1
+  animal: {fileID: 11400000, guid: 9fb84eb063d0e7a47a6e17798b537581, type: 2}
+  animalLimit: 3
+  doesGrow: 0
+  growDays: -1
+  nextStage: {fileID: 0}
+  product: {fileID: 11400000, guid: 032bb0d98d2f1c248a075474733e46a3, type: 2}

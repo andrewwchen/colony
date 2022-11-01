@@ -22,6 +22,21 @@ public class StructureData
         this.row = row;
         this.col = col;
     }
+    public StructureData(StructureInstance si)
+    {
+        type = si.config.type;
+        direction = si.direction;
+        row = si.row;
+        col = si.col;
+        animals = new AnimalData[si.animals.Count];
+
+        int i = 0;
+        foreach (AnimalInstance ai in si.animals)
+        {
+            animals[i] = new AnimalData(ai);
+            i += 1;
+        }
+    }
 
     public override string ToString()
     {

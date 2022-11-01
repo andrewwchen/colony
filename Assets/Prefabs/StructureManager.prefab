@@ -44,3 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 123f9d8e5cf6ff84088f2997a616bcc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  corner: {fileID: 0}
+  highlightPrefab: {fileID: 0}
+  structures:
+  - {fileID: 11400000, guid: 74ce8dc885497fc48a047d031b6cb236, type: 2}
+  - {fileID: 11400000, guid: 86c732bd7ba3a3b4c8186051ee2ccc41, type: 2}
+  - {fileID: 11400000, guid: 70cc573919f604f44b1edd03a5d27185, type: 2}
+  - {fileID: 11400000, guid: 03095c44238c724439ac8aa9932c41a6, type: 2}
+  - {fileID: 11400000, guid: 9fa7acbd91c9f6449af5219630433efd, type: 2}
+  - {fileID: 11400000, guid: bba22b67961359e45b6b8e3b4d5e9c02, type: 2}
+  - {fileID: 11400000, guid: 4638607907ea0294686d1d504f5402ab, type: 2}
+  - {fileID: 11400000, guid: 44901f15c6872e346a3be0796ee69166, type: 2}
+  - {fileID: 11400000, guid: 894c3b0cf88741d4589955b760dbc897, type: 2}

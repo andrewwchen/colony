@@ -7,4 +7,6 @@ public enum ItemType
     Lamp,
     Path,
     SheepStable,
+    Milk,
+    Wool,
 }

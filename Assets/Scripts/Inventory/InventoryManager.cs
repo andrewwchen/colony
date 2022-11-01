@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
@@ -8,7 +7,7 @@ public class InventoryManager : MonoBehaviour
     // singleton instance
     public static InventoryManager Instance;
     // list of all items available in the game
-    public Item[] items;
+    [SerializeField] private Item[] items;
     // maps item types to items
     private Dictionary<ItemType, Item> typeToItem;
     // maps items to item types

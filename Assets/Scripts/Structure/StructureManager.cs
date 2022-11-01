@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,16 +5,35 @@ public class StructureManager : MonoBehaviour
 {
     // singleton instance
     public static StructureManager Instance;
+
     // the -x, -z bottom left corner of the tile plot
     [SerializeField] private Transform corner;
+    // a highlight the size of a single tile that is shown or hidden
+    [SerializeField] private GameObject highlightPrefab;
+    // list of all structures available in the game
+    [SerializeField] private Structure[] structures;
+
     // the number of rows of tiles in the plot
     private static int rows = 24;
     // the number of columns of tiles in the plot
     private static int cols = 24;
     // the length and width of one tile
     private static float tileSize = .25f;
+
+    // maps structure types to structures
+    private Dictionary<StructureType, Structure> typeToStructure;
+    // maps structures to structure types
+    private Dictionary<Structure, StructureType> structureToType;
     // maps from row #, col # to the tile at the point
-    private Tile[,] tiles = new Tile[rows,cols];
+    private GameObject[,] highlights = new GameObject[rows,cols];
+    // keeps track of cells that are currently occupied by structures;
+    private Dictionary<(int, int), StructureInstance> occupied = new Dictionary<(int, int), StructureInstance>();
+    // keeps track of cells that are currently highlighted;
+    private HashSet<(int, int)> highlighted = new HashSet<(int, int)>();
+    // keeps track of structures existing in the scene;
+    private HashSet<StructureInstance> currentStructures = new HashSet<StructureInstance>();
+    // reference to the XRRig;
+    private Transform rig;
 
     private void Awake()
     {
@@ -28,57 +46,251 @@ public class StructureManager : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        // initialize the tile plot
-        StructureData[] data = DataManager.Instance.gameData.structures;
+        // initializing dictionaries based on default values
+        for (int i = 0; i < structures.Length; i++)
+        {
+            Structure structure = structures[i];
+            StructureType type = structure.type;
+            typeToStructure[type] = structure;
+            structureToType[structure] = type;
+        }
+
+        // initializing layout based on saved data
+        StructureData[] structureData = DataManager.Instance.gameData.structures;
+        for (int i = 0; i < structureData.Length; i++)
+        {
+            StructureData data = structureData[i];
+            Structure structure = typeToStructure[data.type];
+
+            MakePlacement(structure, GetCellCenter(data.row, data.col), data.direction, data.animals);
+        }
+
+        // initialize the highlights
+        float y = corner.position.z;
+        for (int r = 0; r < rows; r++)
+        {
+            for (int c = 0; c < cols; c++)
+            {
+                GameObject go = Instantiate(highlightPrefab);
+                go.transform.position = GetCellCenter(r, c);
+                go.SetActive(false);
+                highlights[r, c] = go;
+            }
+        }
+
+        // get reference to XRRig transform
+        rig = GameObject.FindGameObjectWithTag("XRRig").transform;
     }
 
     // gets the row and column number of the tile that contains the specified point
-    public (int row, int col) GetCell(float x, float z)
+    private (int row, int col) GetCell(Vector3 pos)
     {
-        int row = Mathf.FloorToInt((z - corner.position.z) % tileSize);
-        int col = Mathf.FloorToInt((x - corner.position.x) % tileSize);
+        int row = Mathf.FloorToInt((pos.z - corner.position.z) % tileSize);
+        int col = Mathf.FloorToInt((pos.x - corner.position.x) % tileSize);
         return (row, col);
     }
 
-    // checks if a tile with row and column specified is in the plot
-    public bool IsCellValid(int row, int col)
+    // checks if a tile with row and column specified is in the plot and unoccupied
+    private bool IsCellValid(int row, int col)
     {
-        return row < rows && col < cols && row >= 0 && col >= 0;
+        return row < rows && col < cols && row >= 0 && col >= 0 && occupied[(row, col)] == null;
     }
 
-    // checks if a tile that contains the specified point is in the plot
-    public bool IsCellValid(float x, float z)
+    // check if any of the tiles are not valid
+    private bool AreCellsValid((int,int)[] cells)
     {
-        (int row, int col) = GetCell(x, z);
-        return IsCellValid(row, col);
+        foreach ((int row, int col) in cells)
+        {
+            if (!IsCellValid(row, col))
+                return false;
+        }
+        return true;
     }
 
     // gets the center point of the tile at the row and column specified
-    public (float x, float z) GetCellCenter(int row, int col)
+    private Vector3 GetCellCenter(int row, int col)
     {
         float centerZ = corner.position.z + row * tileSize + tileSize / 2;
         float centerX = corner.position.x + col * tileSize + tileSize / 2;
-        return (centerX, centerZ);
+        return new Vector3 (centerX, corner.position.y, centerZ);
     }
 
-    // gets the center point of the tile that contains the specified point
-    public (float x, float z) GetCellCenter(float x, float z)
+    // gets the center point of the list of cells
+    private Vector3 GetCellsCenter((int, int)[] cells)
     {
-        (int row, int col) = GetCell(x, z);
-        return GetCellCenter(row, col);
+        int minRow = int.MaxValue;
+        int maxRow = int.MinValue;
+        int minCol = int.MaxValue;
+        int maxCol = int.MinValue;
+
+        foreach ((int r, int c) in cells)
+        {
+            minRow = Mathf.Min(minRow, r);
+            maxRow = Mathf.Max(maxRow, r);
+            minCol = Mathf.Min(minCol, c);
+            maxCol = Mathf.Max(maxCol, c);
+        }
+        float avgRow = minRow + (maxRow - minRow) / 2;
+        float avgCol = minCol + (maxCol - minCol) / 2;
+
+        float centerZ = corner.position.z + avgRow * tileSize + tileSize / 2;
+        float centerX = corner.position.x + avgCol * tileSize + tileSize / 2;
+        return new Vector3(centerX, corner.position.y, centerZ);
     }
-    /*
+
+    // Gets the direction that a structure should be facing based on the player's orientation
     private StructureDirection GetStructureDirection()
     {
-
+        if (Vector3.Angle(rig.forward, Vector3.forward) <= 45)
+            return StructureDirection.South;
+        else if (Vector3.Angle(rig.forward, Vector3.right) <= 45)
+            return StructureDirection.West;
+        else if (Vector3.Angle(rig.forward, -Vector3.forward) <= 45)
+            return StructureDirection.North;
+        else
+            return StructureDirection.East;
     }
 
-
-
-    public GetCells(Structure structure, float x, float z)
+    // gets all the cells a building may occupy if it is placed at the specified row and column
+    private (int row, int col)[] GetCells(Structure structure, int row, int col, StructureDirection? direction = null)
     {
+        (int, int)[] cells = new (int, int)[structure.rows * structure.cols];
+        StructureDirection dir = direction ?? GetStructureDirection();
+        int cornerRow;
+        int cornerCol;
+        int numRows;
+        int numCols;
+        switch (dir)
+        {
+            case StructureDirection.South:
+                cornerRow = row;
+                cornerCol = col;
+                numRows = structure.rows;
+                numCols = structure.cols;
+                break;
+            case StructureDirection.West:
+                cornerRow = row - structure.cols + 1;
+                cornerCol = col;
+                numRows = structure.cols;
+                numCols = structure.rows;
+                break;
+            case StructureDirection.North:
+                cornerRow = row - structure.rows + 1;
+                cornerCol = col - structure.cols + 1;
+                numRows = structure.rows;
+                numCols = structure.cols;
+                break;
+            default:
+                cornerRow = row;
+                cornerCol = col - structure.rows + 1;
+                numRows = structure.cols;
+                numCols = structure.rows;
+                break;
+        }
 
-    }*/
+        for (int r = cornerRow; r < cornerRow + numRows; r++)
+        {
+            for (int c = cornerCol; c < cornerCol + numCols; c++)
+                cells[r * numCols + c] = (r, c);
+        }
+        return cells;
+    }
+
+    // remove all tile highlights
+    public void Unhover()
+    {
+        foreach ((int r, int c) in highlighted)
+            highlights[r, c].SetActive(false);
+        highlighted.Clear();
+    }
+
+    // produce tile highlights for structure placement
+    public void HoverPlacement(Structure structure, Vector3 pos)
+    {
+        Unhover();
+        (int row, int col) = GetCell(pos);
+        (int, int)[] cells = GetCells(structure, row, col);
+        bool canPlace = AreCellsValid(cells);
+
+        foreach ((int r, int c) in cells)
+        {
+            if (IsCellValid(r,c))
+            {
+                highlights[r, c].SetActive(true);
+                highlighted.Add((r, c));
+            }
+        }
+    }
+
+    // place the structure at a position if able
+    public void MakePlacement(Structure structure, Vector3 pos, StructureDirection? direction = null, AnimalData[] animals = null)
+    {
+        Unhover();
+        (int row, int col) = GetCell(pos);
+        (int, int)[] cells = GetCells(structure, row, col, direction);
+        bool canPlace = AreCellsValid(cells);
+
+        if (!canPlace)
+            return;
+
+        Vector3 center = GetCellsCenter(cells);
+
+        GameObject go = Instantiate(structure.prefab);
+        go.transform.position = center;
+        StructureInstance si = go.GetComponent<StructureInstance>();
+        si.Setup(structure, direction ?? GetStructureDirection(), row, col, cells, animals);
+
+        foreach ((int, int) c in cells)
+            occupied[c] = si;
+
+        currentStructures.Add(si);
+    }
+
+    // produce tile highlights for structure removal
+    public void HoverRemoval(Vector3 pos)
+    {
+        Unhover();
+        (int, int) cell = GetCell(pos);
+        StructureInstance si = occupied[cell];
+        if (si == null)
+            return;
+
+        foreach ((int r, int c) in si.occupied)
+        {
+            highlights[r, c].SetActive(true);
+            highlighted.Add((r, c));
+        }
+    }
+
+    // remove the structure from a position if able
+    public void MakeRemoval(Vector3 pos)
+    {
+        Unhover();
+        (int, int) cell = GetCell(pos);
+        StructureInstance si = occupied[cell];
+        if (si == null)
+            return;
+
+        foreach ((int, int) c in si.occupied)
+            occupied[c] = null;
+
+        currentStructures.Remove(si);
+
+        Destroy(si.gameObject);
+    }
+
+    // converts inventory into a serializable format for data saving
+    public StructureData[] Serialize()
+    {
+        StructureData[] structureData = new StructureData[currentStructures.Count];
+        int i = 0;
+        foreach (StructureInstance si in currentStructures)
+        {
+            structureData[i] = new StructureData(si);
+            i += 1;
+        }
+        return structureData;
+    }
 }

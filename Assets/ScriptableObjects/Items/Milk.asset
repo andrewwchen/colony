@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eecb8f6d2b00c014c886e6e794832f15, type: 3}
-  m_Name: CowStable
+  m_Name: Milk
   m_EditorClassIdentifier: 
-  type: 2
-  displayName: Space Cow Stable
-  description: 'A stable for sheltering Space Cows to place around your farm. '
+  type: 7
+  displayName: Milk
+  description: Fresh milk. A hot commodity.
   thumbnail: {fileID: 0}
-  buyable: 1
-  buyPrice: 500
-  sellPrice: 250
-  useType: 1
-  placeable: {fileID: 11400000, guid: 9fa7acbd91c9f6449af5219630433efd, type: 2}
+  buyable: 0
+  buyPrice: -1
+  sellPrice: 80
+  useType: 0
+  placeable: {fileID: 0}

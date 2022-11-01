@@ -21,4 +21,4 @@ MonoBehaviour:
   buyPrice: 10
   sellPrice: 5
   useType: 2
-  placeable: {fileID: 0}
+  placeable: {fileID: 11400000, guid: 86c732bd7ba3a3b4c8186051ee2ccc41, type: 2}
