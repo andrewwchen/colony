@@ -14,11 +14,11 @@ public class StructureManager : MonoBehaviour
     [SerializeField] private Structure[] structures;
 
     // the number of rows of tiles in the plot
-    private static int rows = 24;
+    private static int rows = 64;
     // the number of columns of tiles in the plot
-    private static int cols = 24;
+    private static int cols = 64;
     // the length and width of one tile
-    private static float tileSize = .25f;
+    private static float tileSize = .5f;
 
     // maps structure types to structures
     private Dictionary<StructureType, Structure> typeToStructure;
