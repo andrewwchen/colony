@@ -53,8 +53,8 @@ public class StructureManager : MonoBehaviour
         {
             Structure structure = structures[i];
             StructureType type = structure.type;
-            typeToStructure[type] = structure;
-            structureToType[structure] = type;
+            typeToStructure.Add(type, structure);
+            structureToType.Add(structure, type);
         }
 
         // initializing layout based on saved data

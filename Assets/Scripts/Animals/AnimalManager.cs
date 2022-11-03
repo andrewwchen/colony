@@ -30,7 +30,7 @@ public class AnimalManager : MonoBehaviour
         {
             Animal animal = animals[i];
             AnimalType type = animal.type;
-            typeToAnimal[type] = animal;
+            typeToAnimal.Add(type, animal);
             animalToType[animal] = type;
         }
     }

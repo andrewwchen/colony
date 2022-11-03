@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 5
   prefab: {fileID: 8785561675901546141, guid: 291d44cbd86ef40fe9bf7645ea6f5e9e, type: 3}
-  cols: 5
-  rows: 5
+  cols: 4
+  rows: 4
   isStable: 1
   animal: {fileID: 11400000, guid: fc160021814cc394bbe1e59ed809b29a, type: 2}
   animalLimit: 2

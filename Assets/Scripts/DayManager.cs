@@ -5,7 +5,9 @@ using UnityEngine;
 public class DayManager : MonoBehaviour
 {
     public int day;
-    public int time = 0;
+    public Transform directionalLightPivot;
+    [HideInInspector] public int time = 0;
+
     // Start is called before the first frame update
     void Start()
     {

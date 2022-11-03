@@ -33,7 +33,7 @@ public class InventoryManager : MonoBehaviour
         {
             Item item = items[i];
             ItemType type = item.type;
-            typeToItem[type] = item;
+            typeToItem.Add(type, item);
             inventory[item] = 0;
             itemToType[item] = type;
         }
