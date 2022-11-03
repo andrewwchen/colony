@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StructureInstance : MonoBehaviour
 {
-    [SerializeField] private Transform animalSpawn;
+    [SerializeField] private Transform[] animalSpawns;
     [HideInInspector] public Structure config;
     [HideInInspector] public StructureDirection direction;
     [HideInInspector] public int row;
@@ -45,7 +45,7 @@ public class StructureInstance : MonoBehaviour
         Animal animal = AnimalManager.Instance.typeToAnimal[data.type];
 
         GameObject go = Instantiate(animal.prefab);
-        go.transform.position = animalSpawn.position;
+        // go.transform.position = animalSpawn.position;
         AnimalInstance ai = go.GetComponent<AnimalInstance>();
         ai.Setup(animal, data.displayName, data.daysUnfed);
     }
