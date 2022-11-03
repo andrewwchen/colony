@@ -11,7 +11,7 @@ public class StructureManager : MonoBehaviour
     // a highlight the size of a single tile that is shown or hidden
     [SerializeField] private GameObject highlightPrefab;
     // list of all structures available in the game
-    [SerializeField] private Structure[] structures;
+    [SerializeField] public Structure[] structures;
 
     // the number of rows of tiles in the plot
     private static int rows = 64;
@@ -21,9 +21,9 @@ public class StructureManager : MonoBehaviour
     private static float tileSize = .5f;
 
     // maps structure types to structures
-    private Dictionary<StructureType, Structure> typeToStructure;
+    private Dictionary<StructureType, Structure> typeToStructure = new Dictionary<StructureType, Structure>();
     // maps structures to structure types
-    private Dictionary<Structure, StructureType> structureToType;
+    private Dictionary<Structure, StructureType> structureToType = new Dictionary<Structure, StructureType>();
     // maps from row #, col # to the tile at the point
     private GameObject[,] highlights = new GameObject[rows,cols];
     // keeps track of cells that are currently occupied by structures;
@@ -87,15 +87,15 @@ public class StructureManager : MonoBehaviour
     // gets the row and column number of the tile that contains the specified point
     private (int row, int col) GetCell(Vector3 pos)
     {
-        int row = Mathf.FloorToInt((pos.z - corner.position.z) % tileSize);
-        int col = Mathf.FloorToInt((pos.x - corner.position.x) % tileSize);
+        int row = Mathf.FloorToInt((pos.z - corner.position.z) / tileSize);
+        int col = Mathf.FloorToInt((pos.x - corner.position.x) / tileSize);
         return (row, col);
     }
 
     // checks if a tile with row and column specified is in the plot and unoccupied
     private bool IsCellValid(int row, int col)
     {
-        return row < rows && col < cols && row >= 0 && col >= 0 && occupied[(row, col)] == null;
+        return row < rows && col < cols && row >= 0 && col >= 0 && !occupied.ContainsKey((row, col));
     }
 
     // check if any of the tiles are not valid
@@ -189,11 +189,14 @@ public class StructureManager : MonoBehaviour
                 numCols = structure.rows;
                 break;
         }
-
+        int i = 0;
         for (int r = cornerRow; r < cornerRow + numRows; r++)
         {
             for (int c = cornerCol; c < cornerCol + numCols; c++)
-                cells[r * numCols + c] = (r, c);
+            {
+                cells[i] = (r, c);
+                i++;
+            }
         }
         return cells;
     }
@@ -243,7 +246,7 @@ public class StructureManager : MonoBehaviour
         si.Setup(structure, direction ?? GetStructureDirection(), row, col, cells, animals);
 
         foreach ((int, int) c in cells)
-            occupied[c] = si;
+            occupied.Add(c, si);
 
         currentStructures.Add(si);
     }
@@ -253,9 +256,10 @@ public class StructureManager : MonoBehaviour
     {
         Unhover();
         (int, int) cell = GetCell(pos);
-        StructureInstance si = occupied[cell];
-        if (si == null)
+        if (!occupied.ContainsKey(cell))
             return;
+
+        StructureInstance si = occupied[cell];
 
         foreach ((int r, int c) in si.occupied)
         {
@@ -269,12 +273,13 @@ public class StructureManager : MonoBehaviour
     {
         Unhover();
         (int, int) cell = GetCell(pos);
-        StructureInstance si = occupied[cell];
-        if (si == null)
+        if (!occupied.ContainsKey(cell))
             return;
 
+        StructureInstance si = occupied[cell];
+
         foreach ((int, int) c in si.occupied)
-            occupied[c] = null;
+            occupied.Remove(c);
 
         currentStructures.Remove(si);
 

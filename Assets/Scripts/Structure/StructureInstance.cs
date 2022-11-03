@@ -31,9 +31,24 @@ public class StructureInstance : MonoBehaviour
         this.row = row;
         this.col = col;
         this.occupied = occupied;
-        foreach (AnimalData data in animals)
+        if (animals != null)
         {
-            SpawnAnimal(data);
+            foreach (AnimalData data in animals)
+            {
+                SpawnAnimal(data);
+            }
+        }
+        switch (direction)
+        {
+            case StructureDirection.West:
+                transform.Rotate(Vector3.up * 90);
+                break;
+            case StructureDirection.North:
+                transform.Rotate(Vector3.up * 180);
+                break;
+            case StructureDirection.East:
+                transform.Rotate(Vector3.up * 270);
+                break;
         }
     }
 

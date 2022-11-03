@@ -1,5 +1,5 @@
 {
-    "name": "ControllerSampleActions",
+    "name": "ControllerActions",
     "maps": [
         {
             "name": "LeftHand",
@@ -1058,6 +1058,102 @@
                     "processors": "",
                     "groups": "XR Usage",
                     "action": "EyeRotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Keyboard",
+            "id": "9180414e-5d27-4f5e-b03f-06f0fe7cad19",
+            "actions": [
+                {
+                    "name": "Forward",
+                    "type": "Button",
+                    "id": "bdd493b7-f7bb-436c-855d-da84f4979460",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Up",
+                    "type": "Button",
+                    "id": "3e052bef-94cb-4551-bde6-46daf08de696",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "3b2fa3e6-aed2-4e3f-9eba-c01bf2fdaf43",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Forward",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a0c39865-a47a-47a9-b631-ad07b3abe390",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Mouse",
+            "id": "eaf255e4-b3bf-41a5-a76c-68f624cfb761",
+            "actions": [
+                {
+                    "name": "RMB",
+                    "type": "Button",
+                    "id": "73a4750b-0767-49a8-b970-f4c0a6d4d695",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pos",
+                    "type": "Value",
+                    "id": "2748d1f8-aff1-4bfb-abc5-77f0835dbe9a",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "511f32c1-57b0-4ab4-91b4-7e4aa0d09014",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RMB",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ea8233eb-089b-4533-9de8-fb8672bd0790",
+                    "path": "<Mouse>/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pos",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

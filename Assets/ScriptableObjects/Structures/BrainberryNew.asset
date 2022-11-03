@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BrainberryNew
   m_EditorClassIdentifier: 
   type: 6
-  prefab: {fileID: 0}
+  prefab: {fileID: 7127090749104569712, guid: 9b0fccbfac9b24485992ca0166e44e4f, type: 3}
   cols: 1
   rows: 1
   isStable: 0

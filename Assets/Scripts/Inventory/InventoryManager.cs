@@ -9,11 +9,11 @@ public class InventoryManager : MonoBehaviour
     // list of all items available in the game
     [SerializeField] private Item[] items;
     // maps item types to items
-    private Dictionary<ItemType, Item> typeToItem;
+    private Dictionary<ItemType, Item> typeToItem = new Dictionary<ItemType, Item>();
     // maps items to item types
-    private Dictionary<Item, ItemType> itemToType;
+    private Dictionary<Item, ItemType> itemToType = new Dictionary<Item, ItemType>();
     // maps items to the amount of that item a player has
-    [HideInInspector] public Dictionary<Item, int> inventory;
+    [HideInInspector] public Dictionary<Item, int> inventory = new Dictionary<Item, int>();
 
     private void Awake()
     {

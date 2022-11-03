@@ -305,6 +305,9 @@ MonoBehaviour:
   OnLeftTriggerPress:
     m_PersistentCalls:
       m_Calls: []
+  OnRightTriggerPress:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &9095941960360743351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -543,6 +546,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: ded73c9a-53b1-4fb9-b8c6-f07836892911
     m_ActionName: EyeGaze/EyeRotation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bdd493b7-f7bb-436c-855d-da84f4979460
+    m_ActionName: Keyboard/Forward[/Keyboard/w]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3e052bef-94cb-4551-bde6-46daf08de696
+    m_ActionName: Keyboard/Up[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 73a4750b-0767-49a8-b970-f4c0a6d4d695
+    m_ActionName: Mouse/RMB[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 2748d1f8-aff1-4bfb-abc5-77f0835dbe9a
+    m_ActionName: Mouse/Pos[/Mouse/position]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: LeftHand

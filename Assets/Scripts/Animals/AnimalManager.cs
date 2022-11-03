@@ -8,9 +8,9 @@ public class AnimalManager : MonoBehaviour
     // list of all animals available in the game
     [SerializeField] private Animal[] animals;
     // maps animal types to animals
-    [HideInInspector] public Dictionary<AnimalType, Animal> typeToAnimal;
+    [HideInInspector] public Dictionary<AnimalType, Animal> typeToAnimal = new Dictionary<AnimalType, Animal>();
     // maps animals to animal types
-    [HideInInspector] public Dictionary<Animal, AnimalType> animalToType;
+    [HideInInspector] public Dictionary<Animal, AnimalType> animalToType = new Dictionary<Animal, AnimalType>();
 
     private void Awake()
     {
