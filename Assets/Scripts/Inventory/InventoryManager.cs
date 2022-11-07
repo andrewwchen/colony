@@ -71,10 +71,14 @@ public class InventoryManager : MonoBehaviour
         inventory[item] += 1;
     }
 
-    public void RemoveItem(Item item)
+    public bool RemoveItem(Item item)
     {
         if (HasItem(item))
+        {
             inventory[item] -= 1;
+            return true;
+        }
+        return false;
     }
 
     public bool HasItem(Item item)
@@ -102,9 +106,8 @@ public class InventoryManager : MonoBehaviour
 
     public bool SellItem(Item item)
     {
-        if (HasItem(item))
+        if (RemoveItem(item))
         {
-            inventory[item] -= 1;
             money += item.sellPrice;
             return true;
         }
@@ -116,7 +119,7 @@ public class InventoryManager : MonoBehaviour
         if (item.buyable && money >= item.buyPrice)
         {
             money -= item.buyPrice;
-            inventory[item] += 1;
+            AddItem(item);
             return true;
         }
         return false;

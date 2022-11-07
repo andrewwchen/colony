@@ -18,6 +18,7 @@ public class StructureInstance : MonoBehaviour
 
     private InventoryManager im;
     private PlantManager pm;
+    private bool isWatered = false;
 
     // Start is called before the first frame update
     void Start()
@@ -66,9 +67,29 @@ public class StructureInstance : MonoBehaviour
         }
     }
 
+    public bool CanWaterPlot()
+    {
+        return config.isPlot && !isWatered;
+    }
+
+    public bool WaterPlot()
+    {
+        if (CanWaterPlot())
+        {
+            isWatered = true;
+            return true;
+        }
+        return false;
+    }
+
+    public bool CanSpawnAnimal()
+    {
+        return animals.Count < config.animalLimit;
+    }
+
     public void SpawnAnimal(AnimalData data)
     {
-        if (animals.Count >= config.animalLimit)
+        if (!CanSpawnAnimal())
             return;
 
         Animal animal = AnimalManager.Instance.typeToAnimal[data.type];
@@ -85,15 +106,16 @@ public class StructureInstance : MonoBehaviour
         return config.isPlot && plantGameObject == null;
     }
 
-    public void MakePlant(PlantData data)
+    public bool MakePlant(PlantData data)
     {
         if (!CanPlant())
-            return;
+            return false;
         Plant plant = PlantManager.Instance.typeToPlant[data.type];
         GameObject go = Instantiate(plant.prefab);
         go.transform.position = plantSpawn.position;
         plantGameObject = go;
         plantData = data;
+        return true;
     }
 
     public void ClearPlant()

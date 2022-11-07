@@ -34,6 +34,8 @@ public class StructureManager : MonoBehaviour
     private HashSet<StructureInstance> currentStructures = new HashSet<StructureInstance>();
     // reference to the XRRig;
     private Transform rig;
+    // reference to the Plot type Structure
+    private Structure plotStructure;
 
     private void Awake()
     {
@@ -82,6 +84,9 @@ public class StructureManager : MonoBehaviour
 
         // get reference to XRRig transform
         rig = GameObject.FindGameObjectWithTag("XRRig").transform;
+
+        // get reference to the plot structure
+        plotStructure = typeToStructure[StructureType.Plot];
     }
 
     // gets the row and column number of the tile that contains the specified point
@@ -228,7 +233,7 @@ public class StructureManager : MonoBehaviour
     }
 
     // place the structure at a position if able
-    public void MakePlacement(Structure structure, Vector3 pos, StructureDirection? direction = null, AnimalData[] animals = null, PlantData plant = null)
+    public bool MakePlacement(Structure structure, Vector3 pos, StructureDirection? direction = null, AnimalData[] animals = null, PlantData plant = null)
     {
         Unhover();
         (int row, int col) = GetCell(pos);
@@ -236,7 +241,7 @@ public class StructureManager : MonoBehaviour
         bool canPlace = AreCellsValid(cells);
 
         if (!canPlace)
-            return;
+            return false;
 
         Vector3 center = GetCellsCenter(cells);
 
@@ -249,6 +254,8 @@ public class StructureManager : MonoBehaviour
             occupied.Add(c, si);
 
         currentStructures.Add(si);
+
+        return true;
     }
 
     // produce tile highlights for structure removal
@@ -272,17 +279,17 @@ public class StructureManager : MonoBehaviour
     }
 
     // remove the structure from a position if able
-    public void MakeRemoval(Vector3 pos)
+    public bool MakeRemoval(Vector3 pos)
     {
         Unhover();
         (int, int) cell = GetCell(pos);
         if (!occupied.ContainsKey(cell))
-            return;
+            return false;
 
         StructureInstance si = occupied[cell];
 
         if (!si.CanRemove())
-            return;
+            return false;
 
         foreach ((int, int) c in si.occupied)
             occupied.Remove(c);
@@ -290,6 +297,7 @@ public class StructureManager : MonoBehaviour
         currentStructures.Remove(si);
 
         Destroy(si.gameObject);
+        return true;
     }
 
     // produce tile highlights for seed planting
@@ -313,7 +321,36 @@ public class StructureManager : MonoBehaviour
     }
 
     // plant the plant at the plot if able
-    public void MakePlant(Plant plant, Vector3 pos)
+    public bool MakePlant(Plant plant, Vector3 pos)
+    {
+        Unhover();
+        (int, int) cell = GetCell(pos);
+        if (!occupied.ContainsKey(cell))
+            return false;
+
+        StructureInstance si = occupied[cell];
+
+        if (!si.CanPlant())
+            return false;
+
+        PlantType type = PlantManager.Instance.plantToType[plant];
+
+        PlantData pd = new PlantData(type, 0);
+
+        return si.MakePlant(pd);
+    }
+
+    public void HoverTill(Vector3 pos)
+    {
+        HoverPlacement(plotStructure, pos);
+    }
+
+    public bool MakeTill(Vector3 pos)
+    {
+        return MakePlacement(plotStructure, pos);
+    }
+
+    public void HoverWater(Vector3 pos)
     {
         Unhover();
         (int, int) cell = GetCell(pos);
@@ -322,14 +359,29 @@ public class StructureManager : MonoBehaviour
 
         StructureInstance si = occupied[cell];
 
-        if (!si.CanPlant())
+        if (!si.CanWaterPlot())
             return;
 
-        PlantType type = PlantManager.Instance.plantToType[plant];
+        foreach ((int r, int c) in si.occupied)
+        {
+            highlights[r, c].SetActive(true);
+            highlighted.Add((r, c));
+        }
+    }
 
-        PlantData pd = new PlantData(type, 0);
+    public bool MakeWater(Vector3 pos)
+    {
+        Unhover();
+        (int, int) cell = GetCell(pos);
+        if (!occupied.ContainsKey(cell))
+            return false;
 
-        si.MakePlant(pd);
+        StructureInstance si = occupied[cell];
+
+        if (!si.CanWaterPlot())
+            return false;
+
+        return si.WaterPlot();
     }
 
 
