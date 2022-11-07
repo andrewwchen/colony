@@ -179,6 +179,7 @@ Library: lib_burst_generated
 --root-assembly=/Users/cslabmac/Desktop/colony/Temp/StagingArea/Data/Managed/Unity.RenderPipeline.Universal.ShaderLibrary.dll
 --root-assembly=/Users/cslabmac/Desktop/colony/Temp/StagingArea/Data/Managed/Unity.XR.Interaction.Toolkit.dll
 --root-assembly=/Users/cslabmac/Desktop/colony/Temp/StagingArea/Data/Managed/Unity.Services.Core.Environments.dll
+--root-assembly=/Users/cslabmac/Desktop/colony/Temp/StagingArea/Data/Managed/Assembly-CSharp.dll
 --root-assembly=/Users/cslabmac/Desktop/colony/Temp/StagingArea/Data/Managed/Unity.Services.Core.Internal.dll
 --root-assembly=/Users/cslabmac/Desktop/colony/Temp/StagingArea/Data/Managed/Unity.XR.CoreUtils.dll
 --root-assembly=/Users/cslabmac/Desktop/colony/Temp/StagingArea/Data/Managed/Unity.XR.OpenXR.dll
@@ -186,7 +187,6 @@ Library: lib_burst_generated
 --root-assembly=/Users/cslabmac/Desktop/colony/Temp/StagingArea/Data/Managed/Unity.Mathematics.dll
 --root-assembly=/Users/cslabmac/Desktop/colony/Temp/StagingArea/Data/Managed/Unity.Services.Core.Scheduler.dll
 --root-assembly=/Users/cslabmac/Desktop/colony/Temp/StagingArea/Data/Managed/Unity.Services.Core.Device.dll
---root-assembly=/Users/cslabmac/Desktop/colony/Temp/StagingArea/Data/Managed/Assembly-CSharp.dll
 --root-assembly=/Users/cslabmac/Desktop/colony/Temp/StagingArea/Data/Managed/ControllerSample.dll
 --root-assembly=/Users/cslabmac/Desktop/colony/Temp/StagingArea/Data/Managed/Unity.Services.Core.Analytics.dll
 --root-assembly=/Users/cslabmac/Desktop/colony/Temp/StagingArea/Data/Managed/Unity.Recorder.dll

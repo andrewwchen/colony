@@ -7,22 +7,20 @@ using UnityEngine.XR.Interaction.Toolkit;
 [RequireComponent(typeof(AudioSource))]
 public class UniversalManipulator : MonoBehaviour
 {
-    public Transform teleport_controller;
-    public Transform removing_controller;
-    public Transform planting_controller;
-    public Transform watering_controller;
-    public Transform tilling_controller;
-    public Transform building_controller;
+    public GameObject teleport_controller;
+    public GameObject removing_controller;
+    public GameObject planting_controller;
+    public GameObject watering_controller;
+    public GameObject tilling_controller;
+    public GameObject building_controller;
 
-    public XRBaseController left_hand;
-    public XRBaseController right_hand;
     private AudioSource source;
     private PlayerInputTranslator pit;
 
     [SerializeField] private AudioClip triggerClip;
 
     // the order in which UM modes cycle through. other modes activate when you select an item in the inventory (e.g.: UMMode.Building, UMMode.Planting)
-    private static UMMode[] modeCycle = { UMMode.Removing, UMMode.Tilling, UMMode.Watering };
+    private static UMMode[] modeCycle = { UMMode.Removing, UMMode.Tilling, UMMode.Watering, UMMode.Planting, UMMode.Building};
 
     private UMMode currentMode = modeCycle[0];
     private int currentModeNum = 0;
@@ -32,7 +30,7 @@ public class UniversalManipulator : MonoBehaviour
     {
         source = GetComponent<AudioSource>();
         pit = PlayerInputTranslator.Instance;
-        left_hand.modelPrefab = teleport_controller;
+        
 
         SetMode(currentMode);
 
@@ -88,19 +86,39 @@ public class UniversalManipulator : MonoBehaviour
         switch (mode)
         {
             case UMMode.Building:
-                right_hand.modelPrefab = building_controller;
+                building_controller.SetActive(true);
+                planting_controller.SetActive(false);
+                removing_controller.SetActive(false);
+                tilling_controller.SetActive(false);
+                watering_controller.SetActive(false);
                 break;
             case UMMode.Planting:
-                right_hand.modelPrefab = planting_controller;
+                building_controller.SetActive(false);
+                planting_controller.SetActive(true);
+                removing_controller.SetActive(false);
+                tilling_controller.SetActive(false);
+                watering_controller.SetActive(false);
                 break;
             case UMMode.Removing:
-                right_hand.modelPrefab = removing_controller;
+                building_controller.SetActive(false);
+                planting_controller.SetActive(false);
+                removing_controller.SetActive(true);
+                tilling_controller.SetActive(false);
+                watering_controller.SetActive(false);
                 break;
             case UMMode.Tilling:
-                right_hand.modelPrefab = tilling_controller;
+                building_controller.SetActive(false);
+                planting_controller.SetActive(false);
+                removing_controller.SetActive(false);
+                tilling_controller.SetActive(true);
+                watering_controller.SetActive(false);
                 break;
             case UMMode.Watering:
-                right_hand.modelPrefab = watering_controller;
+                building_controller.SetActive(false);
+                planting_controller.SetActive(false);
+                removing_controller.SetActive(false);
+                tilling_controller.SetActive(false);
+                watering_controller.SetActive(true);
                 break;
         }
     }
