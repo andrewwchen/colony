@@ -2451,10 +2451,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRNodeState_TryGetPosition_mC17C5DFEEA40
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRNodeState_TryGet_m3EC1CBB3B6B823611B82073139949C041CE7C616 (XRNodeState_t683158812A1D80A6BC73DB97405BB0B795A9111A* __this, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___inValue0, int32_t ___availabilityFlag1, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974* ___outValue2, const RuntimeMethod* method) ;
 // System.Boolean UnityEngine.XR.XRNodeState::TryGetRotation(UnityEngine.Quaternion&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRNodeState_TryGetRotation_mA7F9597BE3AFE747BF2F95BF491779520FEF7301 (XRNodeState_t683158812A1D80A6BC73DB97405BB0B795A9111A* __this, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974* ___rotation0, const RuntimeMethod* method) ;
-// System.Boolean UnityEngine.XR.XRNodeState::TryGetAngularVelocity(UnityEngine.Vector3&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRNodeState_TryGetAngularVelocity_mB7C1D0876373441A07815A8CCB1FC05C11729176 (XRNodeState_t683158812A1D80A6BC73DB97405BB0B795A9111A* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___angularVelocity0, const RuntimeMethod* method) ;
-// System.Boolean UnityEngine.XR.XRNodeState::TryGetAngularAcceleration(UnityEngine.Vector3&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRNodeState_TryGetAngularAcceleration_m9D4FF5411CFB801471802F8A084B4333C62F4C04 (XRNodeState_t683158812A1D80A6BC73DB97405BB0B795A9111A* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___angularAcceleration0, const RuntimeMethod* method) ;
 // UnityEngine.Vector3 UnityEngine.Vector3::get_zero()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline (const RuntimeMethod* method) ;
 // UnityEngine.Quaternion UnityEngine.Quaternion::get_identity()
@@ -5302,15 +5298,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool InputDevices_IsDeviceValid_m3A26291DCB77
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// System.Void UnityEngine.XR.InputTracking::Recenter()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InputTracking_Recenter_m1843AECFE9093882149E6B197E6EFEB6151E6C7C (const RuntimeMethod* method) 
-{
-	typedef void (*InputTracking_Recenter_m1843AECFE9093882149E6B197E6EFEB6151E6C7C_ftn) ();
-	static InputTracking_Recenter_m1843AECFE9093882149E6B197E6EFEB6151E6C7C_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (InputTracking_Recenter_m1843AECFE9093882149E6B197E6EFEB6151E6C7C_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.XR.InputTracking::Recenter()");
-	_il2cpp_icall_func();
-}
 // System.Void UnityEngine.XR.InputTracking::GetNodeStates(System.Collections.Generic.List`1<UnityEngine.XR.XRNodeState>)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void InputTracking_GetNodeStates_mA2E8D154A47C817ED74AD42F6B38A9C906A57A67 (List_1_t8AE5A65CCFBC753343962D38B82C801F7BDE3C87* ___nodeStates0, const RuntimeMethod* method) 
 {
@@ -5642,62 +5629,6 @@ IL2CPP_EXTERN_C  bool XRNodeState_TryGetRotation_mA7F9597BE3AFE747BF2F95BF491779
 	_thisAdjusted = reinterpret_cast<XRNodeState_t683158812A1D80A6BC73DB97405BB0B795A9111A*>(__this + _offset);
 	bool _returnValue;
 	_returnValue = XRNodeState_TryGetRotation_mA7F9597BE3AFE747BF2F95BF491779520FEF7301(_thisAdjusted, ___rotation0, method);
-	return _returnValue;
-}
-// System.Boolean UnityEngine.XR.XRNodeState::TryGetAngularVelocity(UnityEngine.Vector3&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRNodeState_TryGetAngularVelocity_mB7C1D0876373441A07815A8CCB1FC05C11729176 (XRNodeState_t683158812A1D80A6BC73DB97405BB0B795A9111A* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___angularVelocity0, const RuntimeMethod* method) 
-{
-	bool V_0 = false;
-	{
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = __this->___m_AngularVelocity_5;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_1 = ___angularVelocity0;
-		bool L_2;
-		L_2 = XRNodeState_TryGet_m6C1D3FC5E773BC5E134F37815FB08839489F5630(__this, L_0, 8, L_1, NULL);
-		V_0 = L_2;
-		goto IL_0012;
-	}
-
-IL_0012:
-	{
-		bool L_3 = V_0;
-		return L_3;
-	}
-}
-IL2CPP_EXTERN_C  bool XRNodeState_TryGetAngularVelocity_mB7C1D0876373441A07815A8CCB1FC05C11729176_AdjustorThunk (RuntimeObject* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___angularVelocity0, const RuntimeMethod* method)
-{
-	XRNodeState_t683158812A1D80A6BC73DB97405BB0B795A9111A* _thisAdjusted;
-	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<XRNodeState_t683158812A1D80A6BC73DB97405BB0B795A9111A*>(__this + _offset);
-	bool _returnValue;
-	_returnValue = XRNodeState_TryGetAngularVelocity_mB7C1D0876373441A07815A8CCB1FC05C11729176(_thisAdjusted, ___angularVelocity0, method);
-	return _returnValue;
-}
-// System.Boolean UnityEngine.XR.XRNodeState::TryGetAngularAcceleration(UnityEngine.Vector3&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRNodeState_TryGetAngularAcceleration_m9D4FF5411CFB801471802F8A084B4333C62F4C04 (XRNodeState_t683158812A1D80A6BC73DB97405BB0B795A9111A* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___angularAcceleration0, const RuntimeMethod* method) 
-{
-	bool V_0 = false;
-	{
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = __this->___m_AngularAcceleration_7;
-		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* L_1 = ___angularAcceleration0;
-		bool L_2;
-		L_2 = XRNodeState_TryGet_m6C1D3FC5E773BC5E134F37815FB08839489F5630(__this, L_0, ((int32_t)32), L_1, NULL);
-		V_0 = L_2;
-		goto IL_0013;
-	}
-
-IL_0013:
-	{
-		bool L_3 = V_0;
-		return L_3;
-	}
-}
-IL2CPP_EXTERN_C  bool XRNodeState_TryGetAngularAcceleration_m9D4FF5411CFB801471802F8A084B4333C62F4C04_AdjustorThunk (RuntimeObject* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* ___angularAcceleration0, const RuntimeMethod* method)
-{
-	XRNodeState_t683158812A1D80A6BC73DB97405BB0B795A9111A* _thisAdjusted;
-	int32_t _offset = 1;
-	_thisAdjusted = reinterpret_cast<XRNodeState_t683158812A1D80A6BC73DB97405BB0B795A9111A*>(__this + _offset);
-	bool _returnValue;
-	_returnValue = XRNodeState_TryGetAngularAcceleration_m9D4FF5411CFB801471802F8A084B4333C62F4C04(_thisAdjusted, ___angularAcceleration0, method);
 	return _returnValue;
 }
 // System.Boolean UnityEngine.XR.XRNodeState::TryGet(UnityEngine.Vector3,UnityEngine.XR.AvailableTrackingData,UnityEngine.Vector3&)
