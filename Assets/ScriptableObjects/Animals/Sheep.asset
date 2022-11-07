@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Sheep
   m_EditorClassIdentifier: 
   type: 2
-  prefab: {fileID: 0}
+  prefab: {fileID: 356521477219086734, guid: c76d7f1830e9d4290a1359b291588a14, type: 3}
   starveDays: 2
   product: {fileID: 11400000, guid: 17e8cd3985841ea49aaf56b04b98b15b, type: 2}

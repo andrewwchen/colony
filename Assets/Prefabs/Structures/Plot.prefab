@@ -130,6 +130,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animalSpawns: []
   plantSpawn: {fileID: 7463680656562196079}
+  dryMaterial: {fileID: 2100000, guid: 0488d9397ef714c38a8dc6c82ba85f85, type: 2}
+  wetMaterial: {fileID: 2100000, guid: 15341f4916caf4a0c9aedc7e86c988cb, type: 2}
   config: {fileID: 0}
   direction: 0
   row: 0

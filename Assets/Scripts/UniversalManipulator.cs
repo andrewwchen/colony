@@ -7,7 +7,6 @@ using UnityEngine.XR.Interaction.Toolkit;
 [RequireComponent(typeof(AudioSource))]
 public class UniversalManipulator : MonoBehaviour
 {
-    public GameObject teleport_controller;
     public GameObject removing_controller;
     public GameObject planting_controller;
     public GameObject watering_controller;
@@ -20,7 +19,7 @@ public class UniversalManipulator : MonoBehaviour
     [SerializeField] private AudioClip triggerClip;
 
     // the order in which UM modes cycle through. other modes activate when you select an item in the inventory (e.g.: UMMode.Building, UMMode.Planting)
-    private static UMMode[] modeCycle = { UMMode.Removing, UMMode.Tilling, UMMode.Watering, UMMode.Planting, UMMode.Building};
+    private static UMMode[] modeCycle = { UMMode.Removing, UMMode.Tilling, UMMode.Watering };
 
     private UMMode currentMode = modeCycle[0];
     private int currentModeNum = 0;
@@ -31,7 +30,6 @@ public class UniversalManipulator : MonoBehaviour
         source = GetComponent<AudioSource>();
         pit = PlayerInputTranslator.Instance;
         
-
         SetMode(currentMode);
 
         // start listeners
@@ -65,7 +63,7 @@ public class UniversalManipulator : MonoBehaviour
         if (modeCycle[currentModeNum] == currentMode)
             currentModeNum = (currentModeNum + 1) % modeCycle.Length;
 
-        // otheriwse, set the mode back to whatever it was before an item was selected in the inventory and a non-cycle mode 
+        // otheriwse, set the mode back to whatever it was before an item was selected in the inventory and a non-cycle mode was set
         SetMode(modeCycle[currentModeNum]);
     }
 
@@ -75,7 +73,7 @@ public class UniversalManipulator : MonoBehaviour
         if (modeCycle[currentModeNum] == currentMode)
             currentModeNum = (currentModeNum + modeCycle.Length - 1) % modeCycle.Length;
 
-        // otheriwse, set the mode back to whatever it was before an item was selected in the inventory and a non-cycle mode 
+        // otheriwse, set the mode back to whatever it was before an item was selected in the inventory and a non-cycle mode was set
         SetMode(modeCycle[currentModeNum]);
     }
 

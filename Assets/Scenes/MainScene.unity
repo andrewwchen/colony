@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.0434877, g: 0.0434877, b: 0.0434877, a: 1}
+  m_IndirectSpecularColor: {r: 0.24815822, g: 0.20614141, b: 0.23423877, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -173,12 +173,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &225398834 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3041424741943175725, guid: ff3496b58899544c9ad4223144bfcec5,
-    type: 3}
-  m_PrefabInstance: {fileID: 7223914800623917839}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &369847317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -248,29 +242,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b088e799c0284c2eb4bbc1a170d2b92, type: 3}
---- !u!1 &470224379 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1726053346266292485, guid: ff3496b58899544c9ad4223144bfcec5,
-    type: 3}
-  m_PrefabInstance: {fileID: 7223914800623917839}
-  m_PrefabAsset: {fileID: 0}
 --- !u!108 &705507994 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 8571625710552491946, guid: e4a44bbd063b2e04b8b951bff4fe76e0,
     type: 3}
   m_PrefabInstance: {fileID: 6714304559222384295}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1035347318 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5200085138288923526, guid: ff3496b58899544c9ad4223144bfcec5,
-    type: 3}
-  m_PrefabInstance: {fileID: 7223914800623917839}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1141374731 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6099087331103593852, guid: ff3496b58899544c9ad4223144bfcec5,
-    type: 3}
-  m_PrefabInstance: {fileID: 7223914800623917839}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1171957765
 PrefabInstance:
@@ -341,18 +317,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65f91b80291604a498240be4ba1a9435, type: 3}
---- !u!1 &1244594881 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5936892792251045045, guid: ff3496b58899544c9ad4223144bfcec5,
-    type: 3}
-  m_PrefabInstance: {fileID: 7223914800623917839}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1852027427 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3094405692577717008, guid: ff3496b58899544c9ad4223144bfcec5,
-    type: 3}
-  m_PrefabInstance: {fileID: 7223914800623917839}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2639342297044619827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -577,60 +541,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1726053346266292485, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2362822908862680385, guid: ff3496b58899544c9ad4223144bfcec5,
         type: 3}
       propertyPath: m_Name
       value: XR
-      objectReference: {fileID: 0}
-    - target: {fileID: 3041424741943175725, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3094405692577717008, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3094405693507223796, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: tilling_controller
-      value: 
-      objectReference: {fileID: 225398834}
-    - target: {fileID: 3094405693507223796, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: building_controller
-      value: 
-      objectReference: {fileID: 470224379}
-    - target: {fileID: 3094405693507223796, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: planting_controller
-      value: 
-      objectReference: {fileID: 1852027427}
-    - target: {fileID: 3094405693507223796, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: removing_controller
-      value: 
-      objectReference: {fileID: 1244594881}
-    - target: {fileID: 3094405693507223796, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: teleport_controller
-      value: 
-      objectReference: {fileID: 1035347318}
-    - target: {fileID: 3094405693507223796, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: watering_controller
-      value: 
-      objectReference: {fileID: 1141374731}
-    - target: {fileID: 3094405693744243467, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_ModelPrefab
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5164820167434120022, guid: ff3496b58899544c9ad4223144bfcec5,
         type: 3}
@@ -687,18 +601,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5936892792251045045, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6099087331103593852, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3094405694086842243, guid: ff3496b58899544c9ad4223144bfcec5, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff3496b58899544c9ad4223144bfcec5, type: 3}
 --- !u!4 &7223914800623917840 stripped
 Transform:

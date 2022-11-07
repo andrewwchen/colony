@@ -6,6 +6,8 @@ public class StructureInstance : MonoBehaviour
 {
     [SerializeField] private Transform[] animalSpawns;
     [SerializeField] private Transform plantSpawn;
+    [SerializeField] private Material dryMaterial;
+    [SerializeField] private Material wetMaterial;
     [HideInInspector] public Structure config;
     [HideInInspector] public StructureDirection direction;
     [HideInInspector] public int row;
@@ -16,8 +18,10 @@ public class StructureInstance : MonoBehaviour
     private GameObject plantGameObject;
     [HideInInspector] public PlantData plantData;
 
+
     private InventoryManager im;
     private PlantManager pm;
+    private Renderer r;
     private bool isWatered = false;
 
     // Start is called before the first frame update
@@ -25,6 +29,8 @@ public class StructureInstance : MonoBehaviour
     {
         im = InventoryManager.Instance;
         pm = PlantManager.Instance;
+        r = GetComponent<Renderer>();
+        UnwaterPlot();
     }
 
     // Update is called once per frame
@@ -77,10 +83,19 @@ public class StructureInstance : MonoBehaviour
         if (CanWaterPlot())
         {
             isWatered = true;
+            r.material = wetMaterial;
             return true;
         }
         return false;
     }
+
+    public void UnwaterPlot()
+    {
+        isWatered = false;
+        r.material = dryMaterial;
+    }
+
+
 
     public bool CanSpawnAnimal()
     {

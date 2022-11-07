@@ -3361,10 +3361,16 @@ MonoBehaviour:
   animalSpawns:
   - {fileID: 8783165156958790972}
   - {fileID: 7785565732838118044}
+  plantSpawn: {fileID: 0}
+  dryMaterial: {fileID: 0}
+  wetMaterial: {fileID: 0}
   config: {fileID: 0}
   direction: 0
   row: 0
   col: 0
+  plantData:
+    type: 0
+    age: 0
 --- !u!1 &9003972520657310794
 GameObject:
   m_ObjectHideFlags: 0
