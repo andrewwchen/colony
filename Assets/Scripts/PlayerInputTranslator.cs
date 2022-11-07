@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Events;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class PlayerInputTranslator : MonoBehaviour
 {
@@ -38,4 +39,6 @@ public class PlayerInputTranslator : MonoBehaviour
         // your logic
         OnRightTriggerPress.Invoke();
     }
+
+    
 }
