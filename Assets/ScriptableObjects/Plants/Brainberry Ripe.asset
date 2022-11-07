@@ -9,17 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25ca50aef15040a4da4a444a7c47cff3, type: 3}
-  m_Name: BrainberryRipe
+  m_Script: {fileID: 11500000, guid: 6292b33a9101f3f4897f1ab99ed9b7c9, type: 3}
+  m_Name: Brainberry Ripe
   m_EditorClassIdentifier: 
-  type: 8
-  prefab: {fileID: 7127090749104569712, guid: 9b0fccbfac9b24485992ca0166e44e4f, type: 3}
-  cols: 1
-  rows: 1
-  isStable: 0
-  animal: {fileID: 0}
-  animalLimit: -1
+  type: 2
+  prefab: {fileID: 7127090749104569712, guid: be58318b714b8c3428c6273be6f9ca8e, type: 3}
   doesGrow: 1
+  needsWater: 0
   growDays: 1
-  nextStage: {fileID: 11400000, guid: 03095c44238c724439ac8aa9932c41a6, type: 2}
+  nextStage: 3
   product: {fileID: 11400000, guid: 1a779473ccd0dfa4c8727f9f3d858e73, type: 2}

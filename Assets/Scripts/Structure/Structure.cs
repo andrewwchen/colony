@@ -17,12 +17,8 @@ public class Structure : ScriptableObject
     public Animal animal;
     // the number of animals this stable can hold
     public int animalLimit;
-    // whether this structure is a plant that grows into another stage
-    public bool doesGrow;
-    // the number of days until this structure grows into its next phase; -1
-    public int growDays;
-    // what this plant grows into
-    public Structure nextStage;
+    // whether this structure is a plot on which plants can be grown
+    public bool isPlot;
     // the item that drops when this structure is destroyed
     public Item product;
 }

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ca50aef15040a4da4a444a7c47cff3, type: 3}
   m_Name: SheepStable
   m_EditorClassIdentifier: 
-  type: 5
+  type: 4
   prefab: {fileID: 8785561675901546141, guid: 291d44cbd86ef40fe9bf7645ea6f5e9e, type: 3}
   cols: 5
   rows: 5

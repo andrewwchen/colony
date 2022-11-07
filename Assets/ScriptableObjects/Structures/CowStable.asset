@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25ca50aef15040a4da4a444a7c47cff3, type: 3}
   m_Name: CowStable
   m_EditorClassIdentifier: 
-  type: 4
+  type: 3
   prefab: {fileID: 7539101902001740194, guid: b2e1cea8b3da5445ea2dfef00075bad3, type: 3}
   cols: 7
   rows: 5

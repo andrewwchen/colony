@@ -14,6 +14,8 @@ public class InventoryManager : MonoBehaviour
     private Dictionary<Item, ItemType> itemToType = new Dictionary<Item, ItemType>();
     // maps items to the amount of that item a player has
     [HideInInspector] public Dictionary<Item, int> inventory = new Dictionary<Item, int>();
+    // the player's current amount of money
+    [HideInInspector] public int money;
 
     private void Awake()
     {
@@ -45,6 +47,9 @@ public class InventoryManager : MonoBehaviour
             ItemData data = itemData[i];
             inventory[typeToItem[data.type]] = data.count;
         }
+
+        // initializing money based on saved data
+        money = DataManager.Instance.gameData.money;
     }
 
     // converts inventory into a serializable format for data saving
@@ -59,5 +64,61 @@ public class InventoryManager : MonoBehaviour
             itemData[i] = new ItemData(type, count);
         }
         return itemData;
+    }
+
+    public void AddItem(Item item)
+    {
+        inventory[item] += 1;
+    }
+
+    public void RemoveItem(Item item)
+    {
+        if (HasItem(item))
+            inventory[item] -= 1;
+    }
+
+    public bool HasItem(Item item)
+    {
+        return inventory[item] > 0;
+    }
+
+    public bool UseItem(Item item)
+    {
+        if (!HasItem(item))
+            return false;
+
+        switch (item.useType)
+        {
+            case ItemUseType.Seed:
+                // Set UM mode to Seeding with this item
+                return true;
+            case ItemUseType.Structure:
+                // Set UM mode to Building with this item
+                return true;
+            default:
+                return false;
+        }
+    }
+
+    public bool SellItem(Item item)
+    {
+        if (HasItem(item))
+        {
+            inventory[item] -= 1;
+            money += item.sellPrice;
+            return true;
+        }
+        return false;
+    }
+
+    public bool BuyItem(Item item)
+    {
+        if (item.buyable && money >= item.buyPrice)
+        {
+            money -= item.buyPrice;
+            inventory[item] += 1;
+            return true;
+        }
+        return false;
     }
 }

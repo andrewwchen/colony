@@ -11,7 +11,7 @@ public class StructureManager : MonoBehaviour
     // a highlight the size of a single tile that is shown or hidden
     [SerializeField] private GameObject highlightPrefab;
     // list of all structures available in the game
-    [SerializeField] public Structure[] structures;
+    public Structure[] structures;
 
     // the number of rows of tiles in the plot
     private static int rows = 64;
@@ -228,7 +228,7 @@ public class StructureManager : MonoBehaviour
     }
 
     // place the structure at a position if able
-    public void MakePlacement(Structure structure, Vector3 pos, StructureDirection? direction = null, AnimalData[] animals = null)
+    public void MakePlacement(Structure structure, Vector3 pos, StructureDirection? direction = null, AnimalData[] animals = null, PlantData plant = null)
     {
         Unhover();
         (int row, int col) = GetCell(pos);
@@ -243,7 +243,7 @@ public class StructureManager : MonoBehaviour
         GameObject go = Instantiate(structure.prefab);
         go.transform.position = center;
         StructureInstance si = go.GetComponent<StructureInstance>();
-        si.Setup(structure, direction ?? GetStructureDirection(), row, col, cells, animals);
+        si.Setup(structure, direction ?? GetStructureDirection(), row, col, cells, animals, plant);
 
         foreach ((int, int) c in cells)
             occupied.Add(c, si);
@@ -260,6 +260,9 @@ public class StructureManager : MonoBehaviour
             return;
 
         StructureInstance si = occupied[cell];
+
+        if (!si.CanRemove())
+            return;
 
         foreach ((int r, int c) in si.occupied)
         {
@@ -278,6 +281,9 @@ public class StructureManager : MonoBehaviour
 
         StructureInstance si = occupied[cell];
 
+        if (!si.CanRemove())
+            return;
+
         foreach ((int, int) c in si.occupied)
             occupied.Remove(c);
 
@@ -285,6 +291,48 @@ public class StructureManager : MonoBehaviour
 
         Destroy(si.gameObject);
     }
+
+    // produce tile highlights for seed planting
+    public void HoverPlant(Vector3 pos)
+    {
+        Unhover();
+        (int, int) cell = GetCell(pos);
+        if (!occupied.ContainsKey(cell))
+            return;
+
+        StructureInstance si = occupied[cell];
+
+        if (!si.CanPlant())
+            return;
+
+        foreach ((int r, int c) in si.occupied)
+        {
+            highlights[r, c].SetActive(true);
+            highlighted.Add((r, c));
+        }
+    }
+
+    // plant the plant at the plot if able
+    public void MakePlant(Plant plant, Vector3 pos)
+    {
+        Unhover();
+        (int, int) cell = GetCell(pos);
+        if (!occupied.ContainsKey(cell))
+            return;
+
+        StructureInstance si = occupied[cell];
+
+        if (!si.CanPlant())
+            return;
+
+        PlantType type = PlantManager.Instance.plantToType[plant];
+
+        PlantData pd = new PlantData(type, 0);
+
+        si.MakePlant(pd);
+    }
+
+
 
     // converts inventory into a serializable format for data saving
     public StructureData[] Serialize()

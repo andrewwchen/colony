@@ -19,6 +19,8 @@ public class Item : ScriptableObject
     public int sellPrice;
     // the way this item is used
     public ItemUseType useType;
-    // the associated plant or structure that can be placed depending on this item's useType
+    // the associated structure that can be placed depending on this item's useType
     public Structure placeable;
+    // the associated plant that can be placed depending on this item's useType
+    public Plant plantable;
 }
