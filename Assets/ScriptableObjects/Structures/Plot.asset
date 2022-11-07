@@ -10,16 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25ca50aef15040a4da4a444a7c47cff3, type: 3}
-  m_Name: Lamp
+  m_Name: Plot
   m_EditorClassIdentifier: 
-  type: 2
-  prefab: {fileID: 7127090749104569712, guid: 9b0fccbfac9b24485992ca0166e44e4f, type: 3}
+  type: 5
+  prefab: {fileID: 8179079380483298059, guid: b16277e3f334f4110991d63a6f7535a6, type: 3}
   cols: 1
   rows: 1
   isStable: 0
   animal: {fileID: 0}
   animalLimit: -1
-  doesGrow: 0
-  growDays: -1
-  nextStage: {fileID: 0}
-  product: {fileID: 11400000, guid: 7668e70b5a4b38e44af6ad1e3d55f3bf, type: 2}
+  isPlot: 1
+  product: {fileID: 0}

@@ -5,17 +5,25 @@ using UnityEngine;
 public class StructureInstance : MonoBehaviour
 {
     [SerializeField] private Transform[] animalSpawns;
+    [SerializeField] private Transform plantSpawn;
     [HideInInspector] public Structure config;
     [HideInInspector] public StructureDirection direction;
     [HideInInspector] public int row;
     [HideInInspector] public int col;
     [HideInInspector] public (int, int)[] occupied;
-    [HideInInspector] public HashSet<AnimalInstance> animals;
+    [HideInInspector] public HashSet<AnimalInstance> animals = new HashSet<AnimalInstance>();
+
+    private GameObject plantGameObject;
+    [HideInInspector] public PlantData plantData;
+
+    private InventoryManager im;
+    private PlantManager pm;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        im = InventoryManager.Instance;
+        pm = PlantManager.Instance;
     }
 
     // Update is called once per frame
@@ -24,7 +32,7 @@ public class StructureInstance : MonoBehaviour
         
     }
 
-    public void Setup(Structure structure, StructureDirection direction, int row, int col, (int, int)[] occupied, AnimalData[] animals)
+    public void Setup(Structure structure, StructureDirection direction, int row, int col, (int, int)[] occupied, AnimalData[] animals, PlantData plant)
     {
         config = structure;
         this.direction = direction;
@@ -38,6 +46,12 @@ public class StructureInstance : MonoBehaviour
                 SpawnAnimal(data);
             }
         }
+
+        if (plant != null)
+        {
+            MakePlant(plant);
+        }
+
         switch (direction)
         {
             case StructureDirection.West:
@@ -54,7 +68,7 @@ public class StructureInstance : MonoBehaviour
 
     public void SpawnAnimal(AnimalData data)
     {
-        if (animals.Count < config.animalLimit)
+        if (animals.Count >= config.animalLimit)
             return;
 
         Animal animal = AnimalManager.Instance.typeToAnimal[data.type];
@@ -63,10 +77,52 @@ public class StructureInstance : MonoBehaviour
         // go.transform.position = animalSpawn.position;
         AnimalInstance ai = go.GetComponent<AnimalInstance>();
         ai.Setup(animal, data.displayName, data.daysUnfed);
+        animals.Add(ai);
     }
 
-    public void SpawnAnimal(AnimalType type)
+    public bool CanPlant()
     {
+        return config.isPlot && plantGameObject == null;
+    }
 
+    public void MakePlant(PlantData data)
+    {
+        if (!CanPlant())
+            return;
+        Plant plant = PlantManager.Instance.typeToPlant[data.type];
+        GameObject go = Instantiate(plant.prefab);
+        go.transform.position = plantSpawn.position;
+        plantGameObject = go;
+        plantData = data;
+    }
+
+    public void ClearPlant()
+    {
+        if (plantGameObject != null)
+        {
+            Destroy(plantGameObject);
+            plantData = null;
+        }
+    }
+
+    public bool CanRemove()
+    {
+        return animals.Count == 0;
+    }
+
+    private void OnDestroy()
+    {
+        if (config.product != null)
+            im.AddItem(config.product);
+
+        if (plantData != null)
+        {
+            Destroy(plantGameObject);
+
+            Plant plant = pm.typeToPlant[plantData.type];
+
+            if (plant.product != null)
+                im.AddItem(plant.product);
+        }
     }
 }

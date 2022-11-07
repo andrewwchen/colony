@@ -22,6 +22,7 @@ public class DesktopRigController : MonoBehaviour
 
     private bool isCreating = false;
     private bool isDeleting = false;
+    private bool isPlanting = false;
 
 
     void Start()
@@ -47,7 +48,8 @@ public class DesktopRigController : MonoBehaviour
 
         RaycastHit hit;
         Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-        Structure s = StructureManager.Instance.structures[num];
+        Structure s = StructureManager.Instance.structures[Mathf.Min(num, StructureManager.Instance.structures.Length - 1)];
+        Plant p = PlantManager.Instance.plants[Mathf.Min(num, PlantManager.Instance.plants.Length-1)];
         if (Keyboard.current.cKey.isPressed)
         {
             if (Physics.Raycast(ray, out hit))
@@ -94,6 +96,31 @@ public class DesktopRigController : MonoBehaviour
                 if (Physics.Raycast(ray, out hit))
                 {
                     StructureManager.Instance.MakeRemoval(hit.point);
+                }
+            }
+        }
+
+        if (Keyboard.current.pKey.isPressed)
+        {
+            if (Physics.Raycast(ray, out hit))
+            {
+                StructureManager.Instance.HoverPlant(hit.point);
+            }
+
+            if (!isPlanting)
+            {
+                isPlanting = true;
+
+            }
+        }
+        else
+        {
+            if (isPlanting)
+            {
+                isPlanting = false;
+                if (Physics.Raycast(ray, out hit))
+                {
+                    StructureManager.Instance.MakePlant(p, hit.point);
                 }
             }
         }

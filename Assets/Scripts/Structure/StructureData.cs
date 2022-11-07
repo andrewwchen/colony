@@ -14,6 +14,8 @@ public class StructureData
     public int col;
     // the animals living in this stable
     public AnimalData[] animals;
+    // the plant living in this plot
+    public PlantData plant;
 
     public StructureData(StructureDirection direction, StructureType type, int row, int col)
     {
@@ -22,6 +24,7 @@ public class StructureData
         this.row = row;
         this.col = col;
     }
+
     public StructureData(StructureInstance si)
     {
         type = si.config.type;
@@ -36,6 +39,7 @@ public class StructureData
             animals[i] = new AnimalData(ai);
             i += 1;
         }
+        plant = si.plantData;
     }
 
     public override string ToString()
