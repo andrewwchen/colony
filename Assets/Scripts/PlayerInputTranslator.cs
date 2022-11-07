@@ -30,6 +30,7 @@ public class PlayerInputTranslator : MonoBehaviour
         if (!ctx.performed) return;
         // your logic
         OnLeftTriggerPress.Invoke();
+        Debug.Log("PIT LEFT");
     }
 
     public void PressRightTrigger(InputAction.CallbackContext ctx)
@@ -38,6 +39,7 @@ public class PlayerInputTranslator : MonoBehaviour
         if (!ctx.performed) return;
         // your logic
         OnRightTriggerPress.Invoke();
+        Debug.Log("PIT RIGHT");
     }
 
     

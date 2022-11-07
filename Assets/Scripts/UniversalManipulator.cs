@@ -30,6 +30,9 @@ public class UniversalManipulator : MonoBehaviour
         left_hand.modelPrefab = teleport_controller;
         right_hand.modelPrefab = grab_controller;
         current_controller = 0;
+
+        PlayerInputTranslator.Instance.OnLeftTriggerPress.AddListener(OnPressLeftTrigger);
+        PlayerInputTranslator.Instance.OnRightTriggerPress.AddListener(OnPressRightTrigger);
     }
 
     // Update is called once per frame
@@ -38,11 +41,16 @@ public class UniversalManipulator : MonoBehaviour
         
     }
 
-    public void OnPressTrigger()
+    public void OnPressLeftTrigger()
     {
         source.clip = triggerClip;
         source.Play();
-        Debug.Log("performed");
+        Debug.Log("performed left");
+    }
+
+    public void OnPressRightTrigger()
+    {
+        Debug.Log("performed right");
         change_controller();
     }
 
