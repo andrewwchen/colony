@@ -21,6 +21,8 @@ public class UniversalManipulator : MonoBehaviour
     private AudioSource source;
     private AudioSource source1;
 
+    public GameObject wristMenu;
+
 
     [SerializeField] private AudioClip triggerClip;
     [SerializeField] private AudioClip triggerClip1;
@@ -37,8 +39,11 @@ public class UniversalManipulator : MonoBehaviour
         right_hand.modelPrefab = grab_controller;
         current_controller = 0;
 
+        wristMenu.SetActive(false);
+
         PlayerInputTranslator.Instance.OnLeftTriggerPress.AddListener(OnPressLeftTrigger);
         PlayerInputTranslator.Instance.OnRightTriggerPress.AddListener(OnPressRightTrigger);
+        PlayerInputTranslator.Instance.OnLeftPrimaryButtonPress.AddListener(OnPressLeftPrimaryButton);
     }
 
     // Update is called once per frame
@@ -60,6 +65,11 @@ public class UniversalManipulator : MonoBehaviour
         source1.Play();
         Debug.Log("performed right");
         change_controller();
+    }
+
+    public void OnPressLeftPrimaryButton()
+    {
+        wristMenu.SetActive(!wristMenu.activeSelf);
     }
 
     void change_controller()

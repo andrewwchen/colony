@@ -12,13 +12,18 @@ public class ShopUIHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mainMenu.SetActive(false);
+        mainMenu.SetActive(true);
         inventoryMenu.SetActive(false);
     }
 
     void LateUpdate()
     {
         gameObject.transform.LookAt(gameObject.transform.position + cam.forward);
+    }
+
+    public void toggleDisplay()
+    {
+        gameObject.SetActive(!gameObject.activeSelf);
     }
 
     public void showMainMenu()

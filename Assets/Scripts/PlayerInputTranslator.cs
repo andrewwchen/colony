@@ -11,6 +11,7 @@ public class PlayerInputTranslator : MonoBehaviour
     public static PlayerInputTranslator Instance;
 
     public UnityEvent OnLeftTriggerPress;
+    public UnityEvent OnLeftPrimaryButtonPress;
     public UnityEvent OnRightTriggerPress;
 
     private void Awake()
@@ -31,6 +32,14 @@ public class PlayerInputTranslator : MonoBehaviour
         // your logic
         OnLeftTriggerPress.Invoke();
         Debug.Log("PIT LEFT");
+    }
+
+    public void PressLeftPrimaryButton(InputAction.CallbackContext ctx)
+    {
+        // Check for the phase, you want to execute buttons logic only on the performed phase
+        if (!ctx.performed) return;
+        // your logic
+        OnLeftPrimaryButtonPress.Invoke();
     }
 
     public void PressRightTrigger(InputAction.CallbackContext ctx)
