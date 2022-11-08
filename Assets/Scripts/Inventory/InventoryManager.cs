@@ -8,7 +8,7 @@ public class InventoryManager : MonoBehaviour
     // singleton instance
     public static InventoryManager Instance;
     // list of all items available in the game
-    [SerializeField] private Item[] items;
+    public Item[] items;
     // maps item types to items
     private Dictionary<ItemType, Item> typeToItem = new Dictionary<ItemType, Item>();
     // maps items to item types
@@ -20,6 +20,7 @@ public class InventoryManager : MonoBehaviour
     // the player's current amount of money
     [HideInInspector] public int money;
     [HideInInspector] public UnityEvent OnMoneyChange;
+    [HideInInspector] public UnityEvent OnInventoryChange;
 
     private void Awake()
     {
@@ -75,6 +76,7 @@ public class InventoryManager : MonoBehaviour
     public void AddItem(Item item)
     {
         inventory[item] += 1;
+        OnInventoryChange?.Invoke();
     }
 
     public bool RemoveItem(Item item)
@@ -82,6 +84,7 @@ public class InventoryManager : MonoBehaviour
         if (HasItem(item))
         {
             inventory[item] -= 1;
+            OnInventoryChange?.Invoke();
             return true;
         }
         return false;

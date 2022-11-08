@@ -15,9 +15,10 @@ MonoBehaviour:
   type: 6
   displayName: Space Sheep Stable
   description: 'A stable for sheltering Space Sheep to place around your farm. '
-  thumbnail: {fileID: 0}
+  thumbnail: {fileID: 21300000, guid: 4a231ba0e81e63849a8f985c228e8acd, type: 3}
   buyable: 1
   buyPrice: 500
   sellPrice: 250
   useType: 1
   placeable: {fileID: 0}
+  plantable: {fileID: 0}

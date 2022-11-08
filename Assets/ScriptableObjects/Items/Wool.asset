@@ -15,9 +15,10 @@ MonoBehaviour:
   type: 8
   displayName: Wool
   description: Sheared wool. A hot commodity.
-  thumbnail: {fileID: 0}
+  thumbnail: {fileID: 21300000, guid: 626b9cddb29049e4cac50cd87b419945, type: 3}
   buyable: 0
   buyPrice: -1
   sellPrice: 70
   useType: 0
   placeable: {fileID: 0}
+  plantable: {fileID: 0}

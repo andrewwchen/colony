@@ -91,8 +91,11 @@ public class StructureInstance : MonoBehaviour
 
     public void UnwaterPlot()
     {
-        isWatered = false;
-        r.material = dryMaterial;
+        if (config.isPlot)
+        {
+            isWatered = false;
+            r.material = dryMaterial;
+        }
     }
 
 

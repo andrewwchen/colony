@@ -2790,6 +2790,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scythe
       objectReference: {fileID: 0}
+    - target: {fileID: 7352881737632020293, guid: 3bc596aa550714bce84916d57f9354f0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bc596aa550714bce84916d57f9354f0, type: 3}
 --- !u!4 &6204847807944684340 stripped

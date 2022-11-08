@@ -15,9 +15,10 @@ MonoBehaviour:
   type: 0
   displayName: Brainberry Bushel
   description: A bushel of brainberries. Sweet and delicious. A hot commodity.
-  thumbnail: {fileID: 0}
+  thumbnail: {fileID: 21300000, guid: e5600378dd761e64d9423790c482bf36, type: 3}
   buyable: 0
   buyPrice: -1
   sellPrice: 100
   useType: 0
   placeable: {fileID: 0}
+  plantable: {fileID: 0}

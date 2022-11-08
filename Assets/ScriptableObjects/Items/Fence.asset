@@ -15,9 +15,10 @@ MonoBehaviour:
   type: 3
   displayName: Fence
   description: A short fence segment to place around your farm.
-  thumbnail: {fileID: 0}
+  thumbnail: {fileID: 21300000, guid: fd098fb4cf57bad419701c802e442b7e, type: 3}
   buyable: 1
   buyPrice: 50
   sellPrice: 25
   useType: 1
   placeable: {fileID: 0}
+  plantable: {fileID: 0}

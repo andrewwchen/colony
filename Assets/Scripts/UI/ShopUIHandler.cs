@@ -78,10 +78,20 @@ public class ShopUIHandler : MonoBehaviour
 
         for (int i = 0; i < slotImgs.Length; i++)
         {
-            Item buyable = im.buyables[page * slotImgs.Length + i];
-            slotImgs[i].sprite = buyable.thumbnail;
             slotButtons[i].onClick.RemoveAllListeners();
-            slotButtons[i].onClick.AddListener(delegate { SelectItem(buyable); });
+            int buyableIndex = page * slotImgs.Length + i;
+            if (buyableIndex < im.buyables.Count)
+            {
+                Item buyable = im.buyables[buyableIndex];
+                slotImgs[i].sprite = buyable.thumbnail;
+                slotImgs[i].gameObject.SetActive(true);
+                slotButtons[i].onClick.AddListener(delegate { SelectItem(buyable); });
+            } else
+            {
+                slotImgs[i].gameObject.SetActive(false);
+            }
+
+
         }
     }
 
@@ -125,6 +135,8 @@ public class ShopUIHandler : MonoBehaviour
             {
                 im.BuyItem(currentItem);
             }
+            quantity = 1;
+            ResetQuantity();
         }
     }
 
