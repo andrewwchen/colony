@@ -1407,6 +1407,7 @@ MonoBehaviour:
   tilling_controller: {fileID: 8151768654048647669}
   building_controller: {fileID: 1726053346266292485}
   triggerClip: {fileID: 8300000, guid: 7ac6c67e10f1aa94d96b765b051587db, type: 3}
+  wristMenu: {fileID: 6616752800337383445}
 --- !u!1 &3094405694086842233
 GameObject:
   m_ObjectHideFlags: 0
@@ -2790,6 +2791,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3094405694097391417}
     m_Modifications:
+    - target: {fileID: 3533588328894210549, guid: c03abdb0ccf3b4232a907285fa9be736,
+        type: 3}
+      propertyPath: m_text
+      value: 00:00
+      objectReference: {fileID: 0}
     - target: {fileID: 4581266524344426875, guid: c03abdb0ccf3b4232a907285fa9be736,
         type: 3}
       propertyPath: m_Pivot.x
@@ -2907,6 +2913,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c03abdb0ccf3b4232a907285fa9be736, type: 3}
+--- !u!114 &6616752800337383445 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4581266524344426873, guid: c03abdb0ccf3b4232a907285fa9be736,
+    type: 3}
+  m_PrefabInstance: {fileID: 7223914801689162092}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da1409c679d8846069060b5a1a19e17d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &6616752800337383447 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4581266524344426875, guid: c03abdb0ccf3b4232a907285fa9be736,
