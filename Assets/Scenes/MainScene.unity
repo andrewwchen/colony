@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.24815822, g: 0.20614141, b: 0.23423877, a: 1}
+  m_IndirectSpecularColor: {r: 0.4824682, g: 0.4700855, b: 0.5179205, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -242,6 +242,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b088e799c0284c2eb4bbc1a170d2b92, type: 3}
+--- !u!114 &656926861 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6616752800337383445, guid: ff3496b58899544c9ad4223144bfcec5,
+    type: 3}
+  m_PrefabInstance: {fileID: 7223914800623917839}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da1409c679d8846069060b5a1a19e17d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!108 &705507994 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 8571625710552491946, guid: e4a44bbd063b2e04b8b951bff4fe76e0,
@@ -329,6 +341,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 7223914800623917841}
+    - target: {fileID: 2599365524097231645, guid: 0ea90bda3792897439e8acf4e3c9f836,
+        type: 3}
+      propertyPath: baldorAnim
+      value: 
+      objectReference: {fileID: 2639342297044619829}
     - target: {fileID: 8066039604836653142, guid: 0ea90bda3792897439e8acf4e3c9f836,
         type: 3}
       propertyPath: m_RootOrder
@@ -391,6 +408,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ea90bda3792897439e8acf4e3c9f836, type: 3}
+--- !u!1 &2639342297044619828 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2527166439216768332, guid: 0ea90bda3792897439e8acf4e3c9f836,
+    type: 3}
+  m_PrefabInstance: {fileID: 2639342297044619827}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2639342297044619829
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2639342297044619828}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f132036bd1f664d7e9d6662d3b08aec6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &6095848494025733731
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -541,6 +584,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR
       objectReference: {fileID: 0}
+    - target: {fileID: 4822689488926800205, guid: ff3496b58899544c9ad4223144bfcec5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5164820167434120022, guid: ff3496b58899544c9ad4223144bfcec5,
         type: 3}
       propertyPath: m_RootOrder
@@ -596,6 +644,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6145535396591358105, guid: ff3496b58899544c9ad4223144bfcec5,
+        type: 3}
+      propertyPath: m_text
+      value: 00:00
+      objectReference: {fileID: 0}
+    - target: {fileID: 7308451811646793591, guid: ff3496b58899544c9ad4223144bfcec5,
+        type: 3}
+      propertyPath: wristMenu
+      value: 
+      objectReference: {fileID: 656926861}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff3496b58899544c9ad4223144bfcec5, type: 3}
 --- !u!20 &7223914800623917841 stripped

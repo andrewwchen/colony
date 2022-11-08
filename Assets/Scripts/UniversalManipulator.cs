@@ -22,6 +22,7 @@ public class UniversalManipulator : MonoBehaviour
     private static float rayDistance = 10f;
 
     [SerializeField] private AudioClip triggerClip;
+    [SerializeField] private MenuUIHandler wristMenu;
 
     // the order in which UM modes cycle through. other modes activate when you select an item in the inventory (e.g.: UMMode.Building, UMMode.Planting)
     private static UMMode[] modeCycle = { UMMode.Removing, UMMode.Tilling, UMMode.Watering };
@@ -54,6 +55,7 @@ public class UniversalManipulator : MonoBehaviour
 
         // start listeners
         pit.OnLeftTriggerPress.AddListener(OnPressLeftTrigger);
+        pit.OnLeftPrimaryButtonPress.AddListener(ToggleWristMenu);
         pit.OnRightTriggerPress.AddListener(Perform);
         pit.OnRightJoystickTiltRight.AddListener(CycleModeForward);
         pit.OnRightJoystickTiltLeft.AddListener(CycleModeBackward);
@@ -146,6 +148,11 @@ public class UniversalManipulator : MonoBehaviour
     {
         source.clip = triggerClip;
         source.Play();
+    }
+
+    private void ToggleWristMenu()
+    {
+        wristMenu.toggleDisplay();
     }
 
     private void CycleModeForward()
