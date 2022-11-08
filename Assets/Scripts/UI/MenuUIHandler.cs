@@ -55,7 +55,7 @@ public class MenuUIHandler : MonoBehaviour
         itemRightButton.onClick.AddListener(AddItem);
         itemSellButton.onClick.AddListener(Sell);
         itemSelectButton.onClick.AddListener(Select);
-        dm.OnEndDay.AddListener(ResetDateText);
+        dm.OnStartDay.AddListener(ResetDateText);
 
         ResetHeldItems();
         ResetCashText();

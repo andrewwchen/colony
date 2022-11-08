@@ -13,6 +13,7 @@ public class DayManager : MonoBehaviour
     public Transform directionalLightPivot;
 
     [HideInInspector] public UnityEvent OnEndDay;
+    [HideInInspector] public UnityEvent OnStartDay;
 
     [HideInInspector] public int time = 0;
 
@@ -68,6 +69,7 @@ public class DayManager : MonoBehaviour
 
     private IEnumerator WhileFaded()
     {
+        OnStartDay?.Invoke();
         yield return new WaitForSeconds(2f);
         fc.OnUnfadeEnd += OnUnfadeEnd;
         fc.StartUnfade();
