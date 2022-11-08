@@ -33,6 +33,7 @@ public class MenuUIHandler : MonoBehaviour
 
     private InventoryManager im;
     private UniversalManipulator um;
+    private DayManager dm;
     private int page = 0;
     private List<Item> heldItems = new List<Item>();
     private int quantity = 1;
@@ -43,6 +44,7 @@ public class MenuUIHandler : MonoBehaviour
     {
         im = InventoryManager.Instance;
         um = UniversalManipulator.Instance;
+        dm = DayManager.Instance;
 
         invLeftButton.onClick.AddListener(LastPage);
         invRightButton.onClick.AddListener(NextPage);
@@ -53,9 +55,11 @@ public class MenuUIHandler : MonoBehaviour
         itemRightButton.onClick.AddListener(AddItem);
         itemSellButton.onClick.AddListener(Sell);
         itemSelectButton.onClick.AddListener(Select);
+        dm.OnEndDay.AddListener(ResetDateText);
 
         ResetHeldItems();
         ResetCashText();
+        ResetDateText();
 
         showMainMenu();
     }
@@ -172,6 +176,12 @@ public class MenuUIHandler : MonoBehaviour
     {
         mmCash.text = im.GetBalance();
     }
+
+    private void ResetDateText()
+    {
+        mmDate.text = "Day " + dm.day;
+    }
+
 
     private void Select()
     {
