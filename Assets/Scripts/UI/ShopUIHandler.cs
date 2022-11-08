@@ -23,6 +23,7 @@ public class ShopUIHandler : MonoBehaviour
     [SerializeField] private Button itemLeft;
     [SerializeField] private Button itemRight;
     [SerializeField] private Button itemBuy;
+    [SerializeField] private Animator baldorAnim;
 
     private InventoryManager im;
     private Transform cam;
@@ -57,6 +58,7 @@ public class ShopUIHandler : MonoBehaviour
         {
             c.text = im.GetBalance();
         }
+        baldorAnim.SetTrigger("Happy");
     }
 
     private void NextPage()
