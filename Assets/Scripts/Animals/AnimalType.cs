@@ -1,6 +1,6 @@
 public enum AnimalType
 {
-    Other,
+    None,
     Cow,
     Sheep
 }

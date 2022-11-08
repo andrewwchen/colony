@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eecb8f6d2b00c014c886e6e794832f15, type: 3}
-  m_Name: SheepStable
+  m_Name: Feed
   m_EditorClassIdentifier: 
-  type: 6
-  displayName: Space Sheep Stable
-  description: 'A stable for sheltering Space Sheep to place around your farm. '
-  thumbnail: {fileID: 21300000, guid: 4a231ba0e81e63849a8f985c228e8acd, type: 3}
+  type: 9
+  displayName: Animal Feed
+  description: Used to feed animals in your stables.
+  thumbnail: {fileID: 21300000, guid: 64eb0648ca0d11944a9517d8662508fd, type: 3}
   buyable: 1
-  buyPrice: 500
-  sellPrice: 250
-  useType: 1
-  placeable: {fileID: 11400000, guid: 894c3b0cf88741d4589955b760dbc897, type: 2}
+  buyPrice: 5
+  sellPrice: 1
+  useType: 0
+  placeable: {fileID: 0}
   plantable: {fileID: 0}

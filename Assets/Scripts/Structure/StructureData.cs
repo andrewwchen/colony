@@ -31,12 +31,12 @@ public class StructureData
         direction = si.direction;
         row = si.row;
         col = si.col;
-        animals = new AnimalData[si.animals.Count];
+        animals = new AnimalData[si.animalMenus.Length];
 
         int i = 0;
-        foreach (AnimalInstance ai in si.animals)
+        foreach (AnimalInstanceMenu aim in si.animalMenus)
         {
-            animals[i] = new AnimalData(ai);
+            animals[i] = aim.data;
             i += 1;
         }
         plant = si.plantData;

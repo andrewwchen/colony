@@ -11,9 +11,9 @@ public class InventoryManager : MonoBehaviour
     // list of all items available in the game
     public Item[] items;
     // maps item types to items
-    private Dictionary<ItemType, Item> typeToItem = new Dictionary<ItemType, Item>();
+    [HideInInspector] public Dictionary<ItemType, Item> typeToItem = new Dictionary<ItemType, Item>();
     // maps items to item types
-    private Dictionary<Item, ItemType> itemToType = new Dictionary<Item, ItemType>();
+    [HideInInspector] public Dictionary<Item, ItemType> itemToType = new Dictionary<Item, ItemType>();
     // list of buyable items
     [HideInInspector] public List<Item> buyables = new List<Item>();
     // maps items to the amount of that item a player has
@@ -140,5 +140,15 @@ public class InventoryManager : MonoBehaviour
     public string GetBalance()
     {
         return Utils.MoneyToString(money);
+    }
+
+    public bool SpendMoney(int amount)
+    {
+        if (money >= amount)
+        {
+            money -= amount;
+            return true;
+        }
+        return false;
     }
 }

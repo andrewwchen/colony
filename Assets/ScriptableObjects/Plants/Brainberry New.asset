@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6292b33a9101f3f4897f1ab99ed9b7c9, type: 3}
   m_Name: Brainberry New
   m_EditorClassIdentifier: 
-  type: 0
+  type: 1
   prefab: {fileID: 1423600104343373607, guid: 450b9eaee52b1439a951e720ee7e4989, type: 3}
   doesGrow: 1
   needsWater: 1
   growDays: 1
-  nextStage: 1
+  nextStage: 2
   product: {fileID: 0}

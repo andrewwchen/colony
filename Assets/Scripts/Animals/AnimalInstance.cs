@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class AnimalInstance : MonoBehaviour
 {
-    [HideInInspector] public Animal config;
-    [HideInInspector] public string displayName;
-    [HideInInspector] public int daysUnfed;
 
     // Start is called before the first frame update
     void Start()
@@ -20,10 +17,5 @@ public class AnimalInstance : MonoBehaviour
 
     }
 
-    public void Setup(Animal animal, string displayName, int daysUnfed)
-    {
-        config = animal;
-        this.displayName = displayName;
-        this.daysUnfed = daysUnfed;
-    }
+
 }

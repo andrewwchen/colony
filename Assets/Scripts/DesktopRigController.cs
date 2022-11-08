@@ -70,7 +70,7 @@ public class DesktopRigController : MonoBehaviour
                 isCreating = false;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    StructureManager.Instance.MakePlacement(s, hit.point);
+                    StructureManager.Instance.MakePlacement(s, hit.point, new AnimalData[0], new PlantData(PlantType.None, 0));
                 }
             }
         }

@@ -7,32 +7,20 @@ public class AnimalData
     // the type of the animal
     public AnimalType type;
 
-    // the name of the animal
-    public string displayName;
-
     // number of days the animal has gone unfed
     public int daysUnfed;
 
-    public AnimalData(AnimalType type, string displayName, int daysUnfed)
+    public AnimalData(AnimalType type, int daysUnfed)
     {
         this.type = type;
-        this.displayName = displayName;
         this.daysUnfed = daysUnfed;
-    }
-
-    public AnimalData(AnimalInstance ai)
-    {
-        type = ai.config.type;
-        displayName = ai.displayName;
-        daysUnfed = ai.daysUnfed;
     }
 
     public override string ToString()
     {
         string s = @"type={0}
-displayName={1}
-daysUnfed={2}";
+daysUnfed={1}";
 
-        return string.Format(s, type, displayName, daysUnfed);
+        return string.Format(s, type, daysUnfed);
     }
 }

@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   prefab: {fileID: 0}
+  buyPrice: 5
   starveDays: 3
   product: {fileID: 11400000, guid: 6c415dde46a6da64aaf8585ae10a4f60, type: 2}

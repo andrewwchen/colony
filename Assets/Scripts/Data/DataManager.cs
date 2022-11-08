@@ -29,16 +29,16 @@ public class DataManager : MonoBehaviour
         // Loading data
         path = Application.persistentDataPath + "/" + filename + ".json";
         gameData = new GameData();
-        // Load();
+        Load();
         
         Debug.Log("LOADING DATA:");
         Debug.Log(string.Format("game data:\n{0}", gameData.ToString()));
         Debug.Log(string.Format("game data path:\n{0}", path));
     }
 
-    public void EndDay(int currentDay, int money, ItemData[] inventory, StructureData[] structures)
+    public void UpdateData(int day, int money, ItemData[] inventory, StructureData[] structures)
     {
-        gameData.day = currentDay + 1;
+        gameData.day = day;
         gameData.money = money;
         gameData.inventory = inventory;
         gameData.structures = structures;

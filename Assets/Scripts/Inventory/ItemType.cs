@@ -9,4 +9,5 @@ public enum ItemType
     SheepStable,
     Milk,
     Wool,
+    Feed,
 }

@@ -30,6 +30,7 @@ public class UniversalManipulator : MonoBehaviour
     private int currentModeNum = 0;
     private Item currentItem;
     private StructureManager sm;
+    private InventoryManager im;
 
     private void Awake()
     {
@@ -47,6 +48,7 @@ public class UniversalManipulator : MonoBehaviour
         source = GetComponent<AudioSource>();
         pit = PlayerInputTranslator.Instance;
         sm = StructureManager.Instance;
+        im = InventoryManager.Instance;
         
         SetMode(currentMode);
 
@@ -63,15 +65,21 @@ public class UniversalManipulator : MonoBehaviour
         switch (currentMode)
         {
             case UMMode.Building:
-                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, rayDistance))
+                if (im.inventory[currentItem] > 0 && Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, rayDistance))
                 {
-                    sm.MakePlacement(currentItem.placeable, hit.point);
+                    if (sm.MakePlacement(currentItem.placeable, hit.point, new AnimalData[0], new PlantData(PlantType.None, 0)))
+                    {
+                        im.RemoveItem(currentItem);
+                    }
                 }
                 break;
             case UMMode.Planting:
-                if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, rayDistance))
+                if (im.inventory[currentItem] > 0 && Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, rayDistance))
                 {
-                    sm.MakePlant(currentItem.plantable, hit.point);
+                    if (sm.MakePlant(currentItem.plantable, hit.point))
+                    {
+                        im.RemoveItem(currentItem);
+                    }
                 }
                 break;
             case UMMode.Removing:

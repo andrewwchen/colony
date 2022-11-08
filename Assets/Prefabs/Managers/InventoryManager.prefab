@@ -54,3 +54,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c4da96d82beda844e8b9c50c31b2ad49, type: 2}
   - {fileID: 11400000, guid: 6c415dde46a6da64aaf8585ae10a4f60, type: 2}
   - {fileID: 11400000, guid: 17e8cd3985841ea49aaf56b04b98b15b, type: 2}
+  - {fileID: 11400000, guid: c9f2d70651a0e5b44bab4aa050aae23c, type: 2}
+  buyables: []
+  money: 0
+  OnMoneyChange:
+    m_PersistentCalls:
+      m_Calls: []
+  OnInventoryChange:
+    m_PersistentCalls:
+      m_Calls: []

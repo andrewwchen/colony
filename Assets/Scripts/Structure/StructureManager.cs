@@ -67,7 +67,7 @@ public class StructureManager : MonoBehaviour
             StructureData data = structureData[i];
             Structure structure = typeToStructure[data.type];
 
-            MakePlacement(structure, GetCellCenter(data.row, data.col), data.direction, data.animals);
+            MakePlacement(structure, GetCellCenter(data.row, data.col), data.animals, data.plant, data.direction);
         }
 
         // initialize the highlights
@@ -234,7 +234,7 @@ public class StructureManager : MonoBehaviour
     }
 
     // place the structure at a position if able
-    public bool MakePlacement(Structure structure, Vector3 pos, StructureDirection? direction = null, AnimalData[] animals = null, PlantData plant = null)
+    public bool MakePlacement(Structure structure, Vector3 pos, AnimalData[] animals, PlantData plant, StructureDirection? direction = null)
     {
         Unhover();
         (int row, int col) = GetCell(pos);
@@ -348,7 +348,7 @@ public class StructureManager : MonoBehaviour
 
     public bool MakeTill(Vector3 pos)
     {
-        return MakePlacement(plotStructure, pos);
+        return MakePlacement(plotStructure, pos, new AnimalData[0], new PlantData(PlantType.None, 0));
     }
 
     public void HoverWater(Vector3 pos)
