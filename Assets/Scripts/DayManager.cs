@@ -19,6 +19,7 @@ public class DayManager : MonoBehaviour
     private DataManager dm;
     private InventoryManager im;
     private StructureManager sm;
+    private FadeController fc;
 
     private void Awake()
     {
@@ -37,6 +38,7 @@ public class DayManager : MonoBehaviour
         im = InventoryManager.Instance;
         sm = StructureManager.Instance;
         day = dm.gameData.day;
+        fc = FadeController.Instance;
     }
 
     // Update is called once per frame
@@ -47,6 +49,13 @@ public class DayManager : MonoBehaviour
 
     public void EndDay()
     {
+        fc.OnFadeEnd += OnFadeEnd;
+        fc.StartFade();
+    }
+
+    private void OnFadeEnd()
+    {
+        fc.OnFadeEnd -= OnFadeEnd;
         OnEndDay.Invoke();
         day += 1;
         int money = im.money;
@@ -54,5 +63,19 @@ public class DayManager : MonoBehaviour
         StructureData[] sd = sm.Serialize();
         dm.UpdateData(day, money, id, sd);
         dm.Save();
+        StartCoroutine(WhileFaded());
+    }
+
+    private IEnumerator WhileFaded()
+    {
+        yield return new WaitForSeconds(2f);
+        fc.OnUnfadeEnd += OnUnfadeEnd;
+        fc.StartUnfade();
+    }
+
+    private void OnUnfadeEnd()
+    {
+        fc.OnUnfadeEnd -= OnUnfadeEnd;
     }
 }
+ 
