@@ -11,7 +11,7 @@ public class DataManager : MonoBehaviour
     // name of json file to load and save data from and to
     private string filename = "game_data";
     // object that stores data to be saved in a serialized format
-    [HideInInspector] public GameData gameData = new GameData();
+    [HideInInspector] public GameData gameData;
     // path where data is stored as a json
     private static string path;
 
@@ -28,6 +28,7 @@ public class DataManager : MonoBehaviour
 
         // Loading data
         path = Application.persistentDataPath + "/" + filename + ".json";
+        gameData = new GameData();
         // Load();
         
         Debug.Log("LOADING DATA:");

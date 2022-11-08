@@ -77,7 +77,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   corner: {fileID: 2679294666101134055}
-  highlightPrefab: {fileID: 6197880164916570700, guid: ac78551c65cea4e598d8de19db8bd3e2,
+  highlightPrefab: {fileID: 7635757363955946722, guid: 98fafeee92e024519b7e5c0f9fada87e,
     type: 3}
   structures:
   - {fileID: 11400000, guid: 9fa7acbd91c9f6449af5219630433efd, type: 2}

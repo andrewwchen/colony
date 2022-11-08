@@ -7,13 +7,21 @@ using UnityEngine;
 public class GameData
 {
     // amount of money the player has
-    public int money = 0;
+    public int money;
     // the current day number the player is on (first day is day 1)
-    public int day = 1;
+    public int day;
     // array of tiles and what structures are placed on them
     [SerializeField] public StructureData[] structures;
     // array of items held in inventory and their amounts
     [SerializeField] public ItemData[] inventory;
+
+    public GameData()
+    {
+        day = 1;
+        money = 400;
+        structures = new StructureData[0];
+        inventory = new ItemData[0];
+    }
 
     public override string ToString()
     {
