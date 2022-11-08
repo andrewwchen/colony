@@ -54,7 +54,7 @@ public class MenuUIHandler : MonoBehaviour
         itemSellButton.onClick.AddListener(Sell);
         itemSelectButton.onClick.AddListener(Select);
 
-        ResetPage();
+        ResetHeldItems();
         ResetCashText();
 
         showMainMenu();
@@ -89,7 +89,7 @@ public class MenuUIHandler : MonoBehaviour
     private void ResetPage()
     {
         invLeftButton.gameObject.SetActive(page > 0);
-        invRightButton.gameObject.SetActive(page < Mathf.CeilToInt(im.buyables.Count / invImgs.Length) - 1);
+        invRightButton.gameObject.SetActive(page < Mathf.CeilToInt((heldItems.Count - 1) / invImgs.Length));
 
         for (int i = 0; i < invImgs.Length; i++)
         {

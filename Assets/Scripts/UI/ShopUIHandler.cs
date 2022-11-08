@@ -73,8 +73,8 @@ public class ShopUIHandler : MonoBehaviour
 
     private void ResetPage()
     {
-        leftButton.gameObject.SetActive(page != 0);
-        rightButton.gameObject.SetActive(page != Mathf.CeilToInt(im.buyables.Count / slotImgs.Length) - 1);
+        leftButton.gameObject.SetActive(page > 0);
+        rightButton.gameObject.SetActive(page <= Mathf.CeilToInt(im.buyables.Count / slotImgs.Length));
 
         for (int i = 0; i < slotImgs.Length; i++)
         {

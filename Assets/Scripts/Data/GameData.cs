@@ -18,7 +18,7 @@ public class GameData
     public GameData()
     {
         day = 1;
-        money = 400;
+        money = 4000;
         structures = new StructureData[0];
         inventory = new ItemData[0];
     }

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[DefaultExecutionOrder(-1)]
 public class StructureManager : MonoBehaviour
 {
     // singleton instance
@@ -32,8 +33,8 @@ public class StructureManager : MonoBehaviour
     private HashSet<(int, int)> highlighted = new HashSet<(int, int)>();
     // keeps track of structures existing in the scene;
     private HashSet<StructureInstance> currentStructures = new HashSet<StructureInstance>();
-    // reference to the XRRig;
-    private Transform rig;
+    // reference to the MainCamera;
+    private Transform cam;
     // reference to the Plot type Structure
     private Structure plotStructure;
 
@@ -82,8 +83,8 @@ public class StructureManager : MonoBehaviour
             }
         }
 
-        // get reference to XRRig transform
-        rig = GameObject.FindGameObjectWithTag("XRRig").transform;
+        // get reference to transform
+        cam = GameObject.FindGameObjectWithTag("MainCamera").transform;
 
         // get reference to the plot structure
         plotStructure = typeToStructure[StructureType.Plot];
@@ -148,11 +149,11 @@ public class StructureManager : MonoBehaviour
     // Gets the direction that a structure should be facing based on the player's orientation
     private StructureDirection GetStructureDirection()
     {
-        if (Vector3.Angle(rig.forward, Vector3.forward) <= 45)
+        if (Vector3.Angle(cam.forward, Vector3.forward) <= 45)
             return StructureDirection.South;
-        else if (Vector3.Angle(rig.forward, Vector3.right) <= 45)
+        else if (Vector3.Angle(cam.forward, Vector3.right) <= 45)
             return StructureDirection.West;
-        else if (Vector3.Angle(rig.forward, -Vector3.forward) <= 45)
+        else if (Vector3.Angle(cam.forward, -Vector3.forward) <= 45)
             return StructureDirection.North;
         else
             return StructureDirection.East;

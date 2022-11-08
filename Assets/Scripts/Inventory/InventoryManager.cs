@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Linq;
 using UnityEngine.Events;
 
+[DefaultExecutionOrder(-1)]
 public class InventoryManager : MonoBehaviour
 {
     // singleton instance
@@ -41,7 +42,7 @@ public class InventoryManager : MonoBehaviour
             Item item = items[i];
             ItemType type = item.type;
             typeToItem.Add(type, item);
-            inventory[item] = 0;
+            inventory[item] = 1;
             itemToType[item] = type;
             if (item.buyable)
                 buyables.Add(item);
