@@ -329,11 +329,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 7223914800623917841}
-    - target: {fileID: 2599365524097231645, guid: 0ea90bda3792897439e8acf4e3c9f836,
-        type: 3}
-      propertyPath: baldorAnim
-      value: 
-      objectReference: {fileID: 2639342297044619829}
     - target: {fileID: 8066039604836653142, guid: 0ea90bda3792897439e8acf4e3c9f836,
         type: 3}
       propertyPath: m_RootOrder
@@ -396,32 +391,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ea90bda3792897439e8acf4e3c9f836, type: 3}
---- !u!1 &2639342297044619828 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2527166439216768332, guid: 0ea90bda3792897439e8acf4e3c9f836,
-    type: 3}
-  m_PrefabInstance: {fileID: 2639342297044619827}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &2639342297044619829
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2639342297044619828}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f132036bd1f664d7e9d6662d3b08aec6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &6095848494025733731
 PrefabInstance:
   m_ObjectHideFlags: 0
