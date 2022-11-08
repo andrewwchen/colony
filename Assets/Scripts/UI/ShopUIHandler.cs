@@ -2,23 +2,136 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class ShopUIHandler : MonoBehaviour
 {
-    public Transform cam;
-    public GameObject mainMenu;
-    public GameObject inventoryMenu;
+
+    [SerializeField] private GameObject mainMenu;
+    [SerializeField] private GameObject inventoryMenu;
+    [SerializeField] private TextMeshProUGUI[] cash;
+    [SerializeField] private Image[] slotImgs;
+    [SerializeField] private Button[] slotButtons;
+    [SerializeField] private Button leftButton;
+    [SerializeField] private Button rightButton;
+    [SerializeField] private TextMeshProUGUI itemName;
+    [SerializeField] private TextMeshProUGUI itemDescription;
+    [SerializeField] private Image itemThumbnail;
+    [SerializeField] private TextMeshProUGUI itemCost;
+    [SerializeField] private TextMeshProUGUI itemTotal;
+    [SerializeField] private TextMeshProUGUI itemQuantity;
+    [SerializeField] private Button itemLeft;
+    [SerializeField] private Button itemRight;
+    [SerializeField] private Button itemBuy;
+
+    private InventoryManager im;
+    private Transform cam;
+    private int page = 0;
+    private int quantity = 1;
+    private Item currentItem;
 
     // Start is called before the first frame update
     void Start()
     {
+        cam = GameObject.FindGameObjectWithTag("MainCamera").transform;
+        im = InventoryManager.Instance;
+
+        leftButton.onClick.AddListener(LastPage);
+        rightButton.onClick.AddListener(NextPage);
+        im.OnMoneyChange.AddListener(ResetCashText);
+        itemLeft.onClick.AddListener(SubtractItem);
+        itemRight.onClick.AddListener(AddItem);
+        itemBuy.onClick.AddListener(Buy);
+
+        ResetPage();
+        ResetCashText();
+
         mainMenu.SetActive(true);
         inventoryMenu.SetActive(false);
+        gameObject.SetActive(false);
+    }
+
+    private void ResetCashText()
+    {
+        foreach (TextMeshProUGUI c in cash)
+        {
+            c.text = im.GetBalance();
+        }
+    }
+
+    private void NextPage()
+    {
+        page += 1;
+        ResetPage();
+    }
+
+    private void LastPage()
+    {
+        page -= 1;
+        ResetPage();
+    }
+
+    private void ResetPage()
+    {
+        leftButton.gameObject.SetActive(page != 0);
+        rightButton.gameObject.SetActive(page != Mathf.CeilToInt(im.buyables.Count / slotImgs.Length) - 1);
+
+        for (int i = 0; i < slotImgs.Length; i++)
+        {
+            Item buyable = im.buyables[page * slotImgs.Length + i];
+            slotImgs[i].sprite = buyable.thumbnail;
+            slotButtons[i].onClick.RemoveAllListeners();
+            slotButtons[i].onClick.AddListener(delegate { SelectItem(buyable); });
+        }
+    }
+
+    private void AddItem()
+    {
+        quantity += 1;
+        ResetQuantity();
+    }
+
+    private void SubtractItem()
+    {
+        quantity -= 1;
+        ResetQuantity();
+    }
+
+    private void SelectItem(Item i)
+    {
+        itemName.text = i.displayName;
+        itemDescription.text = i.description;
+        itemCost.text = Utils.MoneyToString(i.buyPrice);
+        itemThumbnail.sprite = i.thumbnail;
+        quantity = 1;
+        currentItem = i;
+        ResetQuantity();
+
+        showInventoryMenu();
+    }
+
+    private void ResetQuantity()
+    {
+        itemLeft.gameObject.SetActive(quantity != 1);
+        itemQuantity.text = quantity.ToString();
+        itemTotal.text = Utils.MoneyToString(currentItem.buyPrice * quantity);
+    }
+
+    private void Buy()
+    {
+        if (im.money >= currentItem.buyPrice * quantity)
+        {
+            for (int i = 0; i < quantity; i++)
+            {
+                im.BuyItem(currentItem);
+            }
+        }
     }
 
     void LateUpdate()
     {
-        gameObject.transform.LookAt(gameObject.transform.position + cam.forward);
+        transform.LookAt(/*gameObject.transform.position + */ cam.position);
+        transform.Rotate(0f, 180f, 0f);
     }
 
     public void toggleDisplay()

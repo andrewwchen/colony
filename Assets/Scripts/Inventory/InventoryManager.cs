@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.Events;
 
 public class InventoryManager : MonoBehaviour
 {
@@ -12,10 +13,13 @@ public class InventoryManager : MonoBehaviour
     private Dictionary<ItemType, Item> typeToItem = new Dictionary<ItemType, Item>();
     // maps items to item types
     private Dictionary<Item, ItemType> itemToType = new Dictionary<Item, ItemType>();
+    // list of buyable items
+    [HideInInspector] public List<Item> buyables = new List<Item>();
     // maps items to the amount of that item a player has
     [HideInInspector] public Dictionary<Item, int> inventory = new Dictionary<Item, int>();
     // the player's current amount of money
     [HideInInspector] public int money;
+    [HideInInspector] public UnityEvent OnMoneyChange;
 
     private void Awake()
     {
@@ -38,6 +42,8 @@ public class InventoryManager : MonoBehaviour
             typeToItem.Add(type, item);
             inventory[item] = 0;
             itemToType[item] = type;
+            if (item.buyable)
+                buyables.Add(item);
         }
 
         // initializing inventory based on saved data
@@ -109,6 +115,7 @@ public class InventoryManager : MonoBehaviour
         if (RemoveItem(item))
         {
             money += item.sellPrice;
+            OnMoneyChange?.Invoke();
             return true;
         }
         return false;
@@ -120,8 +127,14 @@ public class InventoryManager : MonoBehaviour
         {
             money -= item.buyPrice;
             AddItem(item);
+            OnMoneyChange?.Invoke();
             return true;
         }
         return false;
+    }
+
+    public string GetBalance()
+    {
+        return Utils.MoneyToString(money);
     }
 }

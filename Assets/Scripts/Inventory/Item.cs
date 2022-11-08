@@ -10,7 +10,7 @@ public class Item : ScriptableObject
     // description for the item
     public string description;
     // thumbnail image for the item
-    public Texture2D thumbnail;
+    public Sprite thumbnail;
     // whether this item can be bought in the shop
     public bool buyable;
     // the buy price of the item

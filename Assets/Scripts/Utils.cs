@@ -42,4 +42,9 @@ public class Utils
         }
         return decoded;
     }
+
+    public static string MoneyToString(float money)
+    {
+        return string.Format("{0:N2}", money);
+    }
 }
