@@ -188,6 +188,11 @@ public class MenuUIHandler : MonoBehaviour
         }
     }
 
+    public void toggleDisplay()
+    {
+        gameObject.SetActive(!gameObject.activeSelf);
+    }
+
     public void showMainMenu()
     {
         mainMenu.SetActive(true);

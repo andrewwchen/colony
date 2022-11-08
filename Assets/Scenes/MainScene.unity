@@ -242,6 +242,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b088e799c0284c2eb4bbc1a170d2b92, type: 3}
+--- !u!114 &656926861 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6616752800337383445, guid: ff3496b58899544c9ad4223144bfcec5,
+    type: 3}
+  m_PrefabInstance: {fileID: 7223914800623917839}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da1409c679d8846069060b5a1a19e17d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!108 &705507994 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 8571625710552491946, guid: e4a44bbd063b2e04b8b951bff4fe76e0,
@@ -627,6 +639,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7308451811646793591, guid: ff3496b58899544c9ad4223144bfcec5,
+        type: 3}
+      propertyPath: wristMenu
+      value: 
+      objectReference: {fileID: 656926861}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff3496b58899544c9ad4223144bfcec5, type: 3}
 --- !u!20 &7223914800623917841 stripped
