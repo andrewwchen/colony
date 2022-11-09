@@ -646,6 +646,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7308451811646793591, guid: ff3496b58899544c9ad4223144bfcec5,
         type: 3}
+      propertyPath: closeClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5a3251f6de495c145b1771b5fc222bf9, type: 3}
+    - target: {fileID: 7308451811646793591, guid: ff3496b58899544c9ad4223144bfcec5,
+        type: 3}
       propertyPath: errorClip
       value: 
       objectReference: {fileID: 8300000, guid: fb4473c2747114be08a81111c0f308c3, type: 3}
@@ -676,6 +681,11 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 15d9c51cd0c6f4244ac0244d4bdff5f6, type: 3}
     - target: {fileID: 7308451811646793591, guid: ff3496b58899544c9ad4223144bfcec5,
         type: 3}
+      propertyPath: rechargeClip
+      value: 
+      objectReference: {fileID: 8300000, guid: eb4b92cc1d2da46dba49ded5dcab1664, type: 3}
+    - target: {fileID: 7308451811646793591, guid: ff3496b58899544c9ad4223144bfcec5,
+        type: 3}
       propertyPath: removingClip
       value: 
       objectReference: {fileID: 8300000, guid: 96f1a888d1a6fb548b538a9d095f3e67, type: 3}
@@ -684,6 +694,11 @@ PrefabInstance:
       propertyPath: wateringClip
       value: 
       objectReference: {fileID: 8300000, guid: 1fd202d8702084d23935076ba5245c6e, type: 3}
+    - target: {fileID: 7308451811646793591, guid: ff3496b58899544c9ad4223144bfcec5,
+        type: 3}
+      propertyPath: wristMenuClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 69f90c8fc6b4f4425bc8384674eb2ce8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff3496b58899544c9ad4223144bfcec5, type: 3}
 --- !u!20 &7223914800623917841 stripped

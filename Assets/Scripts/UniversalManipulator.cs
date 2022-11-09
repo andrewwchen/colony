@@ -35,6 +35,9 @@ public class UniversalManipulator : MonoBehaviour
     [SerializeField] private AudioClip removingClip;
     [SerializeField] private AudioClip tillingClip;
     [SerializeField] private AudioClip wateringClip;
+    [SerializeField] private AudioClip rechargeClip;
+    [SerializeField] private AudioClip wristMenuClip;
+    [SerializeField] private AudioClip closeClip;
     [SerializeField] private MenuUIHandler wristMenu;
 
     // the order in which UM modes cycle through. other modes activate when you select an item in the inventory (e.g.: UMMode.Building, UMMode.Planting)
@@ -199,6 +202,7 @@ public class UniversalManipulator : MonoBehaviour
 
     private void ToggleWristMenu()
     {
+        PlaySound(wristMenu.gameObject.activeSelf ? closeClip : wristMenuClip);
         wristMenu.toggleDisplay();
     }
 
@@ -276,6 +280,7 @@ public class UniversalManipulator : MonoBehaviour
 
     public void resetEnergy()
     {
+        PlaySound(rechargeClip);
         umEnergy = 100f;
         OnUMPerform?.Invoke();
     }
