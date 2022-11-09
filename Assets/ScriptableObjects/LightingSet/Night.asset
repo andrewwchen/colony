@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01698e97dbc7f0b4f86be17e5ab64335, type: 3}
+  m_Name: Night
+  m_EditorClassIdentifier: 
+  skyboxMat: {fileID: 2100000, guid: 1479775baea98a841a30a72b254ddd2b, type: 2}
+  mainLight: {fileID: 6367799687628623550, guid: 54130bbdbef49e94e9a5e4e03883e76f,
+    type: 3}
+  lightmapColor: {fileID: 2800000, guid: 37d783cff7d637945ba1e3f1025c26ac, type: 3}
+  lightmapDir: {fileID: 2800000, guid: 5a7a731c52c033a48850286278238387, type: 3}

@@ -130,7 +130,6 @@ public class StructureInstance : MonoBehaviour
     private void SetPlant(PlantData data)
     {
         Plant plant = PlantManager.Instance.typeToPlant[data.type];
-        Debug.Log(data.type);
         GameObject go = Instantiate(plant.prefab);
         go.transform.position = plantSpawn.position;
         plantGameObject = go;
