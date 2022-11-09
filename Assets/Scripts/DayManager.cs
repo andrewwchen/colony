@@ -26,6 +26,7 @@ public class DayManager : MonoBehaviour
     private DataManager dm;
     private InventoryManager im;
     private StructureManager sm;
+    private UniversalManipulator um;
     private FadeController fc;
     private Dictionary<string, LightingSet> idToLightingSet;
     private Dictionary<string, GameObject> idToLight = new Dictionary<string, GameObject>();
@@ -50,6 +51,7 @@ public class DayManager : MonoBehaviour
         dm = DataManager.Instance;
         im = InventoryManager.Instance;
         sm = StructureManager.Instance;
+        um = UniversalManipulator.Instance;
         day = dm.gameData.day;
         fc = FadeController.Instance;
         idToLightingSet = Utils.Zip(lightingSetIds, lightingSets);
@@ -130,6 +132,7 @@ public class DayManager : MonoBehaviour
         fc.OnFadeEnd -= OnFadeEnd;
         OnEndDay.Invoke();
         day += 1;
+        um.resetEnergy();
         int money = im.money;
         ItemData[] id = im.Serialize();
         StructureData[] sd = sm.Serialize();

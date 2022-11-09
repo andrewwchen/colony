@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17156525, g: 0.08505257, b: 0.2111014, a: 1}
+  m_IndirectSpecularColor: {r: 0.451133, g: 0.3228234, b: 0.49681103, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -311,6 +311,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 65f91b80291604a498240be4ba1a9435, type: 3}
+--- !u!1 &1186101868 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6616752798912808106, guid: ff3496b58899544c9ad4223144bfcec5,
+    type: 3}
+  m_PrefabInstance: {fileID: 7223914800623917839}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1186101872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186101868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f60ea5a9a3f094431bd315fc20490576, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2639342297044619827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -530,6 +548,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 670255967309872795, guid: ff3496b58899544c9ad4223144bfcec5,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 670255967309872795, guid: ff3496b58899544c9ad4223144bfcec5,
+        type: 3}
+      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2362822908862680385, guid: ff3496b58899544c9ad4223144bfcec5,
         type: 3}
       propertyPath: m_Name
@@ -590,6 +618,72 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6616752798912808104, guid: ff3496b58899544c9ad4223144bfcec5,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6c7156d7b6c914059925adb3ebb1baa8,
+        type: 3}
+    - target: {fileID: 6616752798912808104, guid: ff3496b58899544c9ad4223144bfcec5,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.5921569
+      objectReference: {fileID: 0}
+    - target: {fileID: 6616752798912808104, guid: ff3496b58899544c9ad4223144bfcec5,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.9411765
+      objectReference: {fileID: 0}
+    - target: {fileID: 6616752798912808104, guid: ff3496b58899544c9ad4223144bfcec5,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.21176471
+      objectReference: {fileID: 0}
+    - target: {fileID: 6616752798912808104, guid: ff3496b58899544c9ad4223144bfcec5,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7308451811646793591, guid: ff3496b58899544c9ad4223144bfcec5,
+        type: 3}
+      propertyPath: errorClip
+      value: 
+      objectReference: {fileID: 8300000, guid: fb4473c2747114be08a81111c0f308c3, type: 3}
+    - target: {fileID: 7308451811646793591, guid: ff3496b58899544c9ad4223144bfcec5,
+        type: 3}
+      propertyPath: hoverClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 8d433d5ab0d075d4488af2c054070888, type: 3}
+    - target: {fileID: 7308451811646793591, guid: ff3496b58899544c9ad4223144bfcec5,
+        type: 3}
+      propertyPath: switchClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 96680aa18ccd14b31872529575a65854, type: 3}
+    - target: {fileID: 7308451811646793591, guid: ff3496b58899544c9ad4223144bfcec5,
+        type: 3}
+      propertyPath: tillingClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a1ef63ad946004f9bb4b66b620a8df99, type: 3}
+    - target: {fileID: 7308451811646793591, guid: ff3496b58899544c9ad4223144bfcec5,
+        type: 3}
+      propertyPath: buildingClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 215242095aa4b456bac373177ffe4237, type: 3}
+    - target: {fileID: 7308451811646793591, guid: ff3496b58899544c9ad4223144bfcec5,
+        type: 3}
+      propertyPath: plantingClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 15d9c51cd0c6f4244ac0244d4bdff5f6, type: 3}
+    - target: {fileID: 7308451811646793591, guid: ff3496b58899544c9ad4223144bfcec5,
+        type: 3}
+      propertyPath: removingClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 96f1a888d1a6fb548b538a9d095f3e67, type: 3}
+    - target: {fileID: 7308451811646793591, guid: ff3496b58899544c9ad4223144bfcec5,
+        type: 3}
+      propertyPath: wateringClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1fd202d8702084d23935076ba5245c6e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff3496b58899544c9ad4223144bfcec5, type: 3}
 --- !u!20 &7223914800623917841 stripped
