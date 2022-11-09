@@ -170,9 +170,6 @@ public class FadeController : MonoBehaviour
     private void UpdateOpacity(float opacity)
     {
         if (overlayRenderer)
-        {
-            Debug.Log(opacity);
             overlayRenderer.material.color = new Color(fadeColor.r, fadeColor.g, fadeColor.b, opacity);
-        }
     }
 }
