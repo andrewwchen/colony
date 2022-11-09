@@ -18,7 +18,7 @@ public class DayManager : MonoBehaviour
     [HideInInspector] public UnityEvent OnTimeChange;
     [HideInInspector] public int time = 0; // time in in-game minutes since the day began
 
-    private static float realSecondsPerGameMinute = 0.5f;
+    private static float realSecondsPerGameMinute = .01f;//0.5f;
     private static int wakeHour = 6;
     private static int duskHour = 18;
     private static int sleepHour = 22;
@@ -88,6 +88,10 @@ public class DayManager : MonoBehaviour
         float realSeconds = Time.time - dayStartTime;
         float gameMinutes = realSeconds / realSecondsPerGameMinute;
         int newTime = Mathf.Clamp(Mathf.FloorToInt(gameMinutes), 0, (sleepHour - wakeHour) * 60);
+        if (dayEnded)
+        {
+            newTime = (sleepHour - wakeHour) * 60;
+        }
         if (newTime != time)
         {
             time = newTime;
@@ -106,7 +110,11 @@ public class DayManager : MonoBehaviour
     private void UseLightingSet(string id)
     {
         if (currentLightingSetId != null)
+        {
+            if (currentLightingSetId == id)
+                return;
             idToLight[currentLightingSetId].SetActive(false);
+        }
 
         currentLightingSetId = id;
         GameObject currentLight = idToLight[id];
@@ -122,6 +130,7 @@ public class DayManager : MonoBehaviour
         if (!dayEnded)
         {
             dayEnded = true;
+            SetTime();
             fc.OnFadeEnd += OnFadeEnd;
             fc.StartFade();
         }
