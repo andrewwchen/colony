@@ -16,11 +16,11 @@ public class DayManager : MonoBehaviour
     [HideInInspector] public UnityEvent OnEndDay;
     [HideInInspector] public UnityEvent OnStartDay;
     [HideInInspector] public UnityEvent OnTimeChange;
-    [HideInInspector] public int time = 0; // time in minutes
+    [HideInInspector] public int time = 0; // time in in-game minutes since the day began
 
-    private static float realSecondsPerGameMinute = 0.1f;
+    private static float realSecondsPerGameMinute = 0.5f;
     private static int wakeHour = 6;
-    private static int duskHour = 21;
+    private static int duskHour = 18;
     private static int sleepHour = 22;
 
     private DataManager dm;
@@ -29,9 +29,10 @@ public class DayManager : MonoBehaviour
     private FadeController fc;
     private Dictionary<string, LightingSet> idToLightingSet;
     private Dictionary<string, GameObject> idToLight = new Dictionary<string, GameObject>();
-    private GameObject currentLight;
     private Dictionary<string, LightmapData> idToLightmap = new Dictionary<string, LightmapData>();
     private float dayStartTime;
+    private string currentLightingSetId;
+    private bool dayEnded = false;
 
     private void Awake()
     {
@@ -71,24 +72,42 @@ public class DayManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        SetTime();
+        if (currentLightingSetId == "day" && time > (duskHour - wakeHour) * 60)
+        {
+            UseLightingSet("night");
+        } else if (time >= (sleepHour - wakeHour) * 60) {
+            EndDay();
+        }
     }
 
     private void SetTime()
     {
-        float realSeconds = dayStartTime - Time.time;
+        float realSeconds = Time.time - dayStartTime;
         float gameMinutes = realSeconds / realSecondsPerGameMinute;
-        int newTime = Mathf.FloorToInt(gameMinutes);
+        int newTime = Mathf.Clamp(Mathf.FloorToInt(gameMinutes), 0, (sleepHour - wakeHour) * 60);
         if (newTime != time)
         {
             time = newTime;
+            OnTimeChange?.Invoke();
         }
+    }
+
+    public string GetDisplayTime()
+    {
+        int gameMinutes = wakeHour * 60 + time;
+        int gameHours = Mathf.FloorToInt(gameMinutes / 60f);
+        int gameMinutesRemainder = Mathf.FloorToInt(gameMinutes % 60f);
+        return string.Format("{0:D2}:{1:D2}", gameHours, gameMinutesRemainder);
     }
 
     private void UseLightingSet(string id)
     {
-        if (currentLight != null)
-            currentLight.SetActive(false);
-        currentLight = idToLight[id];
+        if (currentLightingSetId != null)
+            idToLight[currentLightingSetId].SetActive(false);
+
+        currentLightingSetId = id;
+        GameObject currentLight = idToLight[id];
         currentLight.SetActive(true);
         LightingSet lightingSet = idToLightingSet[id];
         RenderSettings.skybox = lightingSet.skyboxMat;
@@ -98,9 +117,12 @@ public class DayManager : MonoBehaviour
 
     public void EndDay()
     {
-        UseLightingSet("night");
-        fc.OnFadeEnd += OnFadeEnd;
-        fc.StartFade();
+        if (!dayEnded)
+        {
+            dayEnded = true;
+            fc.OnFadeEnd += OnFadeEnd;
+            fc.StartFade();
+        }
     }
 
     private void OnFadeEnd()
@@ -120,9 +142,11 @@ public class DayManager : MonoBehaviour
     {
         OnStartDay?.Invoke();
         yield return new WaitForSeconds(2f);
+        dayStartTime = Time.time;
+        UseLightingSet("day");
+        dayEnded = false;
         fc.OnUnfadeEnd += OnUnfadeEnd;
         fc.StartUnfade();
-        dayStartTime = Time.time;
     }
 
     private void OnUnfadeEnd()

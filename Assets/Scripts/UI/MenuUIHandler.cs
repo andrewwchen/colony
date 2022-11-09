@@ -56,10 +56,12 @@ public class MenuUIHandler : MonoBehaviour
         itemSellButton.onClick.AddListener(Sell);
         itemSelectButton.onClick.AddListener(Select);
         dm.OnStartDay.AddListener(ResetDateText);
+        dm.OnTimeChange.AddListener(ResetTimeText);
 
         ResetHeldItems();
         ResetCashText();
         ResetDateText();
+        ResetTimeText();
 
         showMainMenu();
     }
@@ -180,6 +182,11 @@ public class MenuUIHandler : MonoBehaviour
     private void ResetDateText()
     {
         mmDate.text = "Day " + dm.day;
+    }
+
+    private void ResetTimeText()
+    {
+        mmTime.text = dm.GetDisplayTime();
     }
 
 
