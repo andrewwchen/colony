@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(AudioSource))]
 public class UniversalManipulator : MonoBehaviour
@@ -16,12 +17,27 @@ public class UniversalManipulator : MonoBehaviour
     public GameObject tilling_controller;
     public GameObject building_controller;
 
+    public float umEnergy = 100f;
+    private static float plantingEnergyCost = 5f; // change these later to what we want
+    private static float tillingEnergyCost = 5f;
+    private static float wateringEnergyCost = 7f;
+
     private AudioSource source;
     private PlayerInputTranslator pit;
 
     private static float rayDistance = 10f;
 
     [SerializeField] private AudioClip triggerClip;
+    [SerializeField] private AudioClip errorClip;
+    [SerializeField] private AudioClip switchClip;
+    [SerializeField] private AudioClip buildingClip;
+    [SerializeField] private AudioClip plantingClip;
+    [SerializeField] private AudioClip removingClip;
+    [SerializeField] private AudioClip tillingClip;
+    [SerializeField] private AudioClip wateringClip;
+    [SerializeField] private AudioClip rechargeClip;
+    [SerializeField] private AudioClip wristMenuClip;
+    [SerializeField] private AudioClip closeClip;
     [SerializeField] private MenuUIHandler wristMenu;
 
     // the order in which UM modes cycle through. other modes activate when you select an item in the inventory (e.g.: UMMode.Building, UMMode.Planting)
@@ -32,6 +48,8 @@ public class UniversalManipulator : MonoBehaviour
     private Item currentItem;
     private StructureManager sm;
     private InventoryManager im;
+
+    [HideInInspector] public UnityEvent OnUMPerform;
 
     private void Awake()
     {
@@ -71,36 +89,63 @@ public class UniversalManipulator : MonoBehaviour
                 {
                     if (sm.MakePlacement(currentItem.placeable, hit.point, new AnimalData[0], new PlantData(PlantType.None, 0)))
                     {
+                        PlaySound(buildingClip);
                         im.RemoveItem(currentItem);
+                        return;
                     }
                 }
+                PlaySound(errorClip);
                 break;
             case UMMode.Planting:
                 if (im.inventory[currentItem] > 0 && Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, rayDistance))
                 {
-                    if (sm.MakePlant(currentItem.plantable, hit.point))
+                    if (umEnergy > plantingEnergyCost && sm.MakePlant(currentItem.plantable, hit.point))
                     {
+                        PlaySound(plantingClip);
                         im.RemoveItem(currentItem);
+                        umEnergy -= plantingEnergyCost;
+                        OnUMPerform?.Invoke();
+                        return;
                     }
                 }
+                PlaySound(errorClip);
                 break;
             case UMMode.Removing:
                 if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, rayDistance))
                 {
-                    sm.MakeRemoval(hit.point);
+                    if (sm.MakeRemoval(hit.point))
+                    {
+                        PlaySound(removingClip);
+                        return;
+                    }
                 }
+                PlaySound(errorClip);
                 break;
             case UMMode.Tilling:
                 if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, rayDistance))
                 {
-                    sm.MakeTill(hit.point);
+                    if (umEnergy > tillingEnergyCost && sm.MakeTill(hit.point))
+                    {
+                        PlaySound(tillingClip);
+                        umEnergy -= tillingEnergyCost;
+                        OnUMPerform?.Invoke();
+                        return;
+                    }
                 }
+                PlaySound(errorClip);
                 break;
             case UMMode.Watering:
                 if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, rayDistance))
                 {
-                    sm.MakeWater(hit.point);
+                    if (umEnergy > wateringEnergyCost && sm.MakeWater(hit.point))
+                    {
+                        PlaySound(wateringClip);
+                        umEnergy -= wateringEnergyCost;
+                        OnUMPerform?.Invoke();
+                        return;
+                    }
                 }
+                PlaySound(errorClip);
                 break;
         }
     }
@@ -144,14 +189,20 @@ public class UniversalManipulator : MonoBehaviour
         }
     }
 
+    private void PlaySound(AudioClip c)
+    {
+        source.clip = c;
+        source.Play();
+    }
+
     public void OnPressLeftTrigger()
     {
-        source.clip = triggerClip;
-        source.Play();
+        PlaySound(triggerClip);
     }
 
     private void ToggleWristMenu()
     {
+        PlaySound(wristMenu.gameObject.activeSelf ? closeClip : wristMenuClip);
         wristMenu.toggleDisplay();
     }
 
@@ -163,6 +214,7 @@ public class UniversalManipulator : MonoBehaviour
 
         // otheriwse, set the mode back to whatever it was before an item was selected in the inventory and a non-cycle mode was set
         SetMode(modeCycle[currentModeNum]);
+        PlaySound(switchClip);
     }
 
     private void CycleModeBackward()
@@ -173,6 +225,7 @@ public class UniversalManipulator : MonoBehaviour
 
         // otheriwse, set the mode back to whatever it was before an item was selected in the inventory and a non-cycle mode was set
         SetMode(modeCycle[currentModeNum]);
+        PlaySound(switchClip);
     }
 
     public void SetMode(UMMode mode, Item item = null)
@@ -223,5 +276,12 @@ public class UniversalManipulator : MonoBehaviour
                 watering_controller.SetActive(true);
                 break;
         }
+    }
+
+    public void resetEnergy()
+    {
+        PlaySound(rechargeClip);
+        umEnergy = 100f;
+        OnUMPerform?.Invoke();
     }
 }

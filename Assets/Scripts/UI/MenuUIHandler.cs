@@ -28,8 +28,9 @@ public class MenuUIHandler : MonoBehaviour
     [SerializeField] private Button itemLeftButton;
     [SerializeField] private Button itemRightButton;
     [SerializeField] private Button itemSellButton;
-
     [SerializeField] private Button itemSelectButton;
+
+    [SerializeField] private AudioClip hoverClip;
 
     private InventoryManager im;
     private UniversalManipulator um;
@@ -38,6 +39,7 @@ public class MenuUIHandler : MonoBehaviour
     private List<Item> heldItems = new List<Item>();
     private int quantity = 1;
     private Item currentItem;
+    private AudioSource source;
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +47,8 @@ public class MenuUIHandler : MonoBehaviour
         im = InventoryManager.Instance;
         um = UniversalManipulator.Instance;
         dm = DayManager.Instance;
+
+        source = GetComponent<AudioSource>();
 
         invLeftButton.onClick.AddListener(LastPage);
         invRightButton.onClick.AddListener(NextPage);
@@ -65,6 +69,24 @@ public class MenuUIHandler : MonoBehaviour
 
         showMainMenu();
     }
+
+    private void PlaySound(AudioClip c)
+    {
+        source.clip = c;
+        source.Play();
+    }
+
+    public void HoverButton(Image i)
+    {
+        i.color = new Color32(0, 0, 0, 255);
+        PlaySound(hoverClip);
+    }
+
+    public void UnhoverButton(Image i)
+    {
+        i.color = new Color32(255, 255, 255, 255);
+    }
+
 
     private void NextPage()
     {
