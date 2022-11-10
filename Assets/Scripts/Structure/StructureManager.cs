@@ -15,9 +15,9 @@ public class StructureManager : MonoBehaviour
     public Structure[] structures;
 
     // the number of rows of tiles in the plot
-    private static int rows = 64;
+    private static int rows = 32;
     // the number of columns of tiles in the plot
-    private static int cols = 64;
+    private static int cols = 32;
     // the length and width of one tile
     private static float tileSize = .5f;
 
