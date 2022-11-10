@@ -9,7 +9,6 @@ public class DayManager : MonoBehaviour
     // singleton instance
     public static DayManager Instance;
 
-    [SerializeField] private string[] lightingSetIds;
     [SerializeField] private LightingSet[] lightingSets;
 
     [HideInInspector] public int day;
@@ -18,22 +17,24 @@ public class DayManager : MonoBehaviour
     [HideInInspector] public UnityEvent OnTimeChange;
     [HideInInspector] public int time = 0; // time in in-game minutes since the day began
 
-    private static float realSecondsPerGameMinute = .01f;//0.5f;
+    private static float realSecondsPerGameMinute = 0.5f;
     private static int wakeHour = 6;
     private static int duskHour = 18;
     private static int sleepHour = 22;
+    private static float realSecondsPerLightSwap = 1f;
 
     private DataManager dm;
     private InventoryManager im;
     private StructureManager sm;
     private UniversalManipulator um;
     private FadeController fc;
-    private Dictionary<string, LightingSet> idToLightingSet;
-    private Dictionary<string, GameObject> idToLight = new Dictionary<string, GameObject>();
-    private Dictionary<string, LightmapData> idToLightmap = new Dictionary<string, LightmapData>();
+    private Dictionary<string, LightingSet> idToLightingSet = new Dictionary<string, LightingSet>();
+    private Dictionary<string, LightmapData[]> idToLightmap = new Dictionary<string, LightmapData[]>();
     private float dayStartTime;
-    private string currentLightingSetId;
+    private string currentLightingSetId = "night";
     private bool dayEnded = false;
+    private Light sun;
+    private Material skybox;
 
     private void Awake()
     {
@@ -54,18 +55,18 @@ public class DayManager : MonoBehaviour
         um = UniversalManipulator.Instance;
         day = dm.gameData.day;
         fc = FadeController.Instance;
-        idToLightingSet = Utils.Zip(lightingSetIds, lightingSets);
-        for (int i = 0; i < lightingSetIds.Length; i++)
+        sun = RenderSettings.sun;
+        skybox = RenderSettings.skybox;
+
+        for (int i = 0; i < lightingSets.Length; i++)
         {
-            string id = lightingSetIds[i];
-            LightingSet lightingSet = idToLightingSet[id];
-            GameObject go = Instantiate(lightingSet.mainLight);
-            go.SetActive(false);
-            idToLight.Add(id, go);
+            LightingSet lightingSet = lightingSets[i];
+            string id = lightingSet.id;
+            idToLightingSet[id] = lightingSet;
             LightmapData ld = new LightmapData();
             ld.lightmapColor = lightingSet.lightmapColor;
             ld.lightmapDir = lightingSet.lightmapDir;
-            idToLightmap.Add(id, ld);
+            idToLightmap[id] = new LightmapData[] { ld };
         }
         UseLightingSet("day");
         dayStartTime = Time.time;
@@ -113,16 +114,42 @@ public class DayManager : MonoBehaviour
         {
             if (currentLightingSetId == id)
                 return;
-            idToLight[currentLightingSetId].SetActive(false);
         }
 
+        StopAllCoroutines();
+        StartCoroutine(SwapLightingSet(currentLightingSetId, id));
         currentLightingSetId = id;
-        GameObject currentLight = idToLight[id];
-        currentLight.SetActive(true);
-        LightingSet lightingSet = idToLightingSet[id];
-        RenderSettings.skybox = lightingSet.skyboxMat;
-        RenderSettings.sun = currentLight.GetComponent<Light>();
-        LightmapSettings.lightmaps = new LightmapData[]{ idToLightmap[id]};
+    }
+
+    private IEnumerator SwapLightingSet(string id1, string id2)
+    {
+        float startTime = Time.time;
+        float elapsedTime;
+        while ((elapsedTime = Time.time - startTime) < realSecondsPerLightSwap)
+        {
+            LerpLightingSet(idToLightingSet[id1], idToLightingSet[id2], elapsedTime/realSecondsPerLightSwap);
+            yield return new WaitForFixedUpdate();
+        }
+    }
+
+    private void LerpLightingSet(LightingSet set1, LightingSet set2, float t)
+    {
+        // Lerp sun intensity, angle, and color
+        sun.intensity = Mathf.Lerp(set1.light.intensity, set2.light.intensity, t);
+        sun.transform.rotation = Quaternion.Lerp(set1.light.transform.rotation, set2.light.transform.rotation, t);
+        sun.color = Color.Lerp(set1.light.color, set2.light.color, t);
+
+        // Lerp skybox shader values
+        skybox.Lerp(set1.skyboxMat, set2.skyboxMat, t);
+
+        // Swap lightmaps after reaching threshold
+        if (t < 0.5f)
+        {
+            LightmapSettings.lightmaps = idToLightmap[set1.id];
+        } else
+        {
+            LightmapSettings.lightmaps = idToLightmap[set2.id];
+        }
     }
 
     public void EndDay()

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01698e97dbc7f0b4f86be17e5ab64335, type: 3}
   m_Name: Day
   m_EditorClassIdentifier: 
+  id: day
   skyboxMat: {fileID: 2100000, guid: f7e800d1ba952e94db39d9e287c34cdb, type: 2}
-  mainLight: {fileID: 6367799687628623550, guid: 736cfe9ee7a30dc4dac4b3e8518cec19,
-    type: 3}
+  light: {fileID: 6367799687628623549, guid: 736cfe9ee7a30dc4dac4b3e8518cec19, type: 3}
   lightmapColor: {fileID: 2800000, guid: 1a615e945d97e6842a5adf60c845b707, type: 3}
   lightmapDir: {fileID: 2800000, guid: c521052edd53fce45aa310c134664f44, type: 3}
