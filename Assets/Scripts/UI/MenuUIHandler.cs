@@ -31,6 +31,7 @@ public class MenuUIHandler : MonoBehaviour
     [SerializeField] private Button itemSelectButton;
 
     [SerializeField] private AudioClip hoverClip;
+    [SerializeField] private AudioClip cashClip;
 
     private InventoryManager im;
     private UniversalManipulator um;
@@ -73,20 +74,26 @@ public class MenuUIHandler : MonoBehaviour
     private void PlaySound(AudioClip c)
     {
         source.clip = c;
+        StartCoroutine(PlaySound());
+        
+    }
+
+    IEnumerator PlaySound()
+    {
         source.Play();
+        yield return new WaitForSeconds(source.clip.length);
     }
 
     public void HoverButton(Image i)
     {
-        i.color = new Color32(0, 0, 0, 255);
+        i.color = new Color(i.color.r * .7f, i.color.g * .7f, i.color.b * .7f, 255 * .8f);
         PlaySound(hoverClip);
     }
 
     public void UnhoverButton(Image i)
     {
-        i.color = new Color32(255, 255, 255, 255);
+        i.color = Color.white;
     }
-
 
     private void NextPage()
     {
@@ -166,6 +173,7 @@ public class MenuUIHandler : MonoBehaviour
                 im.SellItem(currentItem);
             }
             quantity = 1;
+            PlaySound(cashClip);
             ResetQuantity();
         }
     }
