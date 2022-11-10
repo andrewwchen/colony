@@ -22,6 +22,8 @@ public class InventoryManager : MonoBehaviour
     [HideInInspector] public int money;
     [HideInInspector] public UnityEvent OnMoneyChange;
     [HideInInspector] public UnityEvent OnInventoryChange;
+    [SerializeField] private AudioClip cashClip;
+    private AudioSource source;
 
     private void Awake()
     {
@@ -58,6 +60,14 @@ public class InventoryManager : MonoBehaviour
 
         // initializing money based on saved data
         money = DataManager.Instance.gameData.money;
+
+        source = GetComponent<AudioSource>();
+    }
+
+    private void PlaySound(AudioClip c)
+    {
+        source.clip = c;
+        source.Play();
     }
 
     // converts inventory into a serializable format for data saving
@@ -118,6 +128,7 @@ public class InventoryManager : MonoBehaviour
     {
         if (RemoveItem(item))
         {
+            PlaySound(cashClip);
             money += item.sellPrice;
             OnMoneyChange?.Invoke();
             return true;
@@ -129,6 +140,7 @@ public class InventoryManager : MonoBehaviour
     {
         if (item.buyable && money >= item.buyPrice)
         {
+            PlaySound(cashClip);
             money -= item.buyPrice;
             AddItem(item);
             OnMoneyChange?.Invoke();
