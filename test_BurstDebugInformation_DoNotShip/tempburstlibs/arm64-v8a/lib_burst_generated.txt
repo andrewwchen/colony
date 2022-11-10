@@ -122,6 +122,8 @@ Library: lib_burst_generated
 --compilation-defines=ENABLE_TIMELINE
 --compilation-defines=ENABLE_INPUT_SYSTEM
 --compilation-defines=ENABLE_LEGACY_INPUT_MANAGER
+--compilation-defines=CROSS_PLATFORM_INPUT
+--compilation-defines=MOBILE_INPUT
 --compilation-defines=PACKAGE_PHYSICS
 --compilation-defines=PACKAGE_PHYSICS2D
 --compilation-defines=PACKAGE_TILEMAP
@@ -177,6 +179,7 @@ Library: lib_burst_generated
 --root-assembly=/Users/cslabmac/Desktop/colony/Temp/StagingArea/Data/Managed/Unity.TextMeshPro.dll
 --root-assembly=/Users/cslabmac/Desktop/colony/Temp/StagingArea/Data/Managed/Unity.Burst.dll
 --root-assembly=/Users/cslabmac/Desktop/colony/Temp/StagingArea/Data/Managed/Unity.RenderPipeline.Universal.ShaderLibrary.dll
+--root-assembly=/Users/cslabmac/Desktop/colony/Temp/StagingArea/Data/Managed/Assembly-CSharp-firstpass.dll
 --root-assembly=/Users/cslabmac/Desktop/colony/Temp/StagingArea/Data/Managed/Unity.XR.Interaction.Toolkit.dll
 --root-assembly=/Users/cslabmac/Desktop/colony/Temp/StagingArea/Data/Managed/Unity.Services.Core.Environments.dll
 --root-assembly=/Users/cslabmac/Desktop/colony/Temp/StagingArea/Data/Managed/Assembly-CSharp.dll
