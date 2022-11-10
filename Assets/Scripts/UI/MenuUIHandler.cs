@@ -41,6 +41,7 @@ public class MenuUIHandler : MonoBehaviour
     private int quantity = 1;
     private Item currentItem;
     private AudioSource source;
+    private Queue<AudioClip> audioQueue = new Queue<AudioClip>();
 
     // Start is called before the first frame update
     void Start()
@@ -73,8 +74,19 @@ public class MenuUIHandler : MonoBehaviour
 
     private void PlaySound(AudioClip c)
     {
-        source.clip = c;
-        source.Play();
+        audioQueue.Enqueue(c);
+        if (source.clip == null) StartCoroutine(PlaySoundQueue());
+    }
+
+    IEnumerator PlaySoundQueue()
+    {
+        while(audioQueue.Count != 0)
+        {
+            source.clip = audioQueue.Dequeue();
+            source.Play();
+            yield return new WaitForSeconds(source.clip.length);
+        }
+        source.clip = null;
     }
 
     public void HoverButton(Image i)
@@ -161,12 +173,12 @@ public class MenuUIHandler : MonoBehaviour
     {
         if (im.money >= currentItem.sellPrice * quantity)
         {
+            PlaySound(cashClip);
             for (int i = 0; i < quantity; i++)
             {
                 im.SellItem(currentItem);
             }
             quantity = 1;
-            PlaySound(cashClip);
             ResetQuantity();
         }
     }
