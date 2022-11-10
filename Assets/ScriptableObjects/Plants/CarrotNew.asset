@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6292b33a9101f3f4897f1ab99ed9b7c9, type: 3}
-  m_Name: Brainberry New
+  m_Name: CarrotNew
   m_EditorClassIdentifier: 
-  type: 1
+  type: 9
   prefab: {fileID: 1423600104343373607, guid: 450b9eaee52b1439a951e720ee7e4989, type: 3}
   doesGrow: 1
   needsWater: 1
   growDays: 1
-  nextStage: 2
+  nextStage: 10
   product: {fileID: 0}

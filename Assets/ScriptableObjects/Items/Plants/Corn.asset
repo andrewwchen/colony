@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eecb8f6d2b00c014c886e6e794832f15, type: 3}
-  m_Name: Pumpkin
+  m_Name: Corn
   m_EditorClassIdentifier: 
-  type: 14
-  displayName: Ominous Carrot
-  description: A carrot with a distinct purple hue. A hot commodity.
+  type: 12
+  displayName: Regular Corn
+  description: A regular ear of corn. A hot commodity.
   thumbnail: {fileID: 21300000, guid: e5600378dd761e64d9423790c482bf36, type: 3}
   buyable: 0
   buyPrice: -1
-  sellPrice: 50
+  sellPrice: 200
   useType: 0
   placeable: {fileID: 0}
   plantable: {fileID: 0}
