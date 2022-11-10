@@ -300,6 +300,7 @@ GameObject:
   - component: {fileID: 2861900425662188480}
   - component: {fileID: 2861900425662188481}
   - component: {fileID: 2861900425662188482}
+  - component: {fileID: 851221001827521659}
   m_Layer: 5
   m_Name: FeedButton
   m_TagString: Untagged
@@ -423,6 +424,67 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &851221001827521659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2861900425662188492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2824961520628476477}
+          m_TargetAssemblyTypeName: AnimalInstanceMenu, Assembly-CSharp
+          m_MethodName: HoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2861900426287328309}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2824961520628476477}
+          m_TargetAssemblyTypeName: AnimalInstanceMenu, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2861900426287328309}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2824961520628476477}
+          m_TargetAssemblyTypeName: AnimalInstanceMenu, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2861900426287328309}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2861900425700220514
 GameObject:
   m_ObjectHideFlags: 0
@@ -514,6 +576,7 @@ GameObject:
   - component: {fileID: 2861900426001785845}
   - component: {fileID: 2861900426001785846}
   - component: {fileID: 2861900426001785847}
+  - component: {fileID: 6972923298963754531}
   m_Layer: 5
   m_Name: CollectButton
   m_TagString: Untagged
@@ -637,6 +700,67 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6972923298963754531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2861900426001785841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2824961520628476477}
+          m_TargetAssemblyTypeName: AnimalInstanceMenu, Assembly-CSharp
+          m_MethodName: HoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2861900424918845118}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2824961520628476477}
+          m_TargetAssemblyTypeName: AnimalInstanceMenu, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2861900424918845118}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2824961520628476477}
+          m_TargetAssemblyTypeName: AnimalInstanceMenu, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2861900424918845118}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2861900426287328311
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,6 +850,7 @@ GameObject:
   - component: {fileID: 2861900426435182723}
   - component: {fileID: 2861900426435182732}
   - component: {fileID: 2861900426435182721}
+  - component: {fileID: 7249809483797831516}
   - component: {fileID: 2824961520628476477}
   m_Layer: 0
   m_Name: AnimalCanvas
@@ -752,7 +877,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0.8160095}
+  m_AnchoredPosition: {x: 0, y: 0.81604004}
   m_SizeDelta: {x: 12.0522, y: 4.4648}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2861900426435182722
@@ -798,7 +923,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &2861900426435182732
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -835,6 +960,102 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
+--- !u!82 &7249809483797831516
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2861900426435182734}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &2824961520628476477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -851,6 +1072,9 @@ MonoBehaviour:
   collect: {fileID: 2861900426001785847}
   feed: {fileID: 2861900425662188482}
   animalSpawn: {fileID: 0}
+  hoverClip: {fileID: 8300000, guid: e11ac1dde6017fd4aa4313b6afccc4b1, type: 3}
+  collectClip: {fileID: 8300000, guid: f6fa52eec25a64c4c9f53f294c72b2e1, type: 3}
+  eatClip: {fileID: 8300000, guid: 371359ad6c7204098bc9a26078cb7d11, type: 3}
   animal: {fileID: 0}
   animalConfig: {fileID: 0}
   data:
@@ -1140,6 +1364,7 @@ GameObject:
   - component: {fileID: 4798510145760439950}
   - component: {fileID: 6209569069501254692}
   - component: {fileID: 4347271090584422876}
+  - component: {fileID: 1622256544875811508}
   m_Layer: 5
   m_Name: BuyButton
   m_TagString: Untagged
@@ -1263,3 +1488,64 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1622256544875811508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5684700866241048928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2824961520628476477}
+          m_TargetAssemblyTypeName: AnimalInstanceMenu, Assembly-CSharp
+          m_MethodName: HoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 7094466921723633526}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2824961520628476477}
+          m_TargetAssemblyTypeName: AnimalInstanceMenu, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 7094466921723633526}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2824961520628476477}
+          m_TargetAssemblyTypeName: AnimalInstanceMenu, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 7094466921723633526}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2

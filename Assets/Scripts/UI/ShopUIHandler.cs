@@ -25,17 +25,23 @@ public class ShopUIHandler : MonoBehaviour
     [SerializeField] private Button itemBuy;
     [SerializeField] private Animator baldorAnim;
 
+    [SerializeField] private AudioClip hoverClip;
+    [SerializeField] private AudioClip cashClip;
+
     private InventoryManager im;
     private Transform cam;
     private int page = 0;
     private int quantity = 1;
     private Item currentItem;
+    private AudioSource source;
 
     // Start is called before the first frame update
     void Start()
     {
         cam = GameObject.FindGameObjectWithTag("MainCamera").transform;
         im = InventoryManager.Instance;
+
+        source = GetComponent<AudioSource>();
 
         leftButton.onClick.AddListener(LastPage);
         rightButton.onClick.AddListener(NextPage);
@@ -50,6 +56,23 @@ public class ShopUIHandler : MonoBehaviour
         mainMenu.SetActive(true);
         inventoryMenu.SetActive(false);
         gameObject.SetActive(false);
+    }
+
+    private void PlaySound(AudioClip c)
+    {
+        source.clip = c;
+        source.Play();
+    }
+
+    public void HoverButton(Image i)
+    {
+        i.color = new Color(i.color.r * .7f, i.color.g * .7f, i.color.b * .7f, 255 * .8f);
+        PlaySound(hoverClip);
+    }
+
+    public void UnhoverButton(Image i)
+    {
+        i.color = Color.white;
     }
 
     private void ResetCashText()
@@ -92,8 +115,6 @@ public class ShopUIHandler : MonoBehaviour
             {
                 slotImgs[i].gameObject.SetActive(false);
             }
-
-
         }
     }
 
@@ -138,6 +159,7 @@ public class ShopUIHandler : MonoBehaviour
                 im.BuyItem(currentItem);
             }
             quantity = 1;
+            PlaySound(cashClip);
             ResetQuantity();
         }
     }

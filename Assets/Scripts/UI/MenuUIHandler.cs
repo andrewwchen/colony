@@ -74,14 +74,7 @@ public class MenuUIHandler : MonoBehaviour
     private void PlaySound(AudioClip c)
     {
         source.clip = c;
-        StartCoroutine(PlaySound());
-        
-    }
-
-    IEnumerator PlaySound()
-    {
         source.Play();
-        yield return new WaitForSeconds(source.clip.length);
     }
 
     public void HoverButton(Image i)

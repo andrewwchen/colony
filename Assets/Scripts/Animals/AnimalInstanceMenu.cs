@@ -9,6 +9,9 @@ public class AnimalInstanceMenu : MonoBehaviour
     [SerializeField] private Button collect;
     [SerializeField] private Button feed;
     [SerializeField] private Transform animalSpawn;
+    [SerializeField] private AudioClip hoverClip;
+    [SerializeField] private AudioClip collectClip;
+    [SerializeField] private AudioClip eatClip;
 
     [HideInInspector] public AnimalInstance animal;
     [HideInInspector] public Animal animalConfig;
@@ -16,15 +19,34 @@ public class AnimalInstanceMenu : MonoBehaviour
 
     private InventoryManager im;
     private bool didCollectToday = false;
+    private AudioSource source;
 
     // Start is called before the first frame update
     void Start()
     {
+        source = GetComponent<AudioSource>();
         buy.onClick.AddListener(Buy);
         collect.onClick.AddListener(Collect);
         feed.onClick.AddListener(Feed);
         im = InventoryManager.Instance;
         DayManager.Instance.OnEndDay.AddListener(OnEndDay);
+    }
+
+    private void PlaySound(AudioClip c)
+    {
+        source.clip = c;
+        source.Play();
+    }
+
+    public void HoverButton(Image i)
+    {
+        i.color = new Color(i.color.r * .7f, i.color.g * .7f, i.color.b * .7f, 255 * .8f);
+        PlaySound(hoverClip);
+    }
+
+    public void UnhoverButton(Image i)
+    {
+        i.color = Color.white;
     }
 
     public void Setup(AnimalData data, AnimalType type)
@@ -91,6 +113,7 @@ public class AnimalInstanceMenu : MonoBehaviour
             didCollectToday = true;
             Debug.Log("Collected from Animal");
             im.AddItem(animalConfig.product);
+            PlaySound(collectClip);
         }
     }
 
@@ -100,6 +123,7 @@ public class AnimalInstanceMenu : MonoBehaviour
         {
             Debug.Log("Fed Animal");
             data.daysUnfed = 0;
+            PlaySound(eatClip);
         }
     }
 
