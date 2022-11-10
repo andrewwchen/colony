@@ -27,7 +27,6 @@ public class UniversalManipulator : MonoBehaviour
 
     private static float rayDistance = 10f;
 
-    [SerializeField] private AudioClip triggerClip;
     [SerializeField] private AudioClip errorClip;
     [SerializeField] private AudioClip switchClip;
     [SerializeField] private AudioClip buildingClip;
@@ -197,7 +196,6 @@ public class UniversalManipulator : MonoBehaviour
 
     public void OnPressLeftTrigger()
     {
-        PlaySound(triggerClip);
     }
 
     private void ToggleWristMenu()
