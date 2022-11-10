@@ -2115,7 +2115,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -93.949, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1.6091919, y: 1.0700073}
+  m_AnchoredPosition: {x: -1.6091309, y: 1.0700073}
   m_SizeDelta: {x: 1.1814, y: 0.7007}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7660147118454993416
@@ -2161,7 +2161,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &396655371563941119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4350,7 +4350,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0
   m_Pitch: 1
   Loop: 0
@@ -4479,6 +4479,7 @@ MonoBehaviour:
   itemBuy: {fileID: 2912046843923421296}
   baldorAnim: {fileID: 0}
   hoverClip: {fileID: 0}
+  cashClip: {fileID: 0}
 --- !u!1 &8109543170605265894
 GameObject:
   m_ObjectHideFlags: 0
