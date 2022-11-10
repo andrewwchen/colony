@@ -456,6 +456,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5325848508358128733, guid: 40ea4b9d8fdf149379938fec86726211,
         type: 3}
+      propertyPath: cashClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0a1757ed09ca547a0af704d6d2c0edd1, type: 3}
+    - target: {fileID: 5325848508358128733, guid: 40ea4b9d8fdf149379938fec86726211,
+        type: 3}
+      propertyPath: hoverClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e11ac1dde6017fd4aa4313b6afccc4b1, type: 3}
+    - target: {fileID: 5325848508358128733, guid: 40ea4b9d8fdf149379938fec86726211,
+        type: 3}
       propertyPath: baldorAnim
       value: 
       objectReference: {fileID: 2639342297044619829}

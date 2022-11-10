@@ -47,6 +47,7 @@ public class UniversalManipulator : MonoBehaviour
     private Item currentItem;
     private StructureManager sm;
     private InventoryManager im;
+    private Queue<AudioClip> audioQueue = new Queue<AudioClip>();
 
     [HideInInspector] public UnityEvent OnUMPerform;
 
@@ -190,8 +191,19 @@ public class UniversalManipulator : MonoBehaviour
 
     private void PlaySound(AudioClip c)
     {
-        source.clip = c;
-        source.Play();
+        audioQueue.Enqueue(c);
+        if (source.clip == null) StartCoroutine(PlaySoundQueue());
+    }
+
+    IEnumerator PlaySoundQueue()
+    {
+        while (audioQueue.Count != 0)
+        {
+            source.clip = audioQueue.Dequeue();
+            source.Play();
+            yield return new WaitForSeconds(source.clip.length);
+        }
+        source.clip = null;
     }
 
     public void OnPressLeftTrigger()

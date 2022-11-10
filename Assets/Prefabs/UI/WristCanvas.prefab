@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5629224559729852168}
   - component: {fileID: 782908940826585811}
   - component: {fileID: 3131203343909932224}
+  - component: {fileID: 1778132636313798040}
   m_Layer: 5
   m_Name: Left
   m_TagString: Untagged
@@ -121,6 +122,67 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1778132636313798040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888839654971188169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: HoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 782908940826585811}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 782908940826585811}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 782908940826585811}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1375501808649543005
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,6 +195,7 @@ GameObject:
   - component: {fileID: 2083072497463621075}
   - component: {fileID: 8259849868930715458}
   - component: {fileID: 3451777591214788524}
+  - component: {fileID: 8921018648317539464}
   m_Layer: 0
   m_Name: SellButton
   m_TagString: Untagged
@@ -243,6 +306,67 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8921018648317539464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375501808649543005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: HoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8259849868930715458}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8259849868930715458}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8259849868930715458}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1377743204582479198
 GameObject:
   m_ObjectHideFlags: 0
@@ -1308,6 +1432,7 @@ GameObject:
   - component: {fileID: 8231977588951476665}
   - component: {fileID: 2546633007951288625}
   - component: {fileID: 8681132939781769981}
+  - component: {fileID: 2468619186419663526}
   m_Layer: 5
   m_Name: Right
   m_TagString: Untagged
@@ -1417,6 +1542,67 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2468619186419663526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3457228109766268275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: HoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2546633007951288625}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2546633007951288625}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2546633007951288625}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &3854384291316694681
 GameObject:
   m_ObjectHideFlags: 0
@@ -1565,6 +1751,7 @@ GameObject:
   - component: {fileID: 4400555348756121162}
   - component: {fileID: 7832614998314713702}
   - component: {fileID: 4512490173594282984}
+  - component: {fileID: 8535687886667184549}
   m_Layer: 5
   m_Name: PointerButton
   m_TagString: Untagged
@@ -1687,6 +1874,67 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8535687886667184549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4288943855856722174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: HoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 6589881535522086409}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 6589881535522086409}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 6589881535522086409}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &4581266523919155593
 GameObject:
   m_ObjectHideFlags: 0
@@ -1889,6 +2137,7 @@ GameObject:
   - component: {fileID: 4581266524332308357}
   - component: {fileID: 4581266524332308358}
   - component: {fileID: 4581266524332308359}
+  - component: {fileID: 7529971819996303590}
   m_Layer: 5
   m_Name: Left
   m_TagString: Untagged
@@ -1998,6 +2247,67 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7529971819996303590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4581266524332308409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: HoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266524332308358}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266524332308358}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266524332308358}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &4581266524344426879
 GameObject:
   m_ObjectHideFlags: 0
@@ -2012,6 +2322,7 @@ GameObject:
   - component: {fileID: 4581266524344426878}
   - component: {fileID: 3974606334365755967}
   - component: {fileID: 4581266524344426873}
+  - component: {fileID: 1626709495}
   m_Layer: 5
   m_Name: WristCanvas
   m_TagString: Canvas
@@ -2162,6 +2473,104 @@ MonoBehaviour:
   itemRightButton: {fileID: 8681132939781769981}
   itemSellButton: {fileID: 3451777591214788524}
   itemSelectButton: {fileID: 4512490173594282984}
+  hoverClip: {fileID: 8300000, guid: e11ac1dde6017fd4aa4313b6afccc4b1, type: 3}
+  cashClip: {fileID: 0}
+--- !u!82 &1626709495
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4581266524344426879}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &4581266524386248687
 GameObject:
   m_ObjectHideFlags: 0
@@ -2250,6 +2659,7 @@ GameObject:
   - component: {fileID: 4581266524431932399}
   - component: {fileID: 4581266524431932384}
   - component: {fileID: 4581266524431932385}
+  - component: {fileID: 6588740714116138156}
   m_Layer: 5
   m_Name: Slot1
   m_TagString: Untagged
@@ -2360,6 +2770,67 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6588740714116138156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4581266524431932387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: HoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266524573064091}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266524573064091}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266524573064091}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &4581266524459584158
 GameObject:
   m_ObjectHideFlags: 0
@@ -2372,6 +2843,7 @@ GameObject:
   - component: {fileID: 4581266524459584154}
   - component: {fileID: 4581266524459584155}
   - component: {fileID: 4581266524459584156}
+  - component: {fileID: 2299946344929231991}
   m_Layer: 5
   m_Name: Right
   m_TagString: Untagged
@@ -2481,6 +2953,67 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2299946344929231991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4581266524459584158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: HoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266524459584155}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266524459584155}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266524459584155}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &4581266524494843079
 GameObject:
   m_ObjectHideFlags: 0
@@ -2493,6 +3026,7 @@ GameObject:
   - component: {fileID: 4581266524494843075}
   - component: {fileID: 4581266524494843076}
   - component: {fileID: 4581266524494843077}
+  - component: {fileID: 684494587}
   m_Layer: 5
   m_Name: InventoryButton
   m_TagString: Untagged
@@ -2615,6 +3149,67 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &684494587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4581266524494843079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: HoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266525217454612}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266525217454612}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266525217454612}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &4581266524573064093
 GameObject:
   m_ObjectHideFlags: 0
@@ -2779,6 +3374,7 @@ GameObject:
   - component: {fileID: 4581266524964255108}
   - component: {fileID: 4581266524964255109}
   - component: {fileID: 4581266524964255110}
+  - component: {fileID: 1163551575972636023}
   m_Layer: 5
   m_Name: Slot3
   m_TagString: Untagged
@@ -2889,6 +3485,67 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1163551575972636023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4581266524964255160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: HoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266524386248685}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266524386248685}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266524386248685}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &4581266525102034006
 GameObject:
   m_ObjectHideFlags: 0
@@ -2977,6 +3634,7 @@ GameObject:
   - component: {fileID: 4581266525163093647}
   - component: {fileID: 4581266525163093632}
   - component: {fileID: 4581266525163093633}
+  - component: {fileID: 6572763276343754653}
   m_Layer: 5
   m_Name: Slot4
   m_TagString: Untagged
@@ -3087,6 +3745,67 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6572763276343754653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4581266525163093635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: HoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266525866883101}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266525866883101}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266525866883101}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &4581266525217454614
 GameObject:
   m_ObjectHideFlags: 0
@@ -3349,6 +4068,7 @@ GameObject:
   - component: {fileID: 4581266525469246668}
   - component: {fileID: 4581266525469246669}
   - component: {fileID: 4581266525469246670}
+  - component: {fileID: 3465778396534904286}
   m_Layer: 5
   m_Name: Home
   m_TagString: Untagged
@@ -3470,6 +4190,67 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &3465778396534904286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4581266525469246656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: HoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266525469246669}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266525469246669}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266525469246669}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &4581266525577053182
 GameObject:
   m_ObjectHideFlags: 0
@@ -3524,6 +4305,7 @@ GameObject:
   - component: {fileID: 4581266525664277957}
   - component: {fileID: 4581266525664277955}
   - component: {fileID: 4581266525664277956}
+  - component: {fileID: 1186101872}
   m_Layer: 5
   m_Name: Bar
   m_TagString: Untagged
@@ -3579,7 +4361,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0efc7893902df44c0a1f4426d82f8b7b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6c7156d7b6c914059925adb3ebb1baa8, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3589,6 +4371,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1186101872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4581266525664277958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f60ea5a9a3f094431bd315fc20490576, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4581266525678538593
 GameObject:
   m_ObjectHideFlags: 0
@@ -3601,6 +4395,7 @@ GameObject:
   - component: {fileID: 4581266525678538605}
   - component: {fileID: 4581266525678538606}
   - component: {fileID: 4581266525678538607}
+  - component: {fileID: 9185924923378136043}
   m_Layer: 5
   m_Name: Home
   m_TagString: Untagged
@@ -3722,6 +4517,67 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &9185924923378136043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4581266525678538593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: HoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266525678538606}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266525678538606}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266525678538606}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &4581266525713202340
 GameObject:
   m_ObjectHideFlags: 0
@@ -3776,6 +4632,7 @@ GameObject:
   - component: {fileID: 4581266525828234483}
   - component: {fileID: 4581266525828234484}
   - component: {fileID: 4581266525828234485}
+  - component: {fileID: 2845653208734243531}
   m_Layer: 5
   m_Name: Slot2
   m_TagString: Untagged
@@ -3886,6 +4743,67 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2845653208734243531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4581266525828234487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: HoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266523945873372}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266523945873372}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 4581266524344426873}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 4581266523945873372}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &4581266525866883103
 GameObject:
   m_ObjectHideFlags: 0

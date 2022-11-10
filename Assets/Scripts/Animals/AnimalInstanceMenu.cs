@@ -20,6 +20,7 @@ public class AnimalInstanceMenu : MonoBehaviour
     private InventoryManager im;
     private bool didCollectToday = false;
     private AudioSource source;
+    private Queue<AudioClip> audioQueue = new Queue<AudioClip>();
 
     // Start is called before the first frame update
     void Start()
@@ -34,11 +35,22 @@ public class AnimalInstanceMenu : MonoBehaviour
 
     private void PlaySound(AudioClip c)
     {
-        source.clip = c;
-        source.Play();
+        audioQueue.Enqueue(c);
+        if (source.clip == null) StartCoroutine(PlaySoundQueue());
     }
 
-    public void HoverButton(Image i)
+    IEnumerator PlaySoundQueue()
+    {
+        while (audioQueue.Count != 0)
+        {
+            source.clip = audioQueue.Dequeue();
+            source.Play();
+            yield return new WaitForSeconds(source.clip.length);
+        }
+        source.clip = null;
+    }
+
+        public void HoverButton(Image i)
     {
         i.color = new Color(i.color.r * .7f, i.color.g * .7f, i.color.b * .7f, 255 * .8f);
         PlaySound(hoverClip);
