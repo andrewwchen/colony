@@ -1,7 +1,7 @@
 public enum ItemType
 {
-    Brainberry,
-    BrainberrySeed,
+    Tomato,
+    TomatoSeed,
     CowStable,
     Fence,
     Lamp,
@@ -10,4 +10,12 @@ public enum ItemType
     Milk,
     Wool,
     Feed,
+    ChickenCoop,
+    Egg,
+    Corn,
+    CornSeed,
+    Carrot,
+    CarrotSeed,
+    Pumpkin,
+    PumpkinSeed,
 }
