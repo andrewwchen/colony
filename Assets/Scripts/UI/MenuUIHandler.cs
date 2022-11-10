@@ -31,7 +31,6 @@ public class MenuUIHandler : MonoBehaviour
     [SerializeField] private Button itemSelectButton;
 
     [SerializeField] private AudioClip hoverClip;
-    [SerializeField] private AudioClip cashClip;
 
     private InventoryManager im;
     private UniversalManipulator um;
@@ -178,7 +177,6 @@ public class MenuUIHandler : MonoBehaviour
                 im.SellItem(currentItem);
             }
             quantity = 1;
-            PlaySound(cashClip);
             ResetQuantity();
         }
     }

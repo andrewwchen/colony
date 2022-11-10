@@ -26,7 +26,6 @@ public class ShopUIHandler : MonoBehaviour
     [SerializeField] private Animator baldorAnim;
 
     [SerializeField] private AudioClip hoverClip;
-    [SerializeField] private AudioClip cashClip;
 
     private InventoryManager im;
     private Transform cam;
@@ -34,7 +33,6 @@ public class ShopUIHandler : MonoBehaviour
     private int quantity = 1;
     private Item currentItem;
     private AudioSource source;
-    private Queue<AudioClip> audioQueue = new Queue<AudioClip>();
 
     // Start is called before the first frame update
     void Start()
@@ -61,19 +59,8 @@ public class ShopUIHandler : MonoBehaviour
 
     private void PlaySound(AudioClip c)
     {
-        audioQueue.Enqueue(c);
-        if (source.clip == null) StartCoroutine(PlaySoundQueue());
-    }
-
-    IEnumerator PlaySoundQueue()
-    {
-        while (audioQueue.Count != 0)
-        {
-            source.clip = audioQueue.Dequeue();
-            source.Play();
-            yield return new WaitForSeconds(source.clip.length);
-        }
-        source.clip = null;
+        source.clip = c;
+        source.Play();
     }
 
     public void HoverButton(Image i)
@@ -171,7 +158,6 @@ public class ShopUIHandler : MonoBehaviour
                 im.BuyItem(currentItem);
             }
             quantity = 1;
-            PlaySound(cashClip);
             ResetQuantity();
         }
     }
