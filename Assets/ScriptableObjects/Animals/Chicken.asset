@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b45674ef36cdc5468abdd22a8ae2a4d, type: 3}
-  m_Name: Sheep
+  m_Name: Chicken
   m_EditorClassIdentifier: 
-  type: 2
-  prefab: {fileID: 356521477219086734, guid: c76d7f1830e9d4290a1359b291588a14, type: 3}
-  buyPrice: 50
-  starveDays: 3
-  product: {fileID: 11400000, guid: 17e8cd3985841ea49aaf56b04b98b15b, type: 2}
+  type: 3
+  prefab: {fileID: 0}
+  buyPrice: 20
+  starveDays: 2
+  product: {fileID: 11400000, guid: 6c415dde46a6da64aaf8585ae10a4f60, type: 2}

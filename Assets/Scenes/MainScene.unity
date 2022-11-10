@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 6e58a4e9cad274482b998a9f813f3c41, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 755d508f9fc3346b09d063bac3360118, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -125,237 +125,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &40919615 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3094405692771560437, guid: ff3496b58899544c9ad4223144bfcec5,
-    type: 3}
-  m_PrefabInstance: {fileID: 7223914800623917839}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &44354550 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6616752798986632717, guid: ff3496b58899544c9ad4223144bfcec5,
-    type: 3}
-  m_PrefabInstance: {fileID: 7223914800623917839}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &44354553 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6616752798986632706, guid: ff3496b58899544c9ad4223144bfcec5,
-    type: 3}
-  m_PrefabInstance: {fileID: 7223914800623917839}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 44354550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &44354555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 44354550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1626709489}
-          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
-          m_MethodName: HoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 44354553}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1626709489}
-          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
-          m_MethodName: UnhoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 44354553}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1626709489}
-          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
-          m_MethodName: UnhoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 44354553}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!1 &53863379 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2694391684402719114, guid: 0ea90bda3792897439e8acf4e3c9f836,
-    type: 3}
-  m_PrefabInstance: {fileID: 2639342297044619827}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &53863382 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2592566023931073433, guid: 0ea90bda3792897439e8acf4e3c9f836,
-    type: 3}
-  m_PrefabInstance: {fileID: 2639342297044619827}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 53863379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &53863384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 53863379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 449746921}
-          m_TargetAssemblyTypeName: ShopUIHandler, Assembly-CSharp
-          m_MethodName: HoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 53863382}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 449746921}
-          m_TargetAssemblyTypeName: ShopUIHandler, Assembly-CSharp
-          m_MethodName: UnhoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 53863382}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 449746921}
-          m_TargetAssemblyTypeName: ShopUIHandler, Assembly-CSharp
-          m_MethodName: UnhoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 53863382}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!1 &63068014 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6616752800099019407, guid: ff3496b58899544c9ad4223144bfcec5,
-    type: 3}
-  m_PrefabInstance: {fileID: 7223914800623917839}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &63068019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 63068014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1626709489}
-          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
-          m_MethodName: HoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 1749865027}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1626709489}
-          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
-          m_MethodName: UnhoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 1749865027}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1626709489}
-          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
-          m_MethodName: UnhoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 1749865027}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1 &67518915
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,529 +173,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &225398834 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6616752799617090772, guid: ff3496b58899544c9ad4223144bfcec5,
-    type: 3}
-  m_PrefabInstance: {fileID: 7223914800623917839}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &225398839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 225398834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1626709489}
-          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
-          m_MethodName: HoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 470224382}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1626709489}
-          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
-          m_MethodName: UnhoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 470224382}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1626709489}
-          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
-          m_MethodName: UnhoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 470224382}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!108 &228065676 stripped
 Light:
   m_CorrespondingSourceObject: {fileID: 1768608751466734122, guid: e4a44bbd063b2e04b8b951bff4fe76e0,
     type: 3}
   m_PrefabInstance: {fileID: 6714304559222384295}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &264170057 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3615766691734860231, guid: 0ea90bda3792897439e8acf4e3c9f836,
-    type: 3}
-  m_PrefabInstance: {fileID: 2639342297044619827}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &302988618 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6901172187868254610, guid: ff3496b58899544c9ad4223144bfcec5,
-    type: 3}
-  m_PrefabInstance: {fileID: 7223914800623917839}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &302988623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 302988618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1626709489}
-          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
-          m_MethodName: HoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 1240312900}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1626709489}
-          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
-          m_MethodName: UnhoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 1240312900}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1626709489}
-          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
-          m_MethodName: UnhoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 1240312900}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!1 &312755089 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7222309897358256865, guid: 0ea90bda3792897439e8acf4e3c9f836,
-    type: 3}
-  m_PrefabInstance: {fileID: 2639342297044619827}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &312755094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 312755089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 449746921}
-          m_TargetAssemblyTypeName: ShopUIHandler, Assembly-CSharp
-          m_MethodName: HoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 1781561180}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 449746921}
-          m_TargetAssemblyTypeName: ShopUIHandler, Assembly-CSharp
-          m_MethodName: UnhoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 1781561180}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 449746921}
-          m_TargetAssemblyTypeName: ShopUIHandler, Assembly-CSharp
-          m_MethodName: UnhoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 1781561180}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!1 &316080947 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6616752798870490523, guid: ff3496b58899544c9ad4223144bfcec5,
-    type: 3}
-  m_PrefabInstance: {fileID: 7223914800623917839}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &316080952
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 316080947}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1626709489}
-          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
-          m_MethodName: HoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 656267166}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1626709489}
-          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
-          m_MethodName: UnhoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 656267166}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1626709489}
-          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
-          m_MethodName: UnhoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 656267166}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!1 &320655410 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3544589100821601855, guid: 0ea90bda3792897439e8acf4e3c9f836,
-    type: 3}
-  m_PrefabInstance: {fileID: 2639342297044619827}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &320655412 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2751959294644829906, guid: 0ea90bda3792897439e8acf4e3c9f836,
-    type: 3}
-  m_PrefabInstance: {fileID: 2639342297044619827}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 320655410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &320655415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 320655410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 449746921}
-          m_TargetAssemblyTypeName: ShopUIHandler, Assembly-CSharp
-          m_MethodName: HoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 320655412}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 449746921}
-          m_TargetAssemblyTypeName: ShopUIHandler, Assembly-CSharp
-          m_MethodName: UnhoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 320655412}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 449746921}
-          m_TargetAssemblyTypeName: ShopUIHandler, Assembly-CSharp
-          m_MethodName: UnhoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 320655412}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!1 &352849218 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6616752799246316972, guid: ff3496b58899544c9ad4223144bfcec5,
-    type: 3}
-  m_PrefabInstance: {fileID: 7223914800623917839}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &352849221 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6616752799246316961, guid: ff3496b58899544c9ad4223144bfcec5,
-    type: 3}
-  m_PrefabInstance: {fileID: 7223914800623917839}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 352849218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &352849223
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 352849218}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1626709489}
-          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
-          m_MethodName: HoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 352849221}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1626709489}
-          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
-          m_MethodName: UnhoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 352849221}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1626709489}
-          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
-          m_MethodName: UnhoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 352849221}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
---- !u!1 &360976228 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6616752800117505010, guid: ff3496b58899544c9ad4223144bfcec5,
-    type: 3}
-  m_PrefabInstance: {fileID: 7223914800623917839}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &360976230 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6616752800117505015, guid: ff3496b58899544c9ad4223144bfcec5,
-    type: 3}
-  m_PrefabInstance: {fileID: 7223914800623917839}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 360976228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &360976233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 360976228}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1626709489}
-          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
-          m_MethodName: HoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 360976230}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1626709489}
-          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
-          m_MethodName: UnhoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 360976230}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1626709489}
-          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
-          m_MethodName: UnhoverButton
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 360976230}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
 --- !u!1001 &369847317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -952,7 +204,7 @@ PrefabInstance:
     - target: {fileID: 2863148683723321770, guid: 5b088e799c0284c2eb4bbc1a170d2b92,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.563
+      value: -2.5
       objectReference: {fileID: 0}
     - target: {fileID: 2863148683723321770, guid: 5b088e799c0284c2eb4bbc1a170d2b92,
         type: 3}
@@ -980,6 +232,143 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2863148683723321770, guid: 5b088e799c0284c2eb4bbc1a170d2b92,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2863148683723321770, guid: 5b088e799c0284c2eb4bbc1a170d2b92,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3238125663429126928, guid: 5b088e799c0284c2eb4bbc1a170d2b92,
+        type: 3}
+      propertyPath: m_Name
+      value: Spaceship
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5b088e799c0284c2eb4bbc1a170d2b92, type: 3}
+--- !u!1 &684494582 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6616752800220659115, guid: ff3496b58899544c9ad4223144bfcec5,
+    type: 3}
+  m_PrefabInstance: {fileID: 7223914800623917839}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &684494587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 684494582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1626709489}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: HoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1128536941}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1626709489}
+          m_TargetAssemblyTypeName: MenuUIHandler, Assembly-CSharp
+          m_MethodName: UnhoverButton
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1128536941}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Image, UnityEngine.UI
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1128536941 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6616752799330274168, guid: ff3496b58899544c9ad4223144bfcec5,
+    type: 3}
+  m_PrefabInstance: {fileID: 7223914800623917839}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &1171957765
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5635729441834893208, guid: 65f91b80291604a498240be4ba1a9435,
+        type: 3}
+      propertyPath: m_Name
+      value: DataManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 5635729441834893214, guid: 65f91b80291604a498240be4ba1a9435,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5635729441834893214, guid: 65f91b80291604a498240be4ba1a9435,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5635729441834893214, guid: 65f91b80291604a498240be4ba1a9435,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5635729441834893214, guid: 65f91b80291604a498240be4ba1a9435,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5635729441834893214, guid: 65f91b80291604a498240be4ba1a9435,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5635729441834893214, guid: 65f91b80291604a498240be4ba1a9435,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5635729441834893214, guid: 65f91b80291604a498240be4ba1a9435,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5635729441834893214, guid: 65f91b80291604a498240be4ba1a9435,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5635729441834893214, guid: 65f91b80291604a498240be4ba1a9435,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5635729441834893214, guid: 65f91b80291604a498240be4ba1a9435,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
@@ -4164,331 +3553,132 @@ MeshCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1983532298}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &1983532301
+--- !u!114 &1186101872
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1983532298}
+  m_GameObject: {fileID: 1186101868}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
+  m_Script: {fileID: 11500000, guid: f60ea5a9a3f094431bd315fc20490576, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 1828601336}
-  m_Colliders: []
-  m_InteractionLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_InteractionLayers:
-    m_Bits: 4
-  m_SelectMode: 1
-  m_CustomReticle: {fileID: 0}
-  m_FirstHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FirstSelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Activated:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Deactivated:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnFirstHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnLastHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectCanceled:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnActivate:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnDeactivate:
-    m_PersistentCalls:
-      m_Calls: []
-  m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
-  m_TeleportTrigger: 0
-  m_Teleporting:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!23 &1983532302
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1983532298}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: b93c0208aed8e46bcaafe1313d534e08, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1983532303
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1983532298}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &2058353333
+--- !u!1 &1626709488 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 6616752800337383443, guid: ff3496b58899544c9ad4223144bfcec5,
+    type: 3}
+  m_PrefabInstance: {fileID: 7223914800623917839}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2058353334}
-  - component: {fileID: 2058353338}
-  - component: {fileID: 2058353337}
-  - component: {fileID: 2058353336}
-  - component: {fileID: 2058353335}
-  m_Layer: 0
-  m_Name: TeleportArea (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2058353334
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058353333}
-  m_LocalRotation: {x: -0, y: -0.5308483, z: -0, w: 0.84746695}
-  m_LocalPosition: {x: 4.95, y: 0.01, z: 2.9}
-  m_LocalScale: {x: 16.418427, y: 0.0093331365, z: 9.199637}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 40919615}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: -64.126, z: 0}
---- !u!64 &2058353335
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058353333}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &2058353336
+--- !u!114 &1626709489 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 6616752800337383445, guid: ff3496b58899544c9ad4223144bfcec5,
+    type: 3}
+  m_PrefabInstance: {fileID: 7223914800623917839}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058353333}
+  m_GameObject: {fileID: 1626709488}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 38f6bf3d943ac7945842268c9ef1dca6, type: 3}
+  m_Script: {fileID: 11500000, guid: da1409c679d8846069060b5a1a19e17d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 1828601336}
-  m_Colliders: []
-  m_InteractionLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_InteractionLayers:
-    m_Bits: 4
-  m_SelectMode: 1
-  m_CustomReticle: {fileID: 0}
-  m_FirstHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FirstSelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Activated:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Deactivated:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnFirstHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnLastHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectCanceled:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnActivate:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnDeactivate:
-    m_PersistentCalls:
-      m_Calls: []
-  m_TeleportationProvider: {fileID: 0}
-  m_MatchOrientation: 0
-  m_TeleportTrigger: 0
-  m_Teleporting:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!23 &2058353337
-MeshRenderer:
+--- !u!82 &1626709495
+AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058353333}
+  m_GameObject: {fileID: 1626709488}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: b93c0208aed8e46bcaafe1313d534e08, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &2058353338
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058353333}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &2639342297044619827
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4516,46 +3706,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 7223914800623917841}
-    - target: {fileID: 2599365524097231645, guid: 0ea90bda3792897439e8acf4e3c9f836,
-        type: 3}
-      propertyPath: cashClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 0a1757ed09ca547a0af704d6d2c0edd1, type: 3}
-    - target: {fileID: 2599365524097231645, guid: 0ea90bda3792897439e8acf4e3c9f836,
-        type: 3}
-      propertyPath: hoverClip
-      value: 
-      objectReference: {fileID: 8300000, guid: e11ac1dde6017fd4aa4313b6afccc4b1, type: 3}
-    - target: {fileID: 4035910785104280936, guid: 0ea90bda3792897439e8acf4e3c9f836,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4571987105189886178, guid: 0ea90bda3792897439e8acf4e3c9f836,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6814708459760885738, guid: 0ea90bda3792897439e8acf4e3c9f836,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7528551662514676671, guid: 0ea90bda3792897439e8acf4e3c9f836,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7815979452281213687, guid: 0ea90bda3792897439e8acf4e3c9f836,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.013
-      objectReference: {fileID: 0}
-    - target: {fileID: 7815979452281213687, guid: 0ea90bda3792897439e8acf4e3c9f836,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0.199
-      objectReference: {fileID: 0}
     - target: {fileID: 8066039604836653142, guid: 0ea90bda3792897439e8acf4e3c9f836,
         type: 3}
       propertyPath: m_RootOrder
@@ -4625,11 +3775,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4100190437111235822, guid: f741fd655b08f944f849175573a14ea9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9122590282225013070, guid: f741fd655b08f944f849175573a14ea9,
         type: 3}
       propertyPath: m_RootOrder
@@ -4783,101 +3928,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR
       objectReference: {fileID: 0}
-    - target: {fileID: 3094405692569885925, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 27.035698
-      objectReference: {fileID: 0}
-    - target: {fileID: 3094405692569885925, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.018809602
-      objectReference: {fileID: 0}
-    - target: {fileID: 3094405692569885925, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 21.857412
-      objectReference: {fileID: 0}
-    - target: {fileID: 3094405692569885925, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 12.29
-      objectReference: {fileID: 0}
-    - target: {fileID: 3094405692569885928, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b93c0208aed8e46bcaafe1313d534e08, type: 2}
-    - target: {fileID: 3094405692569885930, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_InteractionLayers.m_Bits
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3094405693744243466, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_InteractionLayers.m_Bits
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3094405694097391420, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_Velocity
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3094405694097391420, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_EnableUIInteraction
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3094405694097391420, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_InteractionLayers.m_Bits
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3094405694097391422, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_ValidColorGradient.key0.a
-      value: 0.827451
-      objectReference: {fileID: 0}
-    - target: {fileID: 3094405694097391422, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_ValidColorGradient.key0.b
-      value: 0.1012671
-      objectReference: {fileID: 0}
-    - target: {fileID: 3094405694097391422, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_ValidColorGradient.key0.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3094405694097391422, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_ValidColorGradient.key0.r
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3094405694097391422, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_ValidColorGradient.key1.a
-      value: 0.827451
-      objectReference: {fileID: 0}
-    - target: {fileID: 3094405694097391422, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_ValidColorGradient.key1.b
-      value: 0.20000002
-      objectReference: {fileID: 0}
-    - target: {fileID: 3094405694097391422, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_ValidColorGradient.key1.g
-      value: 0.9176471
-      objectReference: {fileID: 0}
-    - target: {fileID: 3094405694097391422, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_ValidColorGradient.key1.r
-      value: 0.11764707
-      objectReference: {fileID: 0}
-    - target: {fileID: 3094405694097391422, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_ValidColorGradient.m_Mode
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5164820167434120022, guid: ff3496b58899544c9ad4223144bfcec5,
         type: 3}
       propertyPath: m_RootOrder
@@ -4933,11 +3983,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6616752798692086488, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6616752798912808104, guid: ff3496b58899544c9ad4223144bfcec5,
         type: 3}
       propertyPath: m_Sprite
@@ -4964,26 +4009,6 @@ PrefabInstance:
       propertyPath: m_FillAmount
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6616752798964616648, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6616752799088046738, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6616752799721286937, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6616752800337383445, guid: ff3496b58899544c9ad4223144bfcec5,
-        type: 3}
-      propertyPath: cashClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 0a1757ed09ca547a0af704d6d2c0edd1, type: 3}
     - target: {fileID: 6616752800337383445, guid: ff3496b58899544c9ad4223144bfcec5,
         type: 3}
       propertyPath: hoverClip
@@ -5044,8 +4069,7 @@ PrefabInstance:
       propertyPath: wristMenuClip
       value: 
       objectReference: {fileID: 8300000, guid: 69f90c8fc6b4f4425bc8384674eb2ce8, type: 3}
-    m_RemovedComponents:
-    - {fileID: 3094405693744243464, guid: ff3496b58899544c9ad4223144bfcec5, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff3496b58899544c9ad4223144bfcec5, type: 3}
 --- !u!1 &7223914800623917840 stripped
 GameObject:
