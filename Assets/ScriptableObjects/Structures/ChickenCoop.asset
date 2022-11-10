@@ -10,16 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25ca50aef15040a4da4a444a7c47cff3, type: 3}
-  m_Name: BrainberryHalf
+  m_Name: ChickenCoop
   m_EditorClassIdentifier: 
-  type: 7
-  prefab: {fileID: 7127090749104569712, guid: 9b0fccbfac9b24485992ca0166e44e4f, type: 3}
-  cols: 1
-  rows: 1
-  isStable: 0
-  animal: {fileID: 0}
-  animalLimit: -1
-  doesGrow: 1
-  growDays: 1
-  nextStage: {fileID: 11400000, guid: 70cc573919f604f44b1edd03a5d27185, type: 2}
-  product: {fileID: 0}
+  type: 6
+  prefab: {fileID: 8785561675901546141, guid: 3ecad41c34b3b4a438dbbdad0eac0d08, type: 3}
+  cols: 5
+  rows: 5
+  isStable: 1
+  animal: {fileID: 11400000, guid: 9f7373f5022e545078880b38111d64b4, type: 2}
+  animalLimit: 4
+  isPlot: 0
+  product: {fileID: 11400000, guid: 1baa815e54aca4ea88a09909c403a685, type: 2}

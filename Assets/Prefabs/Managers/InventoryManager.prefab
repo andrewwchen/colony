@@ -55,6 +55,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6c415dde46a6da64aaf8585ae10a4f60, type: 2}
   - {fileID: 11400000, guid: 17e8cd3985841ea49aaf56b04b98b15b, type: 2}
   - {fileID: 11400000, guid: c9f2d70651a0e5b44bab4aa050aae23c, type: 2}
+  - {fileID: 11400000, guid: 1baa815e54aca4ea88a09909c403a685, type: 2}
+  - {fileID: 11400000, guid: 739adb0b8ce214aeeb23d83f07725460, type: 2}
+  - {fileID: 11400000, guid: 8490c46bdcf7f4434bb9230b6a6bcd2d, type: 2}
+  - {fileID: 11400000, guid: 2dc587d654ee0460c92c410e4f2aae72, type: 2}
+  - {fileID: 11400000, guid: 74de5486fac20428da7c09c36aacac8d, type: 2}
+  - {fileID: 11400000, guid: 9a379728975d942698e80f318f446793, type: 2}
+  - {fileID: 11400000, guid: 5f64f9d30e7c941e3a5b340939b3ba02, type: 2}
+  - {fileID: 11400000, guid: e95dfb0f8339e45c890ee3b9ba451fb8, type: 2}
   buyables: []
   money: 0
   OnMoneyChange:

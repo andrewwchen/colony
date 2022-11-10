@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6292b33a9101f3f4897f1ab99ed9b7c9, type: 3}
-  m_Name: Brainberry Ripe
+  m_Name: PumpkinNew
   m_EditorClassIdentifier: 
-  type: 3
-  prefab: {fileID: 7127090749104569712, guid: be58318b714b8c3428c6273be6f9ca8e, type: 3}
+  type: 13
+  prefab: {fileID: 1423600104343373607, guid: 450b9eaee52b1439a951e720ee7e4989, type: 3}
   doesGrow: 1
-  needsWater: 0
+  needsWater: 1
   growDays: 1
-  nextStage: 4
-  product: {fileID: 11400000, guid: 1a779473ccd0dfa4c8727f9f3d858e73, type: 2}
+  nextStage: 14
+  product: {fileID: 0}
