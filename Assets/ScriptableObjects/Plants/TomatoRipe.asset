@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TomatoRipe
   m_EditorClassIdentifier: 
   type: 3
-  prefab: {fileID: 7127090749104569712, guid: be58318b714b8c3428c6273be6f9ca8e, type: 3}
+  prefab: {fileID: 384127677814151371, guid: c940a18f4c5ad4b5f8bc8bb124ce1ce0, type: 3}
   doesGrow: 1
   needsWater: 0
   growDays: 1

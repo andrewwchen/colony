@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1133023409119210292}
-  - component: {fileID: 6612724815354921870}
+  - component: {fileID: 2294010827495001656}
   m_Layer: 0
   m_Name: sheep
   m_TagString: Untagged
@@ -46,7 +46,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6612724815354921870
+--- !u!114 &2294010827495001656
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -58,9 +58,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e813e1eb0ae00c4e9bb87dedacbb798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  config: {fileID: 0}
-  displayName: 
-  daysUnfed: 0
 --- !u!1 &575837213118387731
 GameObject:
   m_ObjectHideFlags: 0

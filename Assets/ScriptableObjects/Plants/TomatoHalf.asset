@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TomatoHalf
   m_EditorClassIdentifier: 
   type: 2
-  prefab: {fileID: 7127090749104569712, guid: be58318b714b8c3428c6273be6f9ca8e, type: 3}
+  prefab: {fileID: 6549083791957194935, guid: 450d05cffc3014adf9f2db9b9f13fb72, type: 3}
   doesGrow: 1
   needsWater: 1
   growDays: 1

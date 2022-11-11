@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cow
   m_EditorClassIdentifier: 
   type: 1
-  prefab: {fileID: 356521477219086734, guid: c76d7f1830e9d4290a1359b291588a14, type: 3}
+  prefab: {fileID: 1771894466134573348, guid: e0e73d47ef26e41e7896e4d8b71b64bc, type: 3}
   buyPrice: 50
   starveDays: 3
   product: {fileID: 11400000, guid: 6c415dde46a6da64aaf8585ae10a4f60, type: 2}

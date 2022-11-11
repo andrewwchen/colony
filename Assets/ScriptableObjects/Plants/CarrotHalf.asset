@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CarrotHalf
   m_EditorClassIdentifier: 
   type: 10
-  prefab: {fileID: 7127090749104569712, guid: be58318b714b8c3428c6273be6f9ca8e, type: 3}
+  prefab: {fileID: 3663457037512931698, guid: 491cdaeaac767407f800c8dbcc05e134, type: 3}
   doesGrow: 1
   needsWater: 1
   growDays: 1

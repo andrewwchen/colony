@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: TomatoWilted
   m_EditorClassIdentifier: 
   type: 4
-  prefab: {fileID: 7127090749104569712, guid: be58318b714b8c3428c6273be6f9ca8e, type: 3}
+  prefab: {fileID: 997864504144732525, guid: 1ef5d2cd9e21946e4817e328edacb893, type: 3}
   doesGrow: 0
   needsWater: 0
   growDays: -1

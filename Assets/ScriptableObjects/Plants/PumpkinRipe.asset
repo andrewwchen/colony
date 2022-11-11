@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PumpkinRipe
   m_EditorClassIdentifier: 
   type: 15
-  prefab: {fileID: 7127090749104569712, guid: be58318b714b8c3428c6273be6f9ca8e, type: 3}
+  prefab: {fileID: 1846582803203890423, guid: 0242e481cb59c4b4c921b53444dce916, type: 3}
   doesGrow: 1
   needsWater: 0
   growDays: 1

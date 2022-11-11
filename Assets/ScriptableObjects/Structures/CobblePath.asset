@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25ca50aef15040a4da4a444a7c47cff3, type: 3}
+  m_Name: CobblePath
+  m_EditorClassIdentifier: 
+  type: 7
+  prefab: {fileID: 7903301609089512471, guid: bd5653052201949f19af6a1f84304a2d, type: 3}
+  cols: 1
+  rows: 1
+  isStable: 0
+  animal: {fileID: 0}
+  animalLimit: -1
+  isPlot: 0
+  product: {fileID: 11400000, guid: 28a50a4f532204ff5b488ca2a74f7e05, type: 2}

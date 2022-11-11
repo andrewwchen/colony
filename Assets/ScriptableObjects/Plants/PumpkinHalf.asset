@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PumpkinHalf
   m_EditorClassIdentifier: 
   type: 14
-  prefab: {fileID: 7127090749104569712, guid: be58318b714b8c3428c6273be6f9ca8e, type: 3}
+  prefab: {fileID: 7868277222077624467, guid: a39a1201ac5b84fa29010226f6d2c8b9, type: 3}
   doesGrow: 1
   needsWater: 1
   growDays: 1

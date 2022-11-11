@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Chicken
   m_EditorClassIdentifier: 
   type: 3
-  prefab: {fileID: 356521477219086734, guid: c76d7f1830e9d4290a1359b291588a14, type: 3}
+  prefab: {fileID: 7930282781798805168, guid: 2892e510ef055415e8137fab847bfe52, type: 3}
   buyPrice: 20
   starveDays: 2
   product: {fileID: 11400000, guid: 739adb0b8ce214aeeb23d83f07725460, type: 2}

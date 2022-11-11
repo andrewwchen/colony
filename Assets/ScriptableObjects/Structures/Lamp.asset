@@ -13,13 +13,11 @@ MonoBehaviour:
   m_Name: Lamp
   m_EditorClassIdentifier: 
   type: 2
-  prefab: {fileID: 7127090749104569712, guid: 9b0fccbfac9b24485992ca0166e44e4f, type: 3}
+  prefab: {fileID: 5905103356607292127, guid: 8984e3312f5ed47f6b7aaffe96bb6696, type: 3}
   cols: 1
   rows: 1
   isStable: 0
   animal: {fileID: 0}
   animalLimit: -1
-  doesGrow: 0
-  growDays: -1
-  nextStage: {fileID: 0}
+  isPlot: 0
   product: {fileID: 11400000, guid: 7668e70b5a4b38e44af6ad1e3d55f3bf, type: 2}

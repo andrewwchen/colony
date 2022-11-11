@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CornRipe
   m_EditorClassIdentifier: 
   type: 7
-  prefab: {fileID: 7127090749104569712, guid: be58318b714b8c3428c6273be6f9ca8e, type: 3}
+  prefab: {fileID: 4022191348142344283, guid: 7ac8da1c4b3db490c8aca351b40d5fb8, type: 3}
   doesGrow: 1
   needsWater: 0
   growDays: 1

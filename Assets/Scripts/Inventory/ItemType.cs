@@ -18,4 +18,5 @@ public enum ItemType
     CarrotSeed,
     Pumpkin,
     PumpkinSeed,
+    CobblePath,
 }

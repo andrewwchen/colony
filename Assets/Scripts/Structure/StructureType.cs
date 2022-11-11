@@ -7,4 +7,5 @@ public enum StructureType
     SheepStable,
     Plot,
     ChickenCoop,
+    CobblePath,
 }

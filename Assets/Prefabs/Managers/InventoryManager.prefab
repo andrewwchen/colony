@@ -64,6 +64,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9a379728975d942698e80f318f446793, type: 2}
   - {fileID: 11400000, guid: 5f64f9d30e7c941e3a5b340939b3ba02, type: 2}
   - {fileID: 11400000, guid: e95dfb0f8339e45c890ee3b9ba451fb8, type: 2}
+  - {fileID: 11400000, guid: 28a50a4f532204ff5b488ca2a74f7e05, type: 2}
   buyables: []
   money: 0
   OnMoneyChange:

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CornWilted
   m_EditorClassIdentifier: 
   type: 8
-  prefab: {fileID: 7127090749104569712, guid: be58318b714b8c3428c6273be6f9ca8e, type: 3}
+  prefab: {fileID: 6017847164280707863, guid: e833a68034db1429faffcead5a957f85, type: 3}
   doesGrow: 0
   needsWater: 0
   growDays: -1

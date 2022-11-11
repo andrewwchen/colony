@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PumpkinWilted
   m_EditorClassIdentifier: 
   type: 16
-  prefab: {fileID: 7127090749104569712, guid: be58318b714b8c3428c6273be6f9ca8e, type: 3}
+  prefab: {fileID: 1425488852532830102, guid: 90c0991408903439b9c3e030c7bbd5c2, type: 3}
   doesGrow: 0
   needsWater: 0
   growDays: -1

@@ -13,13 +13,11 @@ MonoBehaviour:
   m_Name: Path
   m_EditorClassIdentifier: 
   type: 0
-  prefab: {fileID: 7127090749104569712, guid: 9b0fccbfac9b24485992ca0166e44e4f, type: 3}
+  prefab: {fileID: 2607420465021762210, guid: bb757bdb69b914fa991cf6f6469d0e0e, type: 3}
   cols: 1
   rows: 1
   isStable: 0
   animal: {fileID: 0}
   animalLimit: -1
-  doesGrow: 0
-  growDays: -1
-  nextStage: {fileID: 0}
+  isPlot: 0
   product: {fileID: 11400000, guid: 670c38be674ce1b42b38fabef5d723ed, type: 2}

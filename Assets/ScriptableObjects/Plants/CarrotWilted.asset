@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CarrotWilted
   m_EditorClassIdentifier: 
   type: 12
-  prefab: {fileID: 7127090749104569712, guid: be58318b714b8c3428c6273be6f9ca8e, type: 3}
+  prefab: {fileID: 1864831425024164707, guid: 679a6495b84054a70996a9140e969263, type: 3}
   doesGrow: 0
   needsWater: 0
   growDays: -1
