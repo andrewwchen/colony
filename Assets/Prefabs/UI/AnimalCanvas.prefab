@@ -1074,7 +1074,6 @@ MonoBehaviour:
   animalSpawn: {fileID: 0}
   hoverClip: {fileID: 8300000, guid: e11ac1dde6017fd4aa4313b6afccc4b1, type: 3}
   collectClip: {fileID: 8300000, guid: f6fa52eec25a64c4c9f53f294c72b2e1, type: 3}
-  eatClip: {fileID: 8300000, guid: 371359ad6c7204098bc9a26078cb7d11, type: 3}
   animal: {fileID: 0}
   animalConfig: {fileID: 0}
   data:

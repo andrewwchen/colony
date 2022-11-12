@@ -11,7 +11,6 @@ public class AnimalInstanceMenu : MonoBehaviour
     [SerializeField] private Transform animalSpawn;
     [SerializeField] private AudioClip hoverClip;
     [SerializeField] private AudioClip collectClip;
-    [SerializeField] private AudioClip eatClip;
 
     [HideInInspector] public AnimalInstance animal;
     [HideInInspector] public Animal animalConfig;
@@ -116,6 +115,7 @@ public class AnimalInstanceMenu : MonoBehaviour
         go.transform.rotation = animalSpawn.rotation;
         animal = go.GetComponent<AnimalInstance>();
         YesAnimal();
+        animal.playAnimalSound();
     }
 
     private void Collect()
@@ -135,7 +135,7 @@ public class AnimalInstanceMenu : MonoBehaviour
         {
             Debug.Log("Fed Animal");
             data.daysUnfed = 0;
-            PlaySound(eatClip);
+            animal.playEatSound();
         }
     }
 
