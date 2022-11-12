@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1778132636313798040}
   m_Layer: 5
   m_Name: Left
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,9 +196,9 @@ GameObject:
   - component: {fileID: 8259849868930715458}
   - component: {fileID: 3451777591214788524}
   - component: {fileID: 8921018648317539464}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SellButton
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -380,7 +380,7 @@ GameObject:
   - component: {fileID: 2620989695942530817}
   m_Layer: 5
   m_Name: Cash
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -517,7 +517,7 @@ GameObject:
   - component: {fileID: 7346065628385899974}
   m_Layer: 5
   m_Name: Img
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -636,9 +636,9 @@ GameObject:
   - component: {fileID: 2096259472626161100}
   - component: {fileID: 9167581696120712310}
   - component: {fileID: 2941911826426099099}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: QuantityValue
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -770,9 +770,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1151579630526381554}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Total
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -811,9 +811,9 @@ GameObject:
   - component: {fileID: 6329708540118983748}
   - component: {fileID: 1310686219043910511}
   - component: {fileID: 7530840880711077105}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: PriceText
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -947,9 +947,9 @@ GameObject:
   - component: {fileID: 2630414316493918065}
   - component: {fileID: 1701291880082276942}
   - component: {fileID: 6340462268129105439}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1083,9 +1083,9 @@ GameObject:
   - component: {fileID: 6993184712087768975}
   - component: {fileID: 5890390206049900117}
   - component: {fileID: 847618896652201317}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Title
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1221,7 +1221,7 @@ GameObject:
   - component: {fileID: 3533588328894210549}
   m_Layer: 5
   m_Name: Time
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1357,7 +1357,7 @@ GameObject:
   - component: {fileID: 7664804637691195608}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1435,7 +1435,7 @@ GameObject:
   - component: {fileID: 2468619186419663526}
   m_Layer: 5
   m_Name: Right
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1616,7 +1616,7 @@ GameObject:
   - component: {fileID: 7902342837909794277}
   m_Layer: 5
   m_Name: ExitText
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1754,7 +1754,7 @@ GameObject:
   - component: {fileID: 8535687886667184549}
   m_Layer: 5
   m_Name: PointerButton
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1948,7 +1948,7 @@ GameObject:
   - component: {fileID: 4581266523919155607}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2024,7 +2024,7 @@ GameObject:
   - component: {fileID: 4581266523945873372}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2098,7 +2098,7 @@ GameObject:
   - component: {fileID: 4581266524251959093}
   m_Layer: 5
   m_Name: Bank
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2140,7 +2140,7 @@ GameObject:
   - component: {fileID: 7529971819996303590}
   m_Layer: 5
   m_Name: Left
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2351,7 +2351,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.0266, y: 0.1167}
+  m_AnchoredPosition: {x: 0.026611328, y: 0.11669922}
   m_SizeDelta: {x: 48.6756, y: 11.39561}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &4581266524344426876
@@ -2397,7 +2397,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &4581266524344426878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2474,7 +2474,7 @@ MonoBehaviour:
   itemSellButton: {fileID: 3451777591214788524}
   itemSelectButton: {fileID: 4512490173594282984}
   hoverClip: {fileID: 8300000, guid: e11ac1dde6017fd4aa4313b6afccc4b1, type: 3}
-  cashClip: {fileID: 0}
+  errorClip: {fileID: 8300000, guid: fb4473c2747114be08a81111c0f308c3, type: 3}
 --- !u!82 &1626709495
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2584,7 +2584,7 @@ GameObject:
   - component: {fileID: 4581266524386248685}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2662,7 +2662,7 @@ GameObject:
   - component: {fileID: 6588740714116138156}
   m_Layer: 5
   m_Name: Slot1
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2846,7 +2846,7 @@ GameObject:
   - component: {fileID: 2299946344929231991}
   m_Layer: 5
   m_Name: Right
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3029,7 +3029,7 @@ GameObject:
   - component: {fileID: 684494587}
   m_Layer: 5
   m_Name: InventoryButton
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3223,7 +3223,7 @@ GameObject:
   - component: {fileID: 4581266524573064091}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3377,7 +3377,7 @@ GameObject:
   - component: {fileID: 1163551575972636023}
   m_Layer: 5
   m_Name: Slot3
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3559,7 +3559,7 @@ GameObject:
   - component: {fileID: 4581266525102034004}
   m_Layer: 5
   m_Name: Frame
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3637,7 +3637,7 @@ GameObject:
   - component: {fileID: 6572763276343754653}
   m_Layer: 5
   m_Name: Slot4
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3819,7 +3819,7 @@ GameObject:
   - component: {fileID: 4581266525217454612}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3895,7 +3895,7 @@ GameObject:
   - component: {fileID: 4581266525282027106}
   m_Layer: 5
   m_Name: Date
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4029,7 +4029,7 @@ GameObject:
   - component: {fileID: 4581266525422020110}
   m_Layer: 5
   m_Name: Energy
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4071,7 +4071,7 @@ GameObject:
   - component: {fileID: 3465778396534904286}
   m_Layer: 5
   m_Name: Home
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4262,7 +4262,7 @@ GameObject:
   - component: {fileID: 4581266525577053181}
   m_Layer: 5
   m_Name: Inventory
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4308,7 +4308,7 @@ GameObject:
   - component: {fileID: 1186101872}
   m_Layer: 5
   m_Name: Bar
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4398,7 +4398,7 @@ GameObject:
   - component: {fileID: 9185924923378136043}
   m_Layer: 5
   m_Name: Home
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4589,7 +4589,7 @@ GameObject:
   - component: {fileID: 4581266525713202339}
   m_Layer: 5
   m_Name: MainMenu
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4635,7 +4635,7 @@ GameObject:
   - component: {fileID: 2845653208734243531}
   m_Layer: 5
   m_Name: Slot2
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4817,7 +4817,7 @@ GameObject:
   - component: {fileID: 4581266525866883101}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4891,7 +4891,7 @@ GameObject:
   - component: {fileID: 4581266525985661875}
   m_Layer: 5
   m_Name: Tooltip
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4935,9 +4935,9 @@ GameObject:
   - component: {fileID: 4725652739446622751}
   - component: {fileID: 43323149929225265}
   - component: {fileID: 344061094329793163}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ItemName
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5071,9 +5071,9 @@ GameObject:
   - component: {fileID: 6211152155071170906}
   - component: {fileID: 984102264330213695}
   - component: {fileID: 7347430814114936088}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: ItemDescription
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5207,9 +5207,9 @@ GameObject:
   - component: {fileID: 2831129692312782653}
   - component: {fileID: 7442642525376170657}
   - component: {fileID: 6770052824467103488}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5281,9 +5281,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7931135345576970748}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Quantity
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5325,7 +5325,7 @@ GameObject:
   - component: {fileID: 6589881535522086409}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5399,9 +5399,9 @@ GameObject:
   - component: {fileID: 3873255978841704551}
   - component: {fileID: 1063081560662495032}
   - component: {fileID: 3995186421425316315}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Title
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

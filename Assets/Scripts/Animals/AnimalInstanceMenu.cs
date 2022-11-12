@@ -12,6 +12,7 @@ public class AnimalInstanceMenu : MonoBehaviour
     [SerializeField] private AudioClip hoverClip;
     [SerializeField] private AudioClip eatClip;
     [SerializeField] private AudioClip collectClip;
+    [SerializeField] private AudioClip errorClip;
 
     [HideInInspector] public AnimalInstance animal;
     [HideInInspector] public Animal animalConfig;
@@ -106,6 +107,7 @@ public class AnimalInstanceMenu : MonoBehaviour
         {
             Spawn();
         }
+        else PlaySound(errorClip);
     }
 
     private void Spawn(AnimalData data = null)
@@ -127,6 +129,7 @@ public class AnimalInstanceMenu : MonoBehaviour
             im.AddItem(animalConfig.product);
             PlaySound(collectClip);
         }
+        else PlaySound(errorClip);
     }
 
     private void Feed()
@@ -137,6 +140,7 @@ public class AnimalInstanceMenu : MonoBehaviour
             data.daysUnfed = 0;
             PlaySound(eatClip);
         }
+        else PlaySound(errorClip);
     }
 
 

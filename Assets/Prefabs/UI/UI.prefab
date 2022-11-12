@@ -2363,7 +2363,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: -93.949, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -1.6091919, y: 1.0700073}
+  m_AnchoredPosition: {x: -1.6091309, y: 1.0700073}
   m_SizeDelta: {x: 1.1814, y: 0.7007}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &7660147118454993416
@@ -5099,6 +5099,7 @@ MonoBehaviour:
   itemBuy: {fileID: 2912046843923421296}
   baldorAnim: {fileID: 0}
   hoverClip: {fileID: 8300000, guid: e11ac1dde6017fd4aa4313b6afccc4b1, type: 3}
+  errorClip: {fileID: 8300000, guid: fb4473c2747114be08a81111c0f308c3, type: 3}
 --- !u!1 &8109543170605265894
 GameObject:
   m_ObjectHideFlags: 0

@@ -26,6 +26,7 @@ public class ShopUIHandler : MonoBehaviour
     [SerializeField] private Animator baldorAnim;
 
     [SerializeField] private AudioClip hoverClip;
+    [SerializeField] private AudioClip errorClip;
 
     private InventoryManager im;
     private Transform cam;
@@ -160,6 +161,7 @@ public class ShopUIHandler : MonoBehaviour
             quantity = 1;
             ResetQuantity();
         }
+        else PlaySound(errorClip);
     }
 
     void LateUpdate()

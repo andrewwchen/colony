@@ -20,8 +20,8 @@ public class AnimalInstance : MonoBehaviour
         source.spatialBlend = 1;
         playAnimalSound();
 
-        minWait = animalSound.length * 1.5f;
-        maxWait = 180;
+        minWait = animalSound.length + 1;
+        maxWait = 100;
     }
 
     // Update is called once per frame
