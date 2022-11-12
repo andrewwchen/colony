@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Corn Seed Packet
   description: A small seed packet. If planted and watered for several days, these
     seeds will grow into a corn plant.
-  thumbnail: {fileID: 21300000, guid: 70632ddfe8e71b04b8f90ef7e29a9e98, type: 3}
+  thumbnail: {fileID: 21300000, guid: e4f21de1496700148b4b9ba506f37524, type: 3}
   buyable: 1
   buyPrice: 20
   sellPrice: 10

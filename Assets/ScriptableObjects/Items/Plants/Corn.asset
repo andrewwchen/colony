@@ -15,7 +15,7 @@ MonoBehaviour:
   type: 12
   displayName: Regular Corn
   description: A regular ear of corn. A hot commodity.
-  thumbnail: {fileID: 21300000, guid: e5600378dd761e64d9423790c482bf36, type: 3}
+  thumbnail: {fileID: 21300000, guid: 0790e9c3230dbb54ba3464bde15fa140, type: 3}
   buyable: 0
   buyPrice: -1
   sellPrice: 200

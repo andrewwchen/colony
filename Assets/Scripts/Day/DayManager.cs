@@ -17,7 +17,7 @@ public class DayManager : MonoBehaviour
     [HideInInspector] public UnityEvent OnTimeChange;
     [HideInInspector] public int time = 0; // time in in-game minutes since the day began
 
-    private static float realSecondsPerGameMinute = 0.5f;
+    private static float realSecondsPerGameMinute = 0.25f;
 
     private static int wakeHour = 6;
     private static int duskHour = 18;

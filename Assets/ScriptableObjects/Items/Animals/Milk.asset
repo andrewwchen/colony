@@ -15,7 +15,7 @@ MonoBehaviour:
   type: 7
   displayName: Milk
   description: Fresh milk. A hot commodity.
-  thumbnail: {fileID: 21300000, guid: 13e7e6fe43a8aa049bcd610bbc1f5ff8, type: 3}
+  thumbnail: {fileID: 21300000, guid: 5f6f5583df839bc4187e048ed24f3df6, type: 3}
   buyable: 0
   buyPrice: -1
   sellPrice: 80

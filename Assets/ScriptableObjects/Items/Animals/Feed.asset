@@ -15,7 +15,7 @@ MonoBehaviour:
   type: 9
   displayName: Animal Feed
   description: Used to feed animals in your stables.
-  thumbnail: {fileID: 21300000, guid: 64eb0648ca0d11944a9517d8662508fd, type: 3}
+  thumbnail: {fileID: 21300000, guid: 30bbbcfcbe8eee24bb5e6e43785f1417, type: 3}
   buyable: 1
   buyPrice: 5
   sellPrice: 1

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Night
   m_EditorClassIdentifier: 
   id: night
-  skyboxMat: {fileID: 2100000, guid: 755d508f9fc3346b09d063bac3360118, type: 2}
+  skyboxMat: {fileID: 2100000, guid: aad00eb73df239f46b0660a4022a4fb9, type: 2}
   light: {fileID: 6367799687628623549, guid: 54130bbdbef49e94e9a5e4e03883e76f, type: 3}
   lightmapColor: {fileID: 2800000, guid: 37d783cff7d637945ba1e3f1025c26ac, type: 3}
   lightmapDir: {fileID: 2800000, guid: 5a7a731c52c033a48850286278238387, type: 3}

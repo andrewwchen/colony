@@ -15,7 +15,7 @@ MonoBehaviour:
   type: 14
   displayName: Ominous Carrot
   description: A carrot with a distinct purple hue. A hot commodity.
-  thumbnail: {fileID: 21300000, guid: e5600378dd761e64d9423790c482bf36, type: 3}
+  thumbnail: {fileID: 21300000, guid: 1724208bd96ed2442a3cd601decb0cb7, type: 3}
   buyable: 0
   buyPrice: -1
   sellPrice: 50

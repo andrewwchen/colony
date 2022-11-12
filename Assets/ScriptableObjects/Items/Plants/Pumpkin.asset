@@ -15,7 +15,7 @@ MonoBehaviour:
   type: 16
   displayName: Glowing Pumpkin
   description: A pumpkin with a distinctive glow. A hot commodity.
-  thumbnail: {fileID: 21300000, guid: e5600378dd761e64d9423790c482bf36, type: 3}
+  thumbnail: {fileID: 21300000, guid: 9df282fbc37f8164391a0e0c8d14dc44, type: 3}
   buyable: 0
   buyPrice: -1
   sellPrice: 300

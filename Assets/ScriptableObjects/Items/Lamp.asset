@@ -15,7 +15,7 @@ MonoBehaviour:
   type: 4
   displayName: Lamp
   description: A lamp to place around your farm.
-  thumbnail: {fileID: 21300000, guid: 7fd3cda14282bb7429b8eeb6c121e5bb, type: 3}
+  thumbnail: {fileID: 21300000, guid: 5b00579eea97e3e4597f978fd4b4f538, type: 3}
   buyable: 1
   buyPrice: 50
   sellPrice: 25

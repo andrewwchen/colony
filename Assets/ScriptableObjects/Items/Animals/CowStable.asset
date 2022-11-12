@@ -15,7 +15,7 @@ MonoBehaviour:
   type: 2
   displayName: Space Cow Stable
   description: 'A stable for sheltering Space Cows to place around your farm. '
-  thumbnail: {fileID: 21300000, guid: 3a0c527d7f890d64a9b56b086e6e766a, type: 3}
+  thumbnail: {fileID: 21300000, guid: e6c8960152ea87141a70c8505d83786f, type: 3}
   buyable: 1
   buyPrice: 800
   sellPrice: 400

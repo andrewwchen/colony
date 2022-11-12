@@ -15,7 +15,7 @@ MonoBehaviour:
   type: 10
   displayName: Space Chicken Coop
   description: 'A stable for sheltering Space Chickens to place around your farm. '
-  thumbnail: {fileID: 21300000, guid: 3a0c527d7f890d64a9b56b086e6e766a, type: 3}
+  thumbnail: {fileID: 21300000, guid: 36753c9aa9a816d4f84db3a66fd12103, type: 3}
   buyable: 1
   buyPrice: 200
   sellPrice: 100
