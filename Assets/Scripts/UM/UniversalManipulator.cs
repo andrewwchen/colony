@@ -91,13 +91,11 @@ public class UniversalManipulator : MonoBehaviour
                         PlaySound(buildingClip);
                         im.RemoveItem(currentItem);
                     }
-                    else PlaySound(errorClip);
                 }
-                //PlaySound(errorClip);
                 break;
             case UMMode.Planting:
                 if (im.inventory[currentItem] > 0 && Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, rayDistance))
-                {
+                { 
                     if (umEnergy > plantingEnergyCost && sm.MakePlant(currentItem.plantable, hit.point))
                     {
                         PlaySound(plantingClip);
@@ -105,9 +103,7 @@ public class UniversalManipulator : MonoBehaviour
                         umEnergy -= plantingEnergyCost;
                         OnUMPerform?.Invoke();
                     }
-                    else PlaySound(errorClip);
                 }
-                //PlaySound(errorClip);
                 break;
             case UMMode.Removing:
                 if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, rayDistance))
@@ -116,9 +112,7 @@ public class UniversalManipulator : MonoBehaviour
                     {
                         PlaySound(removingClip);
                     }
-                    else PlaySound(errorClip);
                 }
-                //PlaySound(errorClip);
                 break;
             case UMMode.Tilling:
                 if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, rayDistance))
@@ -129,9 +123,7 @@ public class UniversalManipulator : MonoBehaviour
                         umEnergy -= tillingEnergyCost;
                         OnUMPerform?.Invoke();
                     }
-                    else PlaySound(errorClip);
                 }
-                //PlaySound(errorClip);
                 break;
             case UMMode.Watering:
                 if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, rayDistance))
@@ -142,9 +134,7 @@ public class UniversalManipulator : MonoBehaviour
                         umEnergy -= wateringEnergyCost;
                         OnUMPerform?.Invoke();
                     }
-                    else PlaySound(errorClip);
-                }
-                //PlaySound(errorClip);
+                };
                 break;
         }
     }

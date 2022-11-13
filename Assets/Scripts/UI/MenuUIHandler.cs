@@ -31,6 +31,7 @@ public class MenuUIHandler : MonoBehaviour
     [SerializeField] private Button itemSelectButton;
 
     [SerializeField] private AudioClip hoverClip;
+    [SerializeField] private AudioClip errorClip;
 
     private InventoryManager im;
     private UniversalManipulator um;
@@ -170,15 +171,12 @@ public class MenuUIHandler : MonoBehaviour
 
     private void Sell()
     {
-        if (im.money >= currentItem.sellPrice * quantity)
+        for (int i = 0; i < quantity; i++)
         {
-            for (int i = 0; i < quantity; i++)
-            {
-                im.SellItem(currentItem);
-            }
-            quantity = 1;
-            ResetQuantity();
+            im.SellItem(currentItem);
         }
+        quantity = 1;
+        ResetQuantity();
     }
 
     private void ResetItemCount()
@@ -234,6 +232,7 @@ public class MenuUIHandler : MonoBehaviour
                 um.SetMode(UMMode.Building, currentItem);
                 break;
             default:
+                PlaySound(errorClip);
                 break;
         }
     }

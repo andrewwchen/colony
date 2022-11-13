@@ -1171,7 +1171,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animalSound: {fileID: 8300000, guid: d7a0828a305dd4cd69636855780d851d, type: 3}
-  eatSound: {fileID: 8300000, guid: 371359ad6c7204098bc9a26078cb7d11, type: 3}
 --- !u!82 &7478172718961123227
 AudioSource:
   m_ObjectHideFlags: 0
