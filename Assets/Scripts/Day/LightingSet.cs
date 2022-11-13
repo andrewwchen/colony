@@ -9,6 +9,6 @@ public class LightingSet : ScriptableObject
     // the main directional light
     public Light light;
     // the lightmap data
-    public Texture2D lightmapColor;
-    public Texture2D lightmapDir;
+    public Texture2D[] lightmapColor;
+    public Texture2D[] lightmapDir;
 }

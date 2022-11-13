@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Linq;
 
 [DefaultExecutionOrder(-1)]
 public class DayManager : MonoBehaviour
@@ -36,6 +37,7 @@ public class DayManager : MonoBehaviour
     private bool dayEnded = false;
     private Light sun;
     private Material skybox;
+    // private IEnumerable<Renderer> staticRenderers;
 
     private void Awake()
     {
@@ -58,17 +60,23 @@ public class DayManager : MonoBehaviour
         fc = FadeController.Instance;
         sun = RenderSettings.sun;
         skybox = RenderSettings.skybox;
+        // renderers = FindObjectsOfType<Renderer>().Where(r => r.isPartOfStaticBatch);
 
         for (int i = 0; i < lightingSets.Length; i++)
         {
             LightingSet lightingSet = lightingSets[i];
             string id = lightingSet.id;
             idToLightingSet[id] = lightingSet;
-            LightmapData ld = new LightmapData();
-            ld.lightmapColor = lightingSet.lightmapColor;
-            ld.lightmapDir = lightingSet.lightmapDir;
-            idToLightmap[id] = new LightmapData[] { ld };
+            idToLightmap[id] = new LightmapData[lightingSet.lightmapColor.Length];
+            for (int j = 0; j < lightingSet.lightmapColor.Length; j++)
+            {
+                LightmapData ld = new LightmapData();
+                ld.lightmapColor = lightingSet.lightmapColor[j];
+                ld.lightmapDir = lightingSet.lightmapDir[j];
+                idToLightmap[id][j] = ld;
+            }
         }
+        // LightmapSettings.lightmapsMode = LightmapsMode.CombinedDirectional;
         UseLightingSet("day");
         dayStartTime = Time.time;
     }
