@@ -44,7 +44,7 @@ public class InventoryManager : MonoBehaviour
             Item item = items[i];
             ItemType type = item.type;
             typeToItem.Add(type, item);
-            inventory[item] = 1;
+            inventory[item] = 0;
             itemToType[item] = type;
             if (item.buyable)
                 buyables.Add(item);
@@ -84,26 +84,26 @@ public class InventoryManager : MonoBehaviour
         return itemData;
     }
 
-    public void AddItem(Item item)
+    public void AddItem(Item item, int quantity = 1)
     {
-        inventory[item] += 1;
+        inventory[item] += quantity;
         OnInventoryChange?.Invoke();
     }
 
-    public bool RemoveItem(Item item)
+    public bool RemoveItem(Item item, int quantity = 1)
     {
-        if (HasItem(item))
+        if (HasItem(item, quantity))
         {
-            inventory[item] -= 1;
+            inventory[item] -= quantity;
             OnInventoryChange?.Invoke();
             return true;
         }
         return false;
     }
 
-    public bool HasItem(Item item)
+    public bool HasItem(Item item, int quantity = 1)
     {
-        return inventory[item] > 0;
+        return inventory[item] >= quantity;
     }
 
     public bool UseItem(Item item)
@@ -124,25 +124,25 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public bool SellItem(Item item)
+    public bool SellItem(Item item, int quantity = 1)
     {
-        if (RemoveItem(item))
+        if (RemoveItem(item, quantity))
         {
             PlaySound(cashClip);
-            money += item.sellPrice;
+            money += item.sellPrice * quantity;
             OnMoneyChange?.Invoke();
             return true;
         }
         return false;
     }
 
-    public bool BuyItem(Item item)
+    public bool BuyItem(Item item, int quantity = 1)
     {
-        if (item.buyable && money >= item.buyPrice)
+        if (item.buyable && money >= item.buyPrice * quantity)
         {
             PlaySound(cashClip);
-            money -= item.buyPrice;
-            AddItem(item);
+            money -= item.buyPrice * quantity;
+            AddItem(item, quantity);
             OnMoneyChange?.Invoke();
             return true;
         }

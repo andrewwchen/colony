@@ -171,10 +171,7 @@ public class MenuUIHandler : MonoBehaviour
 
     private void Sell()
     {
-        for (int i = 0; i < quantity; i++)
-        {
-            im.SellItem(currentItem);
-        }
+        im.SellItem(currentItem, quantity);
         quantity = 1;
         ResetQuantity();
     }
