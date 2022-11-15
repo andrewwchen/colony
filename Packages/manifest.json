@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.newblood.lighting-internals": "git@github.com:NewBloodInteractive/com.newblood.lighting-internals.git",
     "com.unity.collab-proxy": "1.17.2",
     "com.unity.feature.development": "1.0.1",
     "com.unity.feature.vr": "1.0.0",
