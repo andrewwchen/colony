@@ -5,4 +5,5 @@ public enum UMMode
     Removing,
     Tilling,
     Watering,
+    Nothing,
 }

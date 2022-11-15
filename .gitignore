@@ -123,3 +123,6 @@ $RECYCLE.BIN/
 
 # UserSettings directory
 /UserSettings/
+
+# Recordings directory
+/Recordings/

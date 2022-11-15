@@ -16,6 +16,7 @@ public class UniversalManipulator : MonoBehaviour
     public GameObject watering_controller;
     public GameObject tilling_controller;
     public GameObject building_controller;
+    public GameObject nothing_controller;
 
     public float umEnergy = 100f;
     private static float plantingEnergyCost = 5f; // change these later to what we want
@@ -40,7 +41,7 @@ public class UniversalManipulator : MonoBehaviour
     [SerializeField] private MenuUIHandler wristMenu;
 
     // the order in which UM modes cycle through. other modes activate when you select an item in the inventory (e.g.: UMMode.Building, UMMode.Planting)
-    private static UMMode[] modeCycle = { UMMode.Removing, UMMode.Tilling, UMMode.Watering };
+    private static UMMode[] modeCycle = { UMMode.Nothing, UMMode.Removing, UMMode.Tilling, UMMode.Watering };
 
     private UMMode currentMode = modeCycle[0];
     private int currentModeNum = 0;
@@ -230,6 +231,7 @@ public class UniversalManipulator : MonoBehaviour
                 removing_controller.SetActive(false);
                 tilling_controller.SetActive(false);
                 watering_controller.SetActive(false);
+                nothing_controller.SetActive(false);
                 break;
             case UMMode.Planting:
                 sm.Unhover();
@@ -238,6 +240,7 @@ public class UniversalManipulator : MonoBehaviour
                 removing_controller.SetActive(false);
                 tilling_controller.SetActive(false);
                 watering_controller.SetActive(false);
+                nothing_controller.SetActive(false);
                 break;
             case UMMode.Removing:
                 sm.Unhover();
@@ -246,6 +249,7 @@ public class UniversalManipulator : MonoBehaviour
                 removing_controller.SetActive(true);
                 tilling_controller.SetActive(false);
                 watering_controller.SetActive(false);
+                nothing_controller.SetActive(false);
                 break;
             case UMMode.Tilling:
                 sm.Unhover();
@@ -254,6 +258,7 @@ public class UniversalManipulator : MonoBehaviour
                 removing_controller.SetActive(false);
                 tilling_controller.SetActive(true);
                 watering_controller.SetActive(false);
+                nothing_controller.SetActive(false);
                 break;
             case UMMode.Watering:
                 sm.Unhover();
@@ -262,6 +267,16 @@ public class UniversalManipulator : MonoBehaviour
                 removing_controller.SetActive(false);
                 tilling_controller.SetActive(false);
                 watering_controller.SetActive(true);
+                nothing_controller.SetActive(false);
+                break;
+            case UMMode.Nothing:
+                sm.Unhover();
+                building_controller.SetActive(false);
+                planting_controller.SetActive(false);
+                removing_controller.SetActive(false);
+                tilling_controller.SetActive(false);
+                watering_controller.SetActive(false);
+                nothing_controller.SetActive(true);
                 break;
         }
     }
